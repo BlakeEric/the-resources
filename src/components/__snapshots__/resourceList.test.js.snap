@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResourceList renders correctly when no resources passed in 1`] = `
+<table
+  id="resources"
+>
+  <thead>
+    <tr>
+      <th
+        className=""
+      >
+        <button
+          onClick={[Function]}
+        >
+          Name 
+          
+        </button>
+      </th>
+      <th
+        className=""
+      >
+        <button
+          onClick={[Function]}
+        >
+          Focus 
+          
+        </button>
+      </th>
+      <th
+        className=""
+      >
+        <button
+          onClick={[Function]}
+        >
+          Skill Level 
+          
+        </button>
+      </th>
+      <th
+        className=""
+      >
+        <button
+          onClick={[Function]}
+        >
+          Format 
+          
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td
+        colspan="4"
+      >
+        Nothing found matching your search.
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`ResourceList renders correctly when resources passed in 1`] = `
+<table
+  id="resources"
+>
+  <thead>
+    <tr>
+      <th
+        className=""
+      >
+        <button
+          onClick={[Function]}
+        >
+          Name 
+          
+        </button>
+      </th>
+      <th
+        className=""
+      >
+        <button
+          onClick={[Function]}
+        >
+          Focus 
+          
+        </button>
+      </th>
+      <th
+        className=""
+      >
+        <button
+          onClick={[Function]}
+        >
+          Skill Level 
+          
+        </button>
+      </th>
+      <th
+        className=""
+      >
+        <button
+          onClick={[Function]}
+        >
+          Format 
+          
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a
+          href="/a-list-apart/"
+        >
+          A List Apart
+        </a>
+      </td>
+      <td>
+        Front-end
+      </td>
+      <td>
+        All
+      </td>
+      <td>
+        Article
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/scrimba/"
+        >
+          Scrimba
+        </a>
+      </td>
+      <td>
+        Front-end
+      </td>
+      <td>
+        Beginner, Moderate
+      </td>
+      <td>
+        Interactive
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/smashing-magazine/"
+        >
+          Smashing Magazine
+        </a>
+      </td>
+      <td>
+        Multiple
+      </td>
+      <td>
+        All
+      </td>
+      <td>
+        Article
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/the-odin-project/"
+        >
+          The Odin Project
+        </a>
+      </td>
+      <td>
+        Multiple
+      </td>
+      <td>
+        Beginner, Moderate
+      </td>
+      <td>
+        Tutorial
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="/watch-and-code/"
+        >
+          Watch and Code
+        </a>
+      </td>
+      <td>
+        Front-end
+      </td>
+      <td>
+        Beginner
+      </td>
+      <td>
+        Video
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

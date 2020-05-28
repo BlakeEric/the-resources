@@ -29,6 +29,7 @@ export const query = graphql`
             title
             format
             focus
+            skillLevel
           }
           fields {
             slug

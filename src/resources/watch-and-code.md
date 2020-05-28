@@ -1,6 +1,6 @@
 ---
 title: "Watch and Code"
-type: "Video"
+format: "Video"
 url: "https://watchandcode.com/"
 ---
 

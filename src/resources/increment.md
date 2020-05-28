@@ -1,6 +1,6 @@
 ---
 title: "Increment"
-type: "Article"
+format: "Article"
 url: "https://increment.com/"
 ---
 

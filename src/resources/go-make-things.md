@@ -1,6 +1,6 @@
 ---
 title: "Go Make Things"
-type: "Article"
+format: "Article"
 url: "https://gomakethings.com/"
 ---
 

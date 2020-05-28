@@ -1,6 +1,6 @@
 ---
 title: "Scrimba"
-type: "Interactive"
+format: "Interactive"
 url: "https://scrimba.com/"
 ---
 

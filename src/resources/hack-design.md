@@ -1,6 +1,6 @@
 ---
 title: "Hack Design"
-type: "Article"
+format: "Article"
 url: "https://hackdesign.org/"
 ---
 

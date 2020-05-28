@@ -1,6 +1,6 @@
 ---
 title: "Learn Code the Hard Way"
-type: "Article"
+format: "Article"
 url: "https://watchandcode.com/"
 ---
 

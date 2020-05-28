@@ -1,7 +1,9 @@
 ---
 title: "A List Apart"
-type: "Article"
+format: "Article"
 url: "https://alistapart.com/"
+skillLevel: "All"
+focus: "Front-end"
 ---
 
 Articles exploring the design, development, and meaning of web content, with a special focus on web standards and best practices.

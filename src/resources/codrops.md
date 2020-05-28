@@ -1,6 +1,6 @@
 ---
 title: "Codrops"
-type: "Article"
+format: "Article"
 url: "https://tympanus.net/codrops/"
 ---
 

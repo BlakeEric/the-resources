@@ -1,6 +1,6 @@
 ---
 title: "Illustrated.dev"
-type: "Graphic"
+format: "Graphic"
 url: "https://illustrated.dev/"
 ---
 

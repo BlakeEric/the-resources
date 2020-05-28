@@ -1,6 +1,6 @@
 ---
 title: "Computer Science Illustrated"
-type: "Graphic"
+format: "Graphic"
 url: "http://csillustrated.berkeley.edu/index.php"
 ---
 

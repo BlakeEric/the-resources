@@ -1,6 +1,6 @@
 ---
 title: "CodeSignal"
-type: "Challenge"
+format: "Challenge"
 url: "https://codesignal.com/developers/"
 ---
 

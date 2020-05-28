@@ -1,6 +1,6 @@
 ---
 title: "Coursera"
-type: "MOOC"
+format: "MOOC"
 url: "https://www.coursera.org/"
 ---
 

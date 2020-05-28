@@ -1,6 +1,6 @@
 ---
 title: "Smashing Magazine"
-type: "Article"
+format: "Article"
 url: "https://www.smashingmagazine.com/"
 ---
 

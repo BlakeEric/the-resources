@@ -1,6 +1,6 @@
 ---
 title: "edX"
-type: "MOOC"
+format: "MOOC"
 url: "https://www.edx.org/"
 ---
 

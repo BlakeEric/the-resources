@@ -1,38 +1,18 @@
 import React from "react"
-import { css } from "@emotion/core"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
+import ResourceList from "../components/resourceList"
 
 export default function Home({ data }) {
   return (
     <Layout>
+      <header style={{textAlign: "center", padding: `${rhythm(3)} 0`}}>
+        <h2>One-up your coding skills and industry knowhow using these great tools, courses, and articles.</h2>
+        <p><a href="#resources"><strong>View the resources</strong></a> or <a href="mailto:blake@blakelundquist.dev"><strong>recommend a resource</strong></a></p>
+      </header>
       <main>
-        <table>
-          <tr>
-            <th>Name</th>
-            <th css={css`
-              text-align: right;
-            `}>Type</th>
-          </tr>
-          <tbody>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-              <tr key={node.id}>
-                <td>
-                  <Link to={node.fields.slug} >
-                    {node.frontmatter.title}
-                  </Link>
-                </td>
-                <td css={css`
-                  text-align: right;
-                `}>
-                  <Link to={node.fields.slug} >
-                    {node.frontmatter.type}
-                  </Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <ResourceList resources={data.allMarkdownRemark.edges} />
       </main>
     </Layout>
   )
@@ -40,14 +20,15 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___title], order: ASC }) {
+    allMarkdownRemark(sort: { fields: [fields___slug], order: ASC }) {
       totalCount
       edges {
         node {
           id
           frontmatter {
             title
-            type
+            format
+            focus
           }
           fields {
             slug

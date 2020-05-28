@@ -1,6 +1,6 @@
 ---
 title: "Photoshop Etiquette"
-type: "Article"
+format: "Article"
 url: "https://photoshopetiquette.com/"
 ---
 

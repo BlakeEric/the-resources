@@ -1,6 +1,6 @@
 ---
 title: "Getting Git Right"
-type: "Article"
+format: "Article"
 url: "https://www.atlassian.com/git"
 ---
 

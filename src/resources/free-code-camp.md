@@ -1,6 +1,6 @@
 ---
 title: "freeCodeCamp"
-type: "Interactive"
+format: "Interactive"
 url: "https://www.freecodecamp.org/"
 ---
 

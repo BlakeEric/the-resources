@@ -1,6 +1,6 @@
 ---
 title: "The Odin Project"
-type: "Tutorial"
+format: "Tutorial"
 url: "https://www.theodinproject.com/"
 ---
 

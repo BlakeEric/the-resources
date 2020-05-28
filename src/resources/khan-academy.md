@@ -1,6 +1,6 @@
 ---
 title: "Khan Academy"
-type: "Interactive"
+format: "Interactive"
 url: "https://www.khanacademy.org/computing"
 ---
 

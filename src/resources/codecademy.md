@@ -1,6 +1,6 @@
 ---
 title: "Codecademy"
-type: "Interactive"
+format: "Interactive"
 url: "https://www.codecademy.com/"
 ---
 

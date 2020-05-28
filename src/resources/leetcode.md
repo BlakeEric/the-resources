@@ -1,6 +1,6 @@
 ---
 title: "Leetcode"
-type: "Challenge"
+format: "Challenge"
 url: "https://scrimba.com/"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "codeburst.io"
-type: "Article"
+format: "Article"
 url: "https://codeburst.io/"
 ---
 

@@ -2,6 +2,7 @@
 title: "Watch and Code"
 format: "Video"
 url: "https://watchandcode.com/"
+skillLevel: ['Beginner']
 ---
 
 Video-based coding courses focusing on beginning and intermediate JavaScript.

@@ -2,7 +2,7 @@
 title: "A List Apart"
 format: "Article"
 url: "https://alistapart.com/"
-skillLevel: "All"
+skillLevel: ['Beginner', 'Moderate', 'Advanced']
 focus: "Front-end"
 ---
 

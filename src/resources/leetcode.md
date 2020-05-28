@@ -1,7 +1,8 @@
 ---
 title: "Leetcode"
 format: "Challenge"
-url: "https://scrimba.com/"
+url: "https://leetcode.com/"
+skillLevel: ['Moderate', 'Advanced']
 ---
 
 Coding challenges and practice algorithms designed to help users prepare for technical interviews.

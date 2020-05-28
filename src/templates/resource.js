@@ -10,7 +10,7 @@ export default function BlogPost({ data }) {
     <Layout>
       <div>
         <h1 css={css`display: inline-block; margin-right: ${rhythm(.25)}`}>{post.frontmatter.title}</h1>
-        <a target="_blank" rel="nofollow" href={post.frontmatter.url}>[View]</a>
+        <a target="_blank" rel="noopener noreferrer" href={post.frontmatter.url}>[View]</a>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
       <Link to="/">&larr; Back</Link>

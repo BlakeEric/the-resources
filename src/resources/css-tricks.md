@@ -1,6 +1,6 @@
 ---
 title: "CSS Tricks"
-type: "Tutorial"
+type: "Article"
 url: "https://css-tricks.com/"
 ---
 

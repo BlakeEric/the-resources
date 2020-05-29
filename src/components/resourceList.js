@@ -19,9 +19,6 @@ export default class ResourceList extends React.Component {
   componentDidMount() {
     // if JS is enabled allow dynamic filtering
     this.setState({isFilterable: true})
-
-    // Get an array of sortable keys from the first resource in state
-    // const sortableKeys = Object.keys(this.state.resources[0].node.frontmatter)
   }
 
   /*
@@ -181,13 +178,13 @@ export default class ResourceList extends React.Component {
                 </Link>
               </td>
               <td>
+                {node.frontmatter.format}
+              </td>
+              <td>
                 {node.frontmatter.focus}
               </td>
               <td>
                 {node.frontmatter.skillLevel.length === 3 ? 'All' : node.frontmatter.skillLevel.join(', ')}
-              </td>
-              <td>
-                {node.frontmatter.format}
               </td>
             </tr>
           ))}

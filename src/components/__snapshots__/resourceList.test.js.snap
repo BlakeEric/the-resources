@@ -75,13 +75,13 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
         </a>
       </td>
       <td>
+        Article
+      </td>
+      <td>
         Front-end
       </td>
       <td>
         All
-      </td>
-      <td>
-        Article
       </td>
     </tr>
     <tr>
@@ -93,13 +93,13 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
         </a>
       </td>
       <td>
+        Interactive
+      </td>
+      <td>
         Algorithms
       </td>
       <td>
         Moderate
-      </td>
-      <td>
-        Interactive
       </td>
     </tr>
     <tr>
@@ -111,13 +111,13 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
         </a>
       </td>
       <td>
+        Article
+      </td>
+      <td>
         Multiple
       </td>
       <td>
         Advanced
-      </td>
-      <td>
-        Article
       </td>
     </tr>
     <tr>
@@ -129,13 +129,13 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
         </a>
       </td>
       <td>
+        Tutorial
+      </td>
+      <td>
         Multiple
       </td>
       <td>
         Beginner, Moderate
-      </td>
-      <td>
-        Tutorial
       </td>
     </tr>
     <tr>
@@ -147,13 +147,13 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
         </a>
       </td>
       <td>
+        Video
+      </td>
+      <td>
         Front-end
       </td>
       <td>
         Beginner
-      </td>
-      <td>
-        Video
       </td>
     </tr>
   </tbody>

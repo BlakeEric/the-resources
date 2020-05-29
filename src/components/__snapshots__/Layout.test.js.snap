@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+<div
+  css={
+    Object {
+      "map": undefined,
+      "name": "20zhf7",
+      "next": undefined,
+      "styles": "
+      margin: 0 auto;
+      max-width: 900px;
+      padding: 2.9rem;
+      padding-top: 2.175rem;
+    ",
+      "toString": [Function],
+    }
+  }
+>
+  <nav>
+    <a
+      href="/"
+    >
+      <h3
+        css={
+          Object {
+            "map": undefined,
+            "name": "zxaqga",
+            "next": undefined,
+            "styles": "
+            margin-bottom: 2.9rem;
+            display: inline-block;
+            font-style: normal;
+          ",
+            "toString": [Function],
+          }
+        }
+      >
+        Cool Site Title
+      </h3>
+    </a>
+    <a
+      css={
+        Object {
+          "map": undefined,
+          "name": "1huhmlv",
+          "next": undefined,
+          "styles": "
+          float: right;
+        ",
+          "toString": [Function],
+        }
+      }
+      href="/about/"
+    >
+      About
+    </a>
+  </nav>
+  <footer
+    css={
+      Object {
+        "map": undefined,
+        "name": "1cje3u9",
+        "next": undefined,
+        "styles": "
+        padding-top: 1.45rem;
+        margin-top: 2.9rem;
+        border-top: 1px solid hsla(0,0%,0%,0.12);
+        font-size: 0.83375rem;
+        @media (min-width: 600px) {
+          display: flex;
+          justify-content: space-between;
+        }
+      ",
+        "toString": [Function],
+      }
+    }
+  >
+    <span
+      css={
+        Object {
+          "map": undefined,
+          "name": "1qkad9s",
+          "next": undefined,
+          "styles": "display: inline-block; margin-bottom: 0.725rem;",
+          "toString": [Function],
+        }
+      }
+    >
+      ©Blake Lundquist 
+      2020
+    </span>
+    <ul
+      css={
+        Object {
+          "map": undefined,
+          "name": "1ir09ca",
+          "next": undefined,
+          "styles": "
+          list-style: none;
+          margin: 0;
+          @media (min-width: 600px) {
+           text-align: right;
+          }
+        ",
+          "toString": [Function],
+        }
+      }
+    >
+      <li>
+        <a
+          href="mailto:blake@blakelundquist.dev"
+        >
+          Recommend a resource
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/BlakeEric/the-resources"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          View source code for this website
+        </a>
+      </li>
+    </ul>
+  </footer>
+</div>
+`;
+
+exports[`Layout renders correctly with children 1`] = `
+<div
+  css={
+    Object {
+      "map": undefined,
+      "name": "20zhf7",
+      "next": undefined,
+      "styles": "
+      margin: 0 auto;
+      max-width: 900px;
+      padding: 2.9rem;
+      padding-top: 2.175rem;
+    ",
+      "toString": [Function],
+    }
+  }
+>
+  <nav>
+    <a
+      href="/"
+    >
+      <h3
+        css={
+          Object {
+            "map": undefined,
+            "name": "zxaqga",
+            "next": undefined,
+            "styles": "
+            margin-bottom: 2.9rem;
+            display: inline-block;
+            font-style: normal;
+          ",
+            "toString": [Function],
+          }
+        }
+      >
+        Cool Site Title
+      </h3>
+    </a>
+    <a
+      css={
+        Object {
+          "map": undefined,
+          "name": "1huhmlv",
+          "next": undefined,
+          "styles": "
+          float: right;
+        ",
+          "toString": [Function],
+        }
+      }
+      href="/about/"
+    >
+      About
+    </a>
+  </nav>
+  <main>
+    <h1>
+      I'm a child!
+    </h1>
+  </main>
+  <footer
+    css={
+      Object {
+        "map": undefined,
+        "name": "1cje3u9",
+        "next": undefined,
+        "styles": "
+        padding-top: 1.45rem;
+        margin-top: 2.9rem;
+        border-top: 1px solid hsla(0,0%,0%,0.12);
+        font-size: 0.83375rem;
+        @media (min-width: 600px) {
+          display: flex;
+          justify-content: space-between;
+        }
+      ",
+        "toString": [Function],
+      }
+    }
+  >
+    <span
+      css={
+        Object {
+          "map": undefined,
+          "name": "1qkad9s",
+          "next": undefined,
+          "styles": "display: inline-block; margin-bottom: 0.725rem;",
+          "toString": [Function],
+        }
+      }
+    >
+      ©Blake Lundquist 
+      2020
+    </span>
+    <ul
+      css={
+        Object {
+          "map": undefined,
+          "name": "1ir09ca",
+          "next": undefined,
+          "styles": "
+          list-style: none;
+          margin: 0;
+          @media (min-width: 600px) {
+           text-align: right;
+          }
+        ",
+          "toString": [Function],
+        }
+      }
+    >
+      <li>
+        <a
+          href="mailto:blake@blakelundquist.dev"
+        >
+          Recommend a resource
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/BlakeEric/the-resources"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          View source code for this website
+        </a>
+      </li>
+    </ul>
+  </footer>
+</div>
+`;

@@ -3,7 +3,7 @@ const getResourcesResponse = [
     node: {
       id: 'd04da249-50e7-5b18-a992-d530e14831a7',
       frontmatter: {
-        title: 'A List Apart',
+        title: 'A-Title',
         format: 'Article',
         focus: 'Front-end',
         skillLevel: ['Beginner','Moderate','Advanced']
@@ -17,10 +17,10 @@ const getResourcesResponse = [
     node: {
       id: '77a6be63-d3c7-50cb-bd29-438427560388',
       frontmatter: {
-        title: 'Scrimba',
+        title: 'B-Title',
         format: 'Interactive',
-        focus: 'Front-end',
-        skillLevel: ['Beginner','Moderate']
+        focus: 'Algorithms',
+        skillLevel: ['Moderate']
       },
       fields: {
         slug: '/scrimba/'
@@ -31,10 +31,10 @@ const getResourcesResponse = [
     node: {
       id: '28feb8c5-acb2-5638-bdd6-b0457eff8db3',
       frontmatter: {
-        title: 'Smashing Magazine',
+        title: 'C-Title',
         format: 'Article',
         focus: 'Multiple',
-        skillLevel: ['Beginner','Moderate','Advanced']
+        skillLevel: ['Advanced']
       },
       fields: {
         slug: '/smashing-magazine/'
@@ -45,7 +45,7 @@ const getResourcesResponse = [
     node: {
       id: '744d8211-8c35-5c83-b8c1-ecb4ab48c0db',
       frontmatter: {
-        title: 'The Odin Project',
+        title: 'D-Title',
         format: 'Tutorial',
         focus: 'Multiple',
         skillLevel: ['Beginner','Moderate']
@@ -59,7 +59,7 @@ const getResourcesResponse = [
     node: {
       id: '3b19247d-2ddd-558d-b0ce-14ec1972d52f',
       frontmatter: {
-        title: 'Watch and Code',
+        title: 'E-Title',
         format: 'Video',
         focus: 'Front-end',
         skillLevel: ['Beginner']

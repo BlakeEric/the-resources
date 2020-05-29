@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
-import Layout from "../components/layout"
-import ResourceList from "../components/resourceList"
+import Layout from "../components/Layout"
+import ResourceList from "../components/ResourceList"
 
 export default function Home({ data }) {
   return (

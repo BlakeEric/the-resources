@@ -5,22 +5,24 @@ import typography from "../utils/typography"
 
 export default class ResourceList extends React.Component {
 
+
   state = {
     resources: this.props.resources,
     isFilterable: false, // used to display filter options if JS is enabled
-    orderBy: null,
-    order: null,
+    orderBy: "title",
+    order: "ASC",
     searchTerm: null
   }
+
 
   componentDidMount() {
     // if JS is enabled allow dynamic filtering
     this.setState({isFilterable: true})
   }
 
-
-
-
+  /*
+   * Reverse value of 'order' in state: "ASC" or "DESC"
+   */
   reverseOrder = () => {
     let currentOrder = this.state.order;
     let order;
@@ -35,6 +37,10 @@ export default class ResourceList extends React.Component {
     })
   }
 
+
+  /*
+   * Set the key to use as basis for alphabetical sorting
+   */
   setOrderBy = (key) => {
     this.setState({
       orderBy: key,
@@ -42,8 +48,24 @@ export default class ResourceList extends React.Component {
     })
   }
 
-  // Order the elements based on the direction set in state
-  reOrder(current, next) {
+
+  /*
+   * Click handler that reverses order in state if a new field is clicked
+   * Otherwise sets orderBy value to new key
+   */
+  handleFilterClick = (key) => {
+    if (this.state.orderBy === key) {
+      this.reverseOrder();
+    } else {
+      this.setOrderBy(key);
+    }
+  }
+
+  /*
+   * Alphabetically compare one field against another
+   * Return -1, 0, or 1 for use in Array.sort
+   */
+  compareFields(current, next) {
 
     if (this.state.order === "DESC") {
 
@@ -61,46 +83,43 @@ export default class ResourceList extends React.Component {
   }
 
 
-
-
-  // Filter the resources based on orderBy and search values set in state
+  /*
+   * Filter the resources based on orderBy and search values set in state
+   * Return reordered array
+   */
   filter() {
+
     const { order, searchTerm } = this.state;
     const key = this.state.orderBy || 'title';
 
+    // create a new array of resources to avoid mutating the value in state
     let filteredItems = [...this.state.resources];
 
+    // remove resources not matching the search term in state
     if (searchTerm) {
-
       let string = searchTerm.toLowerCase()
-      console.log("search term is " + string)
-      filteredItems = filteredItems.filter(item => {
-        console.log("comparing to " + item.node.frontmatter.title.toLowerCase())
-        return item.node.frontmatter.title.toLowerCase().includes(string)
-      }
 
-      )
+      filteredItems = filteredItems.filter(item => {
+        return item.node.frontmatter.title.toLowerCase().includes(string)
+      })
     }
 
+    // Sort the items alphabetically by "orderyBy" key set in state.
+    // Will sort in ASC order by default, or DESC if set as "order" value in state
     filteredItems.sort((current, next) => {
       let currentField = current.node.frontmatter[key].toString().toLowerCase();
       let nextField = next.node.frontmatter[key].toString().toLowerCase();
 
-      return this.reOrder(currentField, nextField)
+      return this.compareFields(currentField, nextField)
 
     })
 
     return filteredItems
   }
 
-  handleFilters = (key) => {
-    if (this.state.orderBy === key) {
-      this.reverseOrder();
-    } else {
-      this.setOrderBy(key);
-    }
-  }
-
+  /*
+   * Display up or down icon based on key and current order in state
+   */
   displaySortIcon(key) {
     if (this.state.orderBy === key) {
       if (this.state.order === "DESC") {
@@ -110,6 +129,8 @@ export default class ResourceList extends React.Component {
     }
     return ''
   }
+
+
 
   render() {
 
@@ -142,16 +163,16 @@ export default class ResourceList extends React.Component {
         <thead>
           <tr>
             <th className={this.state.orderBy === "title" ? "active" : ""}>
-              <button onClick={() => this.handleFilters("title")}>Name {this.displaySortIcon('title')}</button>
+              <button onClick={() => this.handleFilterClick("title")}>Name {this.displaySortIcon('title')}</button>
             </th>
             <th className={this.state.orderBy === "focus" ? "active" : ""}>
-              <button  onClick={() => this.handleFilters("focus")}>Focus {this.displaySortIcon('focus')}</button>
+              <button  onClick={() => this.handleFilterClick("focus")}>Focus {this.displaySortIcon('focus')}</button>
             </th>
             <th className={this.state.orderBy === "skillLevel" ? "active" : ""}>
-              <button onClick={() => this.handleFilters("skillLevel")}>Skill Level {this.displaySortIcon('skillLevel')}</button>
+              <button onClick={() => this.handleFilterClick("skillLevel")}>Skill Level {this.displaySortIcon('skillLevel')}</button>
             </th>
             <th className={this.state.orderBy === "format" ? "active" : ""}>
-              <button onClick={() => this.handleFilters("format")}>Format {this.displaySortIcon('format')}</button>
+              <button onClick={() => this.handleFilterClick("format")}>Format {this.displaySortIcon('format')}</button>
             </th>
           </tr>
         </thead>
@@ -192,9 +213,9 @@ ResourceList.defaultProps = {
   resources: []
 }
 
-String.prototype.toCamelCase = function() {
-    return this.replace(/^([A-Z])|\s(\w)/g, function(match, p1, p2, offset) {
-        if (p2) return p2.toUpperCase();
-        return p1.toLowerCase();
-    });
-};
+// String.prototype.toCamelCase = function() {
+//     return this.replace(/^([A-Z])|\s(\w)/g, function(match, p1, p2, offset) {
+//         if (p2) return p2.toUpperCase();
+//         return p1.toLowerCase();
+//     });
+// };

@@ -1,5 +1,5 @@
 ---
-title: "Learn Code the Hard Way"
+name: "Learn Code the Hard Way"
 format: "Article"
 url: "https://watchandcode.com/"
 skillLevel: ['Beginner', 'Moderate']

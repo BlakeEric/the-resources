@@ -1,5 +1,5 @@
 ---
-title: "Scrimba"
+name: "Scrimba"
 format: "Interactive"
 url: "https://scrimba.com/"
 skillLevel: ['Beginner', 'Moderate']

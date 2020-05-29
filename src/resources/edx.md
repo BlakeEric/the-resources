@@ -1,5 +1,5 @@
 ---
-title: "edX"
+name: "edX"
 format: "MOOC"
 url: "https://www.edx.org/"
 skillLevel: ['Beginner', 'Moderate']

@@ -1,5 +1,5 @@
 ---
-title: "Getting Git Right"
+name: "Getting Git Right"
 format: "Article"
 url: "https://www.atlassian.com/git"
 skillLevel: ['Beginner', 'Moderate']

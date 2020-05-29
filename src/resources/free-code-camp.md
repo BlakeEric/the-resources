@@ -1,5 +1,5 @@
 ---
-title: "freeCodeCamp"
+name: "freeCodeCamp"
 format: "Interactive"
 url: "https://www.freecodecamp.org/"
 skillLevel: ['Beginner', 'Moderate']

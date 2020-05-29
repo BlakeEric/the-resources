@@ -1,5 +1,5 @@
 ---
-title: "Codrops"
+name: "Codrops"
 format: "Article"
 url: "https://tympanus.net/codrops/"
 skillLevel: ['Beginner', 'Moderate', 'Advanced']

@@ -1,5 +1,5 @@
 ---
-title: "Leetcode"
+name: "Leetcode"
 format: "Challenge"
 url: "https://leetcode.com/"
 skillLevel: ['Moderate', 'Advanced']

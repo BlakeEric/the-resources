@@ -1,5 +1,5 @@
 ---
-title: "CodeSignal"
+name: "CodeSignal"
 format: "Challenge"
 url: "https://codesignal.com/developers/"
 skillLevel: ['Moderate', 'Advanced']

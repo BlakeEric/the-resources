@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Global, css } from '@emotion/core'
 import typography from "../utils/typography"
+import ResourceListTableHeader from './ResourceListTableHeader'
 
 export default class ResourceList extends React.Component {
 
@@ -9,7 +10,7 @@ export default class ResourceList extends React.Component {
   state = {
     resources: this.props.resources,
     isFilterable: false, // used to display filter options if JS is enabled
-    orderBy: "title",
+    orderBy: "name",
     order: "ASC",
     searchTerm: null
   }
@@ -18,6 +19,9 @@ export default class ResourceList extends React.Component {
   componentDidMount() {
     // if JS is enabled allow dynamic filtering
     this.setState({isFilterable: true})
+
+    // Get an array of sortable keys from the first resource in state
+    // const sortableKeys = Object.keys(this.state.resources[0].node.frontmatter)
   }
 
   /*
@@ -53,7 +57,7 @@ export default class ResourceList extends React.Component {
    * Click handler that reverses order in state if a new field is clicked
    * Otherwise sets orderBy value to new key
    */
-  handleFilterClick = (key) => {
+  setFilterBy = (key) => {
     if (this.state.orderBy === key) {
       this.reverseOrder();
     } else {
@@ -89,8 +93,8 @@ export default class ResourceList extends React.Component {
    */
   filter() {
 
-    const { order, searchTerm } = this.state;
-    const key = this.state.orderBy || 'title';
+    const { searchTerm } = this.state;
+    const key = this.state.orderBy || 'name';
 
     // create a new array of resources to avoid mutating the value in state
     let filteredItems = [...this.state.resources];
@@ -100,7 +104,7 @@ export default class ResourceList extends React.Component {
       let string = searchTerm.toLowerCase()
 
       filteredItems = filteredItems.filter(item => {
-        return item.node.frontmatter.title.toLowerCase().includes(string)
+        return item.node.frontmatter.name.toLowerCase().includes(string)
       })
     }
 
@@ -117,22 +121,18 @@ export default class ResourceList extends React.Component {
     return filteredItems
   }
 
-  /*
-   * Display up or down icon based on key and current order in state
-   */
-  displaySortIcon(key) {
-    if (this.state.orderBy === key) {
-      if (this.state.order === "DESC") {
-        return '↑'
-      }
-      return '↓'
-    }
-    return ''
-  }
-
 
 
   render() {
+
+    if (this.props.resources.length < 1) {
+      return (
+        <section id="resources">
+          <h4>Something went wrong :(</h4>
+          <p>We are unable to retrieve resources at this time.</p>
+        </section>
+      )
+    }
 
     return (
       <table id="resources">
@@ -160,22 +160,12 @@ export default class ResourceList extends React.Component {
             }
           `}
         />
-        <thead>
-          <tr>
-            <th className={this.state.orderBy === "title" ? "active" : ""}>
-              <button onClick={() => this.handleFilterClick("title")}>Name {this.displaySortIcon('title')}</button>
-            </th>
-            <th className={this.state.orderBy === "focus" ? "active" : ""}>
-              <button  onClick={() => this.handleFilterClick("focus")}>Focus {this.displaySortIcon('focus')}</button>
-            </th>
-            <th className={this.state.orderBy === "skillLevel" ? "active" : ""}>
-              <button onClick={() => this.handleFilterClick("skillLevel")}>Skill Level {this.displaySortIcon('skillLevel')}</button>
-            </th>
-            <th className={this.state.orderBy === "format" ? "active" : ""}>
-              <button onClick={() => this.handleFilterClick("format")}>Format {this.displaySortIcon('format')}</button>
-            </th>
-          </tr>
-        </thead>
+        <ResourceListTableHeader
+          keys={Object.keys(this.state.resources[0].node.frontmatter)}
+          orderBy={this.state.orderBy}
+          order={this.state.order}
+          handleFilterClick={this.setFilterBy}
+        />
         <tbody>
           {this.filter().length === 0 ?
             <tr>
@@ -187,7 +177,7 @@ export default class ResourceList extends React.Component {
             <tr key={node.id}>
               <td>
                 <Link to={node.fields.slug}>
-                  {node.frontmatter.title}
+                  {node.frontmatter.name}
                 </Link>
               </td>
               <td>

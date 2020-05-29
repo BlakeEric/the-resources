@@ -1,5 +1,5 @@
 ---
-title: "Photoshop Etiquette"
+name: "Photoshop Etiquette"
 format: "Article"
 url: "https://photoshopetiquette.com/"
 skillLevel: ['Moderate', 'Advanced']

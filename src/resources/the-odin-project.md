@@ -1,5 +1,5 @@
 ---
-title: "The Odin Project"
+name: "The Odin Project"
 format: "Tutorial"
 url: "https://www.theodinproject.com/"
 skillLevel: ['Beginner', 'Moderate']

@@ -1,5 +1,5 @@
 ---
-title: "A List Apart"
+name: "A List Apart"
 format: "Article"
 url: "https://alistapart.com/"
 skillLevel: ['Beginner', 'Moderate', 'Advanced']

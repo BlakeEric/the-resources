@@ -1,5 +1,5 @@
 ---
-title: "Go Make Things"
+name: "Go Make Things"
 format: "Article"
 url: "https://gomakethings.com/"
 skillLevel: ['Beginner', 'Moderate']

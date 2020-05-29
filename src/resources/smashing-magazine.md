@@ -1,5 +1,5 @@
 ---
-title: "Smashing Magazine"
+name: "Smashing Magazine"
 format: "Article"
 url: "https://www.smashingmagazine.com/"
 skillLevel: ['Beginner', 'Moderate', 'Advanced']

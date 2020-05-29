@@ -1,5 +1,5 @@
 ---
-title: "Khan Academy"
+name: "Khan Academy"
 format: "Interactive"
 url: "https://www.khanacademy.org/computing"
 skillLevel: ['Beginner', 'Moderate']

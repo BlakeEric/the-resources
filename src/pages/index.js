@@ -26,9 +26,9 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            title
+            name
             format
-            focus
+            focus            
             skillLevel
           }
           fields {

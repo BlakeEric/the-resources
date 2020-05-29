@@ -1,5 +1,5 @@
 ---
-title: "Watch and Code"
+name: "Watch and Code"
 format: "Video"
 url: "https://watchandcode.com/"
 skillLevel: ['Beginner']

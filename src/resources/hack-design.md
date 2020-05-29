@@ -1,5 +1,5 @@
 ---
-title: "Hack Design"
+name: "Hack Design"
 format: "Article"
 url: "https://hackdesign.org/"
 skillLevel: ['Beginner', 'Moderate']

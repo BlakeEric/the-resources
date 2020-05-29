@@ -1,5 +1,5 @@
 ---
-title: "Computer Science Illustrated"
+name: "Computer Science Illustrated"
 format: "Graphic"
 url: "http://csillustrated.berkeley.edu/index.php"
 skillLevel: ['Moderate', 'Advanced']

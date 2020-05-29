@@ -1,5 +1,5 @@
 ---
-title: "Increment"
+name: "Increment"
 format: "Article"
 url: "https://increment.com/"
 skillLevel: ['Moderate', 'Advanced']

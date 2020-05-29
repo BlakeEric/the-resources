@@ -1,5 +1,5 @@
 ---
-title: "CSS Tricks"
+name: "CSS Tricks"
 format: "Article"
 url: "https://css-tricks.com/"
 skillLevel: ['Beginner', 'Moderate', 'Advanced']

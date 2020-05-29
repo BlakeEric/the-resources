@@ -1,5 +1,5 @@
 ---
-title: "Codecademy"
+name: "Codecademy"
 format: "Interactive"
 url: "https://www.codecademy.com/"
 skillLevel: ['Beginner', 'Moderate']

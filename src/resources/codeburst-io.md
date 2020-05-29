@@ -1,5 +1,5 @@
 ---
-title: "codeburst.io"
+name: "codeburst.io"
 format: "Article"
 url: "https://codeburst.io/"
 skillLevel: ['Beginner', 'Moderate', 'Advanced']

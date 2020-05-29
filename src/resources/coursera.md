@@ -1,5 +1,5 @@
 ---
-title: "Coursera"
+name: "Coursera"
 format: "MOOC"
 url: "https://www.coursera.org/"
 skillLevel: ['Beginner', 'Moderate']

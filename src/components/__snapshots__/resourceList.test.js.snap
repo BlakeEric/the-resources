@@ -1,63 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ResourceList Initial render renders correctly when no resources passed in 1`] = `
-<table
+<section
   id="resources"
 >
-  <thead>
-    <tr>
-      <th
-        className="active"
-      >
-        <button
-          onClick={[Function]}
-        >
-          Name 
-          ↓
-        </button>
-      </th>
-      <th
-        className=""
-      >
-        <button
-          onClick={[Function]}
-        >
-          Focus 
-          
-        </button>
-      </th>
-      <th
-        className=""
-      >
-        <button
-          onClick={[Function]}
-        >
-          Skill Level 
-          
-        </button>
-      </th>
-      <th
-        className=""
-      >
-        <button
-          onClick={[Function]}
-        >
-          Format 
-          
-        </button>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td
-        colspan="4"
-      >
-        Nothing found matching your search.
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <h4>
+    Something went wrong :(
+  </h4>
+  <p>
+    We are unable to retrieve resources at this time.
+  </p>
+</section>
 `;
 
 exports[`ResourceList Initial render renders correctly when resources passed in 1`] = `
@@ -72,7 +25,8 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
         <button
           onClick={[Function]}
         >
-          Name 
+          Name
+           
           ↓
         </button>
       </th>
@@ -82,7 +36,8 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
         <button
           onClick={[Function]}
         >
-          Focus 
+          Format
+           
           
         </button>
       </th>
@@ -92,7 +47,8 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
         <button
           onClick={[Function]}
         >
-          Skill Level 
+          Focus
+           
           
         </button>
       </th>
@@ -102,7 +58,8 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
         <button
           onClick={[Function]}
         >
-          Format 
+          Skill Level
+           
           
         </button>
       </th>
@@ -112,9 +69,9 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
     <tr>
       <td>
         <a
-          href="/a-list-apart/"
+          href="/alligator/"
         >
-          A-Title
+          Alligator
         </a>
       </td>
       <td>
@@ -130,9 +87,9 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
     <tr>
       <td>
         <a
-          href="/scrimba/"
+          href="/badger/"
         >
-          B-Title
+          Badger
         </a>
       </td>
       <td>
@@ -148,9 +105,9 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
     <tr>
       <td>
         <a
-          href="/smashing-magazine/"
+          href="/caterpillar/"
         >
-          C-Title
+          Caterpillar
         </a>
       </td>
       <td>
@@ -166,9 +123,9 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
     <tr>
       <td>
         <a
-          href="/the-odin-project/"
+          href="/dolphin/"
         >
-          D-Title
+          Dolphin
         </a>
       </td>
       <td>
@@ -184,9 +141,9 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
     <tr>
       <td>
         <a
-          href="/watch-and-code/"
+          href="/elephant/"
         >
-          E-Title
+          Elephant
         </a>
       </td>
       <td>

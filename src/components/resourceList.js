@@ -55,6 +55,10 @@ export default class ResourceList extends React.Component {
    * Otherwise sets orderBy value to new key
    */
   setFilterBy = (key) => {
+    if (!this.state.isFilterable) {
+      return;
+    }
+
     if (this.state.orderBy === key) {
       this.reverseOrder();
     } else {
@@ -199,10 +203,3 @@ export default class ResourceList extends React.Component {
 ResourceList.defaultProps = {
   resources: []
 }
-
-// String.prototype.toCamelCase = function() {
-//     return this.replace(/^([A-Z])|\s(\w)/g, function(match, p1, p2, offset) {
-//         if (p2) return p2.toUpperCase();
-//         return p1.toLowerCase();
-//     });
-// };

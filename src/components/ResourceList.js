@@ -31,6 +31,7 @@ export default class ResourceList extends React.Component {
   reverseOrder = () => {
     let currentOrder = this.state.order;
     let order;
+
     if (currentOrder === "DESC") {
       order = "ASC"
     } else {
@@ -243,7 +244,10 @@ export default class ResourceList extends React.Component {
 
 
 ResourceList.defaultProps = {
-  resources: []
+  resources: [],
+  skillLevels: [],
+  formats:[],
+  focuses: []
 }
 
 

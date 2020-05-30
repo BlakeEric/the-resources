@@ -5,12 +5,11 @@ import Layout from "../components/Layout"
 import ResourceList from "../components/ResourceList"
 
 export default function Home({ data }) {
-  console.log(data)
   return (
     <Layout>
       <header style={{textAlign: "center", padding: `${rhythm(3)} 0`}}>
         <h2>One-up your coding skills and industry knowhow using these great tools, courses, and articles.</h2>
-        <p><a href="#resources"><strong>View the resources</strong></a> or <a href="mailto:blake@blakelundquist.dev"><strong>recommend a resource</strong></a></p>
+        <p><a href="#resources">View the resources</a> or <a href="mailto:blake@blakelundquist.dev">recommend a resource</a></p>
       </header>
       <main>
         <ResourceList

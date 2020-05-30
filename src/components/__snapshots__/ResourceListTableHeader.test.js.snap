@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResourceListTableHeader Adds appropriate className and icon to current orderBy key 1`] = `
+<thead>
+  <tr>
+    <th
+      className=""
+    >
+      <button
+        onClick={[Function]}
+      >
+        Name
+         
+        
+      </button>
+    </th>
+    <th
+      className="active"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Skill Level
+         
+        ↑
+      </button>
+    </th>
+    <th
+      className=""
+    >
+      <button
+        onClick={[Function]}
+      >
+        Format
+         
+        
+      </button>
+    </th>
+    <th
+      className=""
+    >
+      <button
+        onClick={[Function]}
+      >
+        Focus
+         
+        
+      </button>
+    </th>
+  </tr>
+</thead>
+`;
+
+exports[`ResourceListTableHeader renders correctly 1`] = `
+<thead>
+  <tr>
+    <th
+      className="active"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Name
+         
+        ↓
+      </button>
+    </th>
+    <th
+      className=""
+    >
+      <button
+        onClick={[Function]}
+      >
+        Skill Level
+         
+        
+      </button>
+    </th>
+    <th
+      className=""
+    >
+      <button
+        onClick={[Function]}
+      >
+        Format
+         
+        
+      </button>
+    </th>
+    <th
+      className=""
+    >
+      <button
+        onClick={[Function]}
+      >
+        Focus
+         
+        
+      </button>
+    </th>
+  </tr>
+</thead>
+`;

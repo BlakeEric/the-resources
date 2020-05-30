@@ -5,6 +5,7 @@ import Layout from "../components/Layout"
 import ResourceList from "../components/ResourceList"
 
 export default function Home({ data }) {
+  console.log(data)
   return (
     <Layout>
       <header style={{textAlign: "center", padding: `${rhythm(3)} 0`}}>
@@ -12,7 +13,12 @@ export default function Home({ data }) {
         <p><a href="#resources"><strong>View the resources</strong></a> or <a href="mailto:blake@blakelundquist.dev"><strong>recommend a resource</strong></a></p>
       </header>
       <main>
-        <ResourceList resources={data.allMarkdownRemark.edges} />
+        <ResourceList
+          resources={data.resources.edges}
+          formats={data.formatData.distinct}
+          focuses={data.focusData.distinct}
+          skillLevels={data.skillLevelData.distinct}
+        />
       </main>
     </Layout>
   )
@@ -20,7 +26,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [fields___slug], order: ASC }) {
+    resources: allMarkdownRemark(sort: { fields: [fields___slug], order: ASC }) {
       totalCount
       edges {
         node {
@@ -28,7 +34,7 @@ export const query = graphql`
           frontmatter {
             name
             format
-            focus            
+            focus
             skillLevel
           }
           fields {
@@ -36,6 +42,15 @@ export const query = graphql`
           }
         }
       }
+    },
+    focusData: allMarkdownRemark {
+      distinct(field: frontmatter___focus)
+    },
+    formatData: allMarkdownRemark {
+      distinct(field: frontmatter___format)
+    }
+    skillLevelData: allMarkdownRemark {
+      distinct(field: frontmatter___skillLevel)
     }
   }
 `

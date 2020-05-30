@@ -6,6 +6,13 @@ import getResourcesResponse from '../__fixtures__/getResourcesResponse'
 
 import ResourceList from "./ResourceList"
 
+const mockProps = {
+  resources: getResourcesResponse,
+  skillLevels: ["Beginner", "Moderate", "Advanced"],
+  focuses: ["Front-end", "Multiple", "Algorithms"],
+  formats: ['Article', 'Interactive', 'Tutorial', 'Video']
+}
+
 describe("ResourceList", () => {
 
   /*
@@ -21,13 +28,13 @@ describe("ResourceList", () => {
 
     it("renders correctly when resources passed in", () => {
       const tree = renderer
-        .create(<ResourceList resources={getResourcesResponse} />)
+        .create(<ResourceList {...mockProps} />)
         .toJSON()
       expect(tree).toMatchSnapshot()
     })
 
     it("orders ASC by name on initial render", () => {
-      const wrapper = mount(<ResourceList resources={getResourcesResponse} />)
+      const wrapper = mount(<ResourceList {...mockProps} />)
 
       expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
     });
@@ -39,7 +46,7 @@ describe("ResourceList", () => {
   */
   describe('When sorting by name', () => {
     it("toggles between DESC and ASC ordering by NAME on when appropriate button is clicked", () => {
-      const wrapper = mount(<ResourceList resources={getResourcesResponse} />)
+      const wrapper = mount(<ResourceList {...mockProps} />)
 
       expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
 
@@ -67,7 +74,7 @@ describe("ResourceList", () => {
   */
   describe('When sorting by Format', () => {
     it("toggles between DESC and ASC ordering by FORMAT on when appropriate button is clicked", () => {
-      const wrapper = mount(<ResourceList resources={getResourcesResponse} />)
+      const wrapper = mount(<ResourceList {...mockProps} />)
 
       expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
 
@@ -96,7 +103,7 @@ describe("ResourceList", () => {
   */
   describe('When sorting by Focus', () => {
     it("toggles between DESC and ASC ordering by FOCUS on when appropriate button is clicked", () => {
-      const wrapper = mount(<ResourceList resources={getResourcesResponse} />)
+      const wrapper = mount(<ResourceList {...mockProps} />)
 
       expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
 
@@ -124,7 +131,7 @@ describe("ResourceList", () => {
   */
   describe('When sorting by Skill Level', () => {
     it("toggles between DESC and ASC ordering by SKILL LEVEL on when appropriate button is clicked", () => {
-      const wrapper = mount(<ResourceList resources={getResourcesResponse} />)
+      const wrapper = mount(<ResourceList {...mockProps} />)
 
       expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
 
@@ -147,6 +154,94 @@ describe("ResourceList", () => {
     });
   });
 
+
+  /*
+  * Filtering by Name
+  */
+  describe('When filtering by name', () => {
+    it("displays only items with Names containing the search term", () => {
+      const wrapper = mount(<ResourceList {...mockProps} />)
+
+      // Five items should be rendered
+      expect(wrapper.find('tbody > tr').length).toEqual(5);
+
+      // The "skillLevel" filter button
+      const field = wrapper.find('input#searchTerm').first()
+
+      field.instance().value = "Elephant";
+      field.simulate('change');
+      wrapper.update();
+
+      // Only two items should remain after filtering
+      expect(wrapper.find('tbody > tr').length).toEqual(1);
+    });
+  });
+
+  /*
+  * Filtering by skillLevel
+  */
+  describe('When filtering by Skill Level', () => {
+    it("displays only items with skill levels containing the selection", () => {
+      const wrapper = mount(<ResourceList {...mockProps} />)
+
+      // Five items should be rendered
+      expect(wrapper.find('tbody > tr').length).toEqual(5);
+
+      // The "skillLevel" filter button
+      const field = wrapper.find('select#resourceSkillLevel').first()
+
+      field.instance().value = "Advanced";
+      field.simulate('change');
+      wrapper.update();
+
+      // Only two items should remain after filtering
+      expect(wrapper.find('tbody > tr').length).toEqual(2);
+    });
+  });
+
+  /*
+  * Filtering by format
+  */
+  describe('When filtering by Format', () => {
+    it("displays only items with formats containing the selection", () => {
+      const wrapper = mount(<ResourceList {...mockProps} />)
+
+      // Five items should be rendered
+      expect(wrapper.find('tbody > tr').length).toEqual(5);
+
+      // The "skillLevel" filter button
+      const field = wrapper.find('select#resourceFormat').first()
+
+      field.instance().value = "Tutorial";
+      field.simulate('change');
+      wrapper.update();
+
+      // Only two items should remain after filtering
+      expect(wrapper.find('tbody > tr').length).toEqual(1);
+    });
+  });
+
+  /*
+  * Filtering by focus
+  */
+  describe('When filtering by Focus', () => {
+    it("displays only items with formats containing the selection", () => {
+      const wrapper = mount(<ResourceList {...mockProps} />)
+
+      // Five items should be rendered
+      expect(wrapper.find('tbody > tr').length).toEqual(5);
+
+      // The "skillLevel" filter button
+      const field = wrapper.find('select#resourceFocus').first()
+
+      field.instance().value = "Front-end";
+      field.simulate('change');
+      wrapper.update();
+
+      // Only two items should remain after filtering
+      expect(wrapper.find('tbody > tr').length).toEqual(2);
+    });
+  });
 
 
 })

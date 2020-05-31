@@ -14,131 +14,253 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
 `;
 
 exports[`ResourceList Initial render renders correctly when resources passed in 1`] = `
-<div>
-  <form>
-    <h3>
-      Filter!
-    </h3>
-    <label
-      htmlFor="searchTerm"
-    >
-      Name
-      <input
-        aria-label="Name"
-        id="searchTerm"
-        name="searchTerm"
-        onChange={[Function]}
-        placeholder="search resources"
-        type="text"
-        value=""
-      />
-    </label>
-    <label
-      htmlFor="resourceSkillLevel"
-    >
-      Skill Level
-    </label>
-    <select
-      id="resourceSkillLevel"
-      name="resourceSkillLevel"
-      onChange={[Function]}
-      value=""
-    >
-      <option
-        value=""
+<div
+  css={
+    Object {
+      "map": undefined,
+      "name": "1dkqq1o",
+      "next": undefined,
+      "styles": "max-width: 100%; min-height: 500px",
+      "toString": [Function],
+    }
+  }
+>
+  <form
+    css={
+      Object {
+        "map": undefined,
+        "name": "3r6u4d",
+        "next": undefined,
+        "styles": "
+  font-size: 0.8855rem;
+  margin: auto -0.805rem;
+  fieldset {
+    color: white;
+    border-radius: 5px;
+    background-color: #0acc9e;
+    background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+    padding: 0.4025rem;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+    legend {
+      width: 100%;
+      float: left;
+      padding: 0 0.4025rem;
+      font-size: 0.805rem;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      border-radius: 5px;
+      text-transform: uppercase;
+      button.btn-clearFilters {
+        margin-left: 12px;
+        display: inline;
+        padding: 2px .25rem;
+        color: #b90000;
+        border: 1px solid #b90000;
+        border-radius: 3px;
+        background: white;
+        font-size: 0.805rem;
+        line-height: 1;
+        &:hover, &:focus {
+          color: #800000;
+          border: 1px solid #800000;
+        }
+      }
+    }
+  }
+  label {
+    width: 50%;
+    display: inline-block;
+    padding: 0.4025rem;
+    @media (min-width: 600px) {
+      width: 25%;
+    }
+  }
+  input, select {
+    width: 100%;
+    height: 30px;
+    border-color: white;
+    box-shadow: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1.5px solid white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+  }
+",
+        "toString": [Function],
+      }
+    }
+  >
+    <fieldset>
+      <legend>
+        Filter
+      </legend>
+      <label
+        htmlFor="searchTerm"
       >
-        All
-      </option>
-      <option
-        value="Beginner"
+        Name
+        <input
+          aria-label="Name"
+          id="searchTerm"
+          name="searchTerm"
+          onChange={[Function]}
+          placeholder="Start typing..."
+          type="text"
+          value=""
+        />
+      </label>
+      <label
+        htmlFor="resourceFormat"
       >
-        Beginner
-      </option>
-      <option
-        value="Moderate"
+        Format
+        <select
+          id="resourceFormat"
+          name="resourceFormat"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            value="Article"
+          >
+            Article
+          </option>
+          <option
+            value="Interactive"
+          >
+            Interactive
+          </option>
+          <option
+            value="Tutorial"
+          >
+            Tutorial
+          </option>
+          <option
+            value="Video"
+          >
+            Video
+          </option>
+        </select>
+      </label>
+      <label
+        htmlFor="resourceFocus"
       >
-        Moderate
-      </option>
-      <option
-        value="Advanced"
+        Focus
+        <select
+          id="resourceFocus"
+          name="resourceFocus"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            value="Front-end"
+          >
+            Front-end
+          </option>
+          <option
+            value="Multiple"
+          >
+            Multiple
+          </option>
+          <option
+            value="Algorithms"
+          >
+            Algorithms
+          </option>
+        </select>
+      </label>
+      <label
+        htmlFor="resourceSkillLevel"
       >
-        Advanced
-      </option>
-    </select>
-    <label
-      htmlFor="resourceFormat"
-    >
-      Format
-    </label>
-    <select
-      id="resourceFormat"
-      name="resourceFormat"
-      onChange={[Function]}
-      value=""
-    >
-      <option
-        value=""
-      >
-        All
-      </option>
-      <option
-        value="Article"
-      >
-        Article
-      </option>
-      <option
-        value="Interactive"
-      >
-        Interactive
-      </option>
-      <option
-        value="Tutorial"
-      >
-        Tutorial
-      </option>
-      <option
-        value="Video"
-      >
-        Video
-      </option>
-    </select>
-    <label
-      htmlFor="resourceFocus"
-    >
-      Focus
-    </label>
-    <select
-      id="resourceFocus"
-      name="resourceFocus"
-      onChange={[Function]}
-      value=""
-    >
-      <option
-        value=""
-      >
-        All
-      </option>
-      <option
-        value="Front-end"
-      >
-        Front-end
-      </option>
-      <option
-        value="Multiple"
-      >
-        Multiple
-      </option>
-      <option
-        value="Algorithms"
-      >
-        Algorithms
-      </option>
-    </select>
+        Skill Level
+        <select
+          id="resourceSkillLevel"
+          name="resourceSkillLevel"
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            value="Beginner"
+          >
+            Beginner
+          </option>
+          <option
+            value="Moderate"
+          >
+            Moderate
+          </option>
+          <option
+            value="Advanced"
+          >
+            Advanced
+          </option>
+        </select>
+      </label>
+    </fieldset>
   </form>
   <table
     id="resources"
   >
-    <thead>
+    <thead
+      css={
+        Object {
+          "map": undefined,
+          "name": "1soaygs",
+          "next": undefined,
+          "styles": "
+  thead{
+    padding: 20px;
+  }
+  th {
+    font-family: Lato,sans-serif;
+  }
+  th button {
+    background: white;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+  th.active button {
+    font-weight: 400;
+    background-color: #0acc9e;
+    background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+    color: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+    padding: 0 0.4025rem;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+  th {
+    width: 25%;
+    padding-top: 0.25rem;
+    padding-bottom: calc(0.25rem - 1px);
+  }
+",
+          "toString": [Function],
+        }
+      }
+    >
       <tr>
         <th
           className="active"

@@ -165,7 +165,7 @@ describe("ResourceList", () => {
       // Five items should be rendered
       expect(wrapper.find('tbody > tr').length).toEqual(5);
 
-      // The "skillLevel" filter button
+      // The "search term" input
       const field = wrapper.find('input#searchTerm').first()
 
       field.instance().value = "Elephant";
@@ -209,7 +209,7 @@ describe("ResourceList", () => {
       // Five items should be rendered
       expect(wrapper.find('tbody > tr').length).toEqual(5);
 
-      // The "skillLevel" filter button
+      // The "format" filter button
       const field = wrapper.find('select#resourceFormat').first()
 
       field.instance().value = "Tutorial";
@@ -231,6 +231,27 @@ describe("ResourceList", () => {
       // Five items should be rendered
       expect(wrapper.find('tbody > tr').length).toEqual(5);
 
+      // The "focus" filter button
+      const field = wrapper.find('select#resourceFocus').first()
+
+      field.instance().value = "Front-end";
+      field.simulate('change');
+      wrapper.update();
+
+      // Only two items should remain after filtering
+      expect(wrapper.find('tbody > tr').length).toEqual(2);
+    });
+  });
+
+
+  /*
+  * Clearing filters
+  */
+  describe('When filtering by Focus', () => {
+    it("displays all items when 'Clear filter' button is clicked", () => {
+
+      const wrapper = mount(<ResourceList {...mockProps} />)
+
       // The "skillLevel" filter button
       const field = wrapper.find('select#resourceFocus').first()
 
@@ -240,6 +261,15 @@ describe("ResourceList", () => {
 
       // Only two items should remain after filtering
       expect(wrapper.find('tbody > tr').length).toEqual(2);
+
+      // Simulate "clear filters" click
+      const button = wrapper.find('.btn-clearFilters').first()
+      button.simulate('click');
+      wrapper.update();
+
+      // All items should be showing again
+      expect(wrapper.find('tbody > tr').length).toEqual(5);
+
     });
   });
 

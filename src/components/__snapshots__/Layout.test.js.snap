@@ -5,14 +5,20 @@ exports[`Layout renders correctly 1`] = `
   css={
     Object {
       "map": undefined,
-      "name": "20zhf7",
+      "name": "vi9d7b",
       "next": undefined,
       "styles": "
-      margin: 0 auto;
-      max-width: 900px;
-      padding: 2.9rem;
-      padding-top: 2.175rem;
-    ",
+  margin: 0.805rem auto;
+  max-width: 900px;
+  padding: 1.61rem 0.805rem;
+  background: white;
+  @media (min-width: 600px) {
+    padding: 2.415rem;
+  }
+  .page {
+    min-height: 60vh;
+  }
+",
       "toString": [Function],
     }
   }
@@ -25,10 +31,10 @@ exports[`Layout renders correctly 1`] = `
         css={
           Object {
             "map": undefined,
-            "name": "zxaqga",
+            "name": "kgn0fp",
             "next": undefined,
             "styles": "
-            margin-bottom: 2.9rem;
+            margin-bottom: 3.22rem;
             display: inline-block;
             font-style: normal;
           ",
@@ -56,57 +62,47 @@ exports[`Layout renders correctly 1`] = `
       About
     </a>
   </nav>
+  <div
+    className="page"
+  />
   <footer
     css={
       Object {
         "map": undefined,
-        "name": "1cje3u9",
+        "name": "1vkm4mx",
         "next": undefined,
         "styles": "
-        padding-top: 1.45rem;
-        margin-top: 2.9rem;
-        border-top: 1px solid hsla(0,0%,0%,0.12);
-        font-size: 0.83375rem;
-        @media (min-width: 600px) {
-          display: flex;
-          justify-content: space-between;
-        }
-      ",
+  margin-top: 3.22rem;
+  font-size: 0.92575rem;
+  @media (min-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  span {
+    display: inline-block;
+    margin-bottom: 0.4025rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    @media (min-width: 600px) {
+     text-align: right;
+    }
+    li {
+      margin-bottom: 0.4025rem;
+      line-height: 1.25;
+    }
+  }
+",
         "toString": [Function],
       }
     }
   >
-    <span
-      css={
-        Object {
-          "map": undefined,
-          "name": "1qkad9s",
-          "next": undefined,
-          "styles": "display: inline-block; margin-bottom: 0.725rem;",
-          "toString": [Function],
-        }
-      }
-    >
+    <span>
       ©Blake Lundquist 
       2020
     </span>
-    <ul
-      css={
-        Object {
-          "map": undefined,
-          "name": "1ir09ca",
-          "next": undefined,
-          "styles": "
-          list-style: none;
-          margin: 0;
-          @media (min-width: 600px) {
-           text-align: right;
-          }
-        ",
-          "toString": [Function],
-        }
-      }
-    >
+    <ul>
       <li>
         <a
           href="mailto:blake@blakelundquist.dev"
@@ -133,14 +129,20 @@ exports[`Layout renders correctly with children 1`] = `
   css={
     Object {
       "map": undefined,
-      "name": "20zhf7",
+      "name": "vi9d7b",
       "next": undefined,
       "styles": "
-      margin: 0 auto;
-      max-width: 900px;
-      padding: 2.9rem;
-      padding-top: 2.175rem;
-    ",
+  margin: 0.805rem auto;
+  max-width: 900px;
+  padding: 1.61rem 0.805rem;
+  background: white;
+  @media (min-width: 600px) {
+    padding: 2.415rem;
+  }
+  .page {
+    min-height: 60vh;
+  }
+",
       "toString": [Function],
     }
   }
@@ -153,10 +155,10 @@ exports[`Layout renders correctly with children 1`] = `
         css={
           Object {
             "map": undefined,
-            "name": "zxaqga",
+            "name": "kgn0fp",
             "next": undefined,
             "styles": "
-            margin-bottom: 2.9rem;
+            margin-bottom: 3.22rem;
             display: inline-block;
             font-style: normal;
           ",
@@ -184,62 +186,53 @@ exports[`Layout renders correctly with children 1`] = `
       About
     </a>
   </nav>
-  <main>
-    <h1>
-      I'm a child!
-    </h1>
-  </main>
+  <div
+    className="page"
+  >
+    <main>
+      <h1>
+        I'm a child!
+      </h1>
+    </main>
+  </div>
   <footer
     css={
       Object {
         "map": undefined,
-        "name": "1cje3u9",
+        "name": "1vkm4mx",
         "next": undefined,
         "styles": "
-        padding-top: 1.45rem;
-        margin-top: 2.9rem;
-        border-top: 1px solid hsla(0,0%,0%,0.12);
-        font-size: 0.83375rem;
-        @media (min-width: 600px) {
-          display: flex;
-          justify-content: space-between;
-        }
-      ",
+  margin-top: 3.22rem;
+  font-size: 0.92575rem;
+  @media (min-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  span {
+    display: inline-block;
+    margin-bottom: 0.4025rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    @media (min-width: 600px) {
+     text-align: right;
+    }
+    li {
+      margin-bottom: 0.4025rem;
+      line-height: 1.25;
+    }
+  }
+",
         "toString": [Function],
       }
     }
   >
-    <span
-      css={
-        Object {
-          "map": undefined,
-          "name": "1qkad9s",
-          "next": undefined,
-          "styles": "display: inline-block; margin-bottom: 0.725rem;",
-          "toString": [Function],
-        }
-      }
-    >
+    <span>
       ©Blake Lundquist 
       2020
     </span>
-    <ul
-      css={
-        Object {
-          "map": undefined,
-          "name": "1ir09ca",
-          "next": undefined,
-          "styles": "
-          list-style: none;
-          margin: 0;
-          @media (min-width: 600px) {
-           text-align: right;
-          }
-        ",
-          "toString": [Function],
-        }
-      }
-    >
+    <ul>
       <li>
         <a
           href="mailto:blake@blakelundquist.dev"

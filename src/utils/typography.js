@@ -1,7 +1,8 @@
 import Typography from "typography"
-import altonTheme from "typography-theme-alton"
+import noriegaTheme from "typography-theme-noriega"
 
-const typography = new Typography({...altonTheme,
+const typography = new Typography({
+  ...noriegaTheme,
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
     'a': {
       color: "#1779ba"

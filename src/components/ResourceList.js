@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Global, css } from '@emotion/core'
-import typography from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import ResourceListTableHeader from './ResourceListTableHeader'
 import ResourceListFilters from './ResourceListFilters'
 
@@ -111,6 +111,19 @@ export default class ResourceList extends React.Component {
 
 
   /*
+   * Clear all selected filters from state
+   */
+  clearFilters = () => {
+    this.setState({
+      searchTerm: null,
+      selectedSkillLevel: null,
+      selectedFormat: null,
+      selectedFocus: null
+    })
+  }
+
+
+  /*
    * Filter the resources based on orderBy and search values set in state
    * Return reordered array
    */
@@ -185,7 +198,7 @@ export default class ResourceList extends React.Component {
     }
 
     return (
-      <div>
+      <div css={css`max-width: 100%; min-height: 500px`}>
         <Global styles={styles} />
 
         {this.state.isFilterable ?
@@ -199,6 +212,7 @@ export default class ResourceList extends React.Component {
             formats={this.props.formats}
             focuses={this.props.focuses}
             searchTerm={this.state.searchTerm}
+            clearFilters={this.clearFilters}
           />
         : ''}
 
@@ -213,7 +227,7 @@ export default class ResourceList extends React.Component {
             {this.filter().length === 0 ?
               <tr>
                 <td colSpan="4">
-                  Nothing found matching your search.
+                  <span className="notFoundMessage">Nothing found matching your search.</span>
                 </td>
               </tr>
             : this.filter().map(({ node }) => (
@@ -254,23 +268,25 @@ ResourceList.defaultProps = {
 
 const styles = css`
   table {
-    font-size: ${typography.rhythm(.575)};
+    font-size: ${rhythm(.525)};
+    overflow-x: scroll;
+    max-width: 100%;
   }
-  th {
-    font-family: ${typography.options.headerFontFamily.toString()};
+  thead {
+    padding: 20px;
   }
-  th button {
-    background: white;
-    padding: 0;
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-  }
-  th.active button {
-    background: lightgreen;
-  }
-  th, td {
+  td {
+    width: 25%;
     padding-top: 0.25rem;
     padding-bottom: calc(0.25rem - 1px);
+  }
+  td span.notFoundMessage {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
+  td a {
+    display: inline-block;
+    line-height: 1.25;
   }
 `

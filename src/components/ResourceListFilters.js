@@ -91,7 +91,7 @@ const styles = css`
     position: sticky;
     top: 0;
     z-index: 10000;
-  }  
+  }
   fieldset {
     color: white;
     border-radius: 5px;
@@ -138,6 +138,7 @@ const styles = css`
     width: 100%;
     height: 30px;
     border-color: white;
+    background: white;
     box-shadow: none;
     border-radius: 5px;
     padding-left: 5px;

@@ -174,8 +174,14 @@ export default class ResourceList extends React.Component {
     // Sort the items alphabetically by "orderBy" key set in state.
     // Will sort in ASC order by default, or DESC if set as "order" value in state
     filteredItems.sort((current, next) => {
+
       let currentField = current.node.frontmatter[key].toString().toLowerCase();
       let nextField = next.node.frontmatter[key].toString().toLowerCase();
+
+      if (key === "skillLevel") {
+        currentField = currentField.replace("beginner,moderate,advanced", "all");
+        nextField = nextField.replace("beginner,moderate,advanced", "all");
+      }
 
       return this.compareFields(currentField, nextField)
 

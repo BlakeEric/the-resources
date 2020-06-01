@@ -105,7 +105,7 @@ exports[`Layout renders correctly 1`] = `
     <ul>
       <li>
         <a
-          href="mailto:blake@blakelundquist.dev"
+          href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!"
         >
           Recommend a resource
         </a>
@@ -235,7 +235,7 @@ exports[`Layout renders correctly with children 1`] = `
     <ul>
       <li>
         <a
-          href="mailto:blake@blakelundquist.dev"
+          href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!"
         >
           Recommend a resource
         </a>

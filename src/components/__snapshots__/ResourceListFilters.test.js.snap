@@ -5,16 +5,21 @@ exports[`ResourceListFilters Adds selected values to appropriate fields 1`] = `
   css={
     Object {
       "map": undefined,
-      "name": "3r6u4d",
+      "name": "1fcyd7",
       "next": undefined,
       "styles": "
   font-size: 0.8855rem;
   margin: auto -0.805rem;
+  @media (min-width: 600px) {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+  }  
   fieldset {
     color: white;
     border-radius: 5px;
-    background-color: #0acc9e;
-    background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+    background-color: #6aa7fa;
+    background-image: linear-gradient(to bottom right, #6aa7fa, #7b4caf);
     padding: 0.4025rem;
     border: none;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
@@ -31,15 +36,15 @@ exports[`ResourceListFilters Adds selected values to appropriate fields 1`] = `
         margin-left: 12px;
         display: inline;
         padding: 2px .25rem;
-        color: #b90000;
-        border: 1px solid #b90000;
+        background-color: #0acc9e;
+        background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+        border: 1px solid transparent;
+        color: white;
         border-radius: 3px;
-        background: white;
         font-size: 0.805rem;
         line-height: 1;
         &:hover, &:focus {
-          color: #800000;
-          border: 1px solid #800000;
+          border: 1px solid #048e6d;
         }
       }
     }
@@ -201,16 +206,21 @@ exports[`ResourceListFilters renders correctly 1`] = `
   css={
     Object {
       "map": undefined,
-      "name": "3r6u4d",
+      "name": "1fcyd7",
       "next": undefined,
       "styles": "
   font-size: 0.8855rem;
   margin: auto -0.805rem;
+  @media (min-width: 600px) {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+  }  
   fieldset {
     color: white;
     border-radius: 5px;
-    background-color: #0acc9e;
-    background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+    background-color: #6aa7fa;
+    background-image: linear-gradient(to bottom right, #6aa7fa, #7b4caf);
     padding: 0.4025rem;
     border: none;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
@@ -227,15 +237,15 @@ exports[`ResourceListFilters renders correctly 1`] = `
         margin-left: 12px;
         display: inline;
         padding: 2px .25rem;
-        color: #b90000;
-        border: 1px solid #b90000;
+        background-color: #0acc9e;
+        background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+        border: 1px solid transparent;
+        color: white;
         border-radius: 3px;
-        background: white;
         font-size: 0.805rem;
         line-height: 1;
         &:hover, &:focus {
-          color: #800000;
-          border: 1px solid #800000;
+          border: 1px solid #048e6d;
         }
       }
     }

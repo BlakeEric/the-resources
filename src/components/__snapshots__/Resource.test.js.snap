@@ -4,8 +4,9 @@ exports[`Resource renders correctly not toggled 1`] = `
 <tr>
   <td>
     <a
-      href="#resources"
       onClick={[Function]}
+      rel="noreferrer noopener"
+      target="_blank"
     >
       Alligator
     </a>
@@ -26,8 +27,9 @@ exports[`Resource renders correctly when toggled 1`] = `
 <tr>
   <td>
     <a
-      href="#resources"
       onClick={[Function]}
+      rel="noreferrer noopener"
+      target="_blank"
     >
       Alligator
     </a>
@@ -100,7 +102,10 @@ exports[`Resource renders correctly when toggled 1`] = `
             }
           }
         />
-        <a>
+        <a
+          rel="noreferrer noopener"
+          target="_blank"
+        >
           View Now
         </a>
       </aside>

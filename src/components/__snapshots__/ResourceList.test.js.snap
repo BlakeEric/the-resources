@@ -18,9 +18,9 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
   css={
     Object {
       "map": undefined,
-      "name": "1dkqq1o",
+      "name": "g1m8u0",
       "next": undefined,
-      "styles": "max-width: 100%; min-height: 500px",
+      "styles": "min-height: 500px",
       "toString": [Function],
     }
   }
@@ -29,16 +29,21 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
     css={
       Object {
         "map": undefined,
-        "name": "3r6u4d",
+        "name": "1fcyd7",
         "next": undefined,
         "styles": "
   font-size: 0.8855rem;
   margin: auto -0.805rem;
+  @media (min-width: 600px) {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+  }  
   fieldset {
     color: white;
     border-radius: 5px;
-    background-color: #0acc9e;
-    background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+    background-color: #6aa7fa;
+    background-image: linear-gradient(to bottom right, #6aa7fa, #7b4caf);
     padding: 0.4025rem;
     border: none;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
@@ -55,15 +60,15 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
         margin-left: 12px;
         display: inline;
         padding: 2px .25rem;
-        color: #b90000;
-        border: 1px solid #b90000;
+        background-color: #0acc9e;
+        background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+        border: 1px solid transparent;
+        color: white;
         border-radius: 3px;
-        background: white;
         font-size: 0.805rem;
         line-height: 1;
         &:hover, &:focus {
-          color: #800000;
-          border: 1px solid #800000;
+          border: 1px solid #048e6d;
         }
       }
     }
@@ -213,16 +218,17 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
       </label>
     </fieldset>
   </form>
-  <table
-    id="resources"
+  <section
+    className="tableWrap"
   >
-    <thead
-      css={
-        Object {
-          "map": undefined,
-          "name": "1soaygs",
-          "next": undefined,
-          "styles": "
+    <table>
+      <thead
+        css={
+          Object {
+            "map": undefined,
+            "name": "1soaygs",
+            "next": undefined,
+            "styles": "
   thead{
     padding: 20px;
   }
@@ -257,154 +263,160 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
     padding-bottom: calc(0.25rem - 1px);
   }
 ",
-          "toString": [Function],
+            "toString": [Function],
+          }
         }
-      }
-    >
-      <tr>
-        <th
-          className="active"
-        >
-          <button
-            onClick={[Function]}
+      >
+        <tr>
+          <th
+            className="active"
           >
-            Name
-             
-            ↓
-          </button>
-        </th>
-        <th
-          className=""
-        >
-          <button
-            onClick={[Function]}
+            <button
+              onClick={[Function]}
+            >
+              Name
+               
+              ↓
+            </button>
+          </th>
+          <th
+            className=""
           >
-            Format
-             
-            
-          </button>
-        </th>
-        <th
-          className=""
-        >
-          <button
-            onClick={[Function]}
+            <button
+              onClick={[Function]}
+            >
+              Format
+               
+              
+            </button>
+          </th>
+          <th
+            className=""
           >
-            Focus
-             
-            
-          </button>
-        </th>
-        <th
-          className=""
-        >
-          <button
-            onClick={[Function]}
+            <button
+              onClick={[Function]}
+            >
+              Focus
+               
+              
+            </button>
+          </th>
+          <th
+            className=""
           >
-            Skill Level
-             
-            
-          </button>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <a
-            href="#resources"
-            onClick={[Function]}
-          >
-            Alligator
-          </a>
-        </td>
-        <td>
-          Article
-        </td>
-        <td>
-          Front-end
-        </td>
-        <td>
-          All
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="#resources"
-            onClick={[Function]}
-          >
-            Badger
-          </a>
-        </td>
-        <td>
-          Interactive
-        </td>
-        <td>
-          Algorithms
-        </td>
-        <td>
-          Moderate
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="#resources"
-            onClick={[Function]}
-          >
-            Caterpillar
-          </a>
-        </td>
-        <td>
-          Article
-        </td>
-        <td>
-          Multiple
-        </td>
-        <td>
-          Advanced
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="#resources"
-            onClick={[Function]}
-          >
-            Dolphin
-          </a>
-        </td>
-        <td>
-          Tutorial
-        </td>
-        <td>
-          Multiple
-        </td>
-        <td>
-          Beginner, Moderate
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="#resources"
-            onClick={[Function]}
-          >
-            Elephant
-          </a>
-        </td>
-        <td>
-          Video
-        </td>
-        <td>
-          Front-end
-        </td>
-        <td>
-          Beginner
-        </td>
-      </tr>
-    </tbody>
-  </table>
+            <button
+              onClick={[Function]}
+            >
+              Skill Level
+               
+              
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a
+              onClick={[Function]}
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Alligator
+            </a>
+          </td>
+          <td>
+            Article
+          </td>
+          <td>
+            Front-end
+          </td>
+          <td>
+            All
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              onClick={[Function]}
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Badger
+            </a>
+          </td>
+          <td>
+            Interactive
+          </td>
+          <td>
+            Algorithms
+          </td>
+          <td>
+            Moderate
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              onClick={[Function]}
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Caterpillar
+            </a>
+          </td>
+          <td>
+            Article
+          </td>
+          <td>
+            Multiple
+          </td>
+          <td>
+            Advanced
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              onClick={[Function]}
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Dolphin
+            </a>
+          </td>
+          <td>
+            Tutorial
+          </td>
+          <td>
+            Multiple
+          </td>
+          <td>
+            Beginner, Moderate
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              onClick={[Function]}
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Elephant
+            </a>
+          </td>
+          <td>
+            Video
+          </td>
+          <td>
+            Front-end
+          </td>
+          <td>
+            Beginner
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </div>
 `;

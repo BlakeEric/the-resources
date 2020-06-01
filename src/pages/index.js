@@ -69,7 +69,7 @@ const headerStyles = css`
 
 export const query = graphql`
   query {
-    resources: allMarkdownRemark(sort: { fields: [fields___slug], order: ASC }) {
+    resources: allMarkdownRemark(sort: { fields: [frontmatter___name], order: ASC }) {
       totalCount
       edges {
         node {
@@ -81,9 +81,6 @@ export const query = graphql`
             format
             focus
             skillLevel
-          }
-          fields {
-            slug
           }
         }
       }

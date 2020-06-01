@@ -15,11 +15,14 @@ export default function Resource(props) {
     }
   }
 
-
   return (
     <tr key={props.id}>
       <td>
-        <a href="#resources" onClick={(e) => handleClick(e)}>
+        <a
+          href={props.frontmatter.url}
+          onClick={(e) => handleClick(e)}
+          target="_blank" rel="noreferrer noopener"
+        >
           {props.frontmatter.name}
         </a>
         {props.isToggled &&
@@ -27,7 +30,7 @@ export default function Resource(props) {
             <aside className="resourceDetails" css={resourceDetailStyles}>
               <h4>{props.frontmatter.name}</h4>
               <div dangerouslySetInnerHTML={{ __html: props.html }} />
-              <a href={props.frontmatter.url}>View Now</a>
+              <a href={props.frontmatter.url} target="_blank" rel="noreferrer noopener">View Now</a>
             </aside>
           </div>
         }

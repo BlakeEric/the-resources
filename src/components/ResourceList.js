@@ -211,7 +211,7 @@ export default class ResourceList extends React.Component {
     }
 
     return (
-      <div css={css`max-width: 100%; min-height: 500px`}>
+      <div css={css`min-height: 500px`}>
         <Global styles={styles} />
 
         {this.state.isFilterable ?
@@ -228,31 +228,32 @@ export default class ResourceList extends React.Component {
             clearFilters={this.clearFilters}
           />
         : ''}
-
-        <table id="resources">
-          <ResourceListTableHeader
-            keys={['name', 'format', 'focus', 'skillLevel']}
-            orderBy={this.state.orderBy}
-            order={this.state.order}
-            handleFilterClick={this.setOrder}
-          />
-          <tbody>
-            {this.filter().length === 0 ?
-              <tr>
-                <td colSpan="4">
-                  <span className="notFoundMessage">Nothing found matching your search.</span>
-                </td>
-              </tr>
-            : this.filter().map(({ node }) => (
-              <Resource
-                key={node.id}
-                {...node}
-                setToggledItemId={this.setToggledItemId}
-                isToggled={this.state.currentToggledItemId === node.id}
-              />
-            ))}
-          </tbody>
-        </table>
+        <section className="tableWrap">
+          <table>
+            <ResourceListTableHeader
+              keys={['name', 'format', 'focus', 'skillLevel']}
+              orderBy={this.state.orderBy}
+              order={this.state.order}
+              handleFilterClick={this.setOrder}
+            />
+            <tbody>
+              {this.filter().length === 0 ?
+                <tr>
+                  <td colSpan="4">
+                    <span className="notFoundMessage">Nothing found matching your search.</span>
+                  </td>
+                </tr>
+              : this.filter().map(({ node }) => (
+                <Resource
+                  key={node.id}
+                  {...node}
+                  setToggledItemId={this.setToggledItemId}
+                  isToggled={this.state.currentToggledItemId === node.id}
+                />
+              ))}
+            </tbody>
+          </table>
+        </section>
       </div>
     )
   }
@@ -270,14 +271,21 @@ ResourceList.defaultProps = {
 
 
 const styles = css`
+  .tableWrap {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
   table {
     font-size: ${rhythm(.525)};
-    overflow-x: scroll;
-    max-width: 100%;
+    min-width: 640px;
     position: relative;
   }
   thead {
     padding: 20px;
+    min-width: 900px;
+  }
+  tbody {
+    min-width: 900px;
   }
   td {
     width: 25%;

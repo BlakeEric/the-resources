@@ -36,7 +36,7 @@ export const PureLayout = ({ data, children }) => (
       </span>
       <ul>
         <li>
-          <a href="mailto:blake@blakelundquist.dev">Recommend a resource</a></li>
+          <a href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!">Recommend a resource</a></li>
         <li>
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/BlakeEric/the-resources">
             View source code for this website

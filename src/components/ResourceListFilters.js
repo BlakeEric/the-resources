@@ -87,11 +87,16 @@ export default function ResourceListFilters(props) {
 const styles = css`
   font-size: ${rhythm(.55)};
   margin: auto -${rhythm(.5)};
+  @media (min-width: 600px) {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+  }  
   fieldset {
     color: white;
     border-radius: 5px;
-    background-color: #0acc9e;
-    background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+    background-color: #6aa7fa;
+    background-image: linear-gradient(to bottom right, #6aa7fa, #7b4caf);
     padding: ${rhythm(.25)};
     border: none;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
@@ -108,15 +113,15 @@ const styles = css`
         margin-left: 12px;
         display: inline;
         padding: 2px .25rem;
-        color: #b90000;
-        border: 1px solid #b90000;
+        background-color: #0acc9e;
+        background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+        border: 1px solid transparent;
+        color: white;
         border-radius: 3px;
-        background: white;
         font-size: ${rhythm(.5)};
         line-height: 1;
         &:hover, &:focus {
-          color: #800000;
-          border: 1px solid #800000;
+          border: 1px solid #048e6d;
         }
       }
     }

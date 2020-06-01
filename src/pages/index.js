@@ -9,8 +9,8 @@ export default function Home({ data }) {
   return (
     <Layout>
       <header css={headerStyles}>
-        <h2>One-up your coding skills and industry knowhow using these great tools, courses, and articles.</h2>
-        <p><a className="btn btn-accent" href="#resources">View the resources</a> or <a className="btn btn-gray" href="mailto:blake@blakelundquist.dev">recommend a resource</a></p>
+        <h2>One-up your coding skills and industry know-how using these great tools, courses, and articles.</h2>
+        <p>Know a resource that should be added to the list?<a className="btn btn-gray" href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!">recommend a resource</a></p>
       </header>
       <main>
         <ResourceList
@@ -27,7 +27,10 @@ export default function Home({ data }) {
 
 const headerStyles = css`
   text-align: center;
-  padding: ${rhythm(2)} 0;
+  padding: ${rhythm(1)} 0;
+  @media (min-width: 700px) {
+    padding: ${rhythm(2)} 0;
+  }
   main {
     padding: 0 ${rhythm(.5)}
   }
@@ -54,13 +57,9 @@ const headerStyles = css`
     &:hover, &:focus {
       opacity: .85;
     }
-    &.btn-accent {
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-      background-color: #6aa7fa;
-      background-image: linear-gradient(to bottom right, #6aa7fa, #7b4caf);
-      color: white;
-    }
     &.btn-gray {
+      display: block;
+      margin-top: ${rhythm(.5)};
       background: #f3f3f4;
       color: #1d1f20;
     }

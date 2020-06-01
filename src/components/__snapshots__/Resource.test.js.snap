@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Resource renders correctly not toggled 1`] = `
+<tr>
+  <td>
+    <a
+      href="#resources"
+      onClick={[Function]}
+    >
+      Alligator
+    </a>
+  </td>
+  <td>
+    Article
+  </td>
+  <td>
+    Front-end
+  </td>
+  <td>
+    All
+  </td>
+</tr>
+`;
+
+exports[`Resource renders correctly when toggled 1`] = `
+<tr>
+  <td>
+    <a
+      href="#resources"
+      onClick={[Function]}
+    >
+      Alligator
+    </a>
+    <div
+      css={
+        Object {
+          "map": undefined,
+          "name": "1dcu5cj",
+          "next": undefined,
+          "styles": "position: relative",
+          "toString": [Function],
+        }
+      }
+    >
+      <aside
+        className="resourceDetails"
+        css={
+          Object {
+            "map": undefined,
+            "name": "wvf8yw",
+            "next": undefined,
+            "styles": "
+  position: absolute;
+  left: 0;
+  max-width: 90vw;
+  width: 300px;
+  top: 5px;
+  left: -0.4025rem;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
+  padding: 0.4025rem;
+  z-index: 10000;
+  border: 1px solid #e4e4e4;
+  &:after {
+    content: \\"\\";
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+    left: 1.61rem;
+    border-right: 1px solid #e4e4e4;
+    border-top: 1px solid #e4e4e4;
+  }
+  h4 {
+    margin-bottom: 0.4025rem;
+  }
+  p {
+    color: black;
+  }
+  p:last-child {
+    margin: 0;
+  }
+",
+            "toString": [Function],
+          }
+        }
+      >
+        <h4>
+          Alligator
+        </h4>
+        <div
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+        />
+        <a>
+          View Now
+        </a>
+      </aside>
+    </div>
+  </td>
+  <td>
+    Article
+  </td>
+  <td>
+    Front-end
+  </td>
+  <td>
+    All
+  </td>
+</tr>
+`;

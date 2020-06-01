@@ -312,7 +312,8 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
       <tr>
         <td>
           <a
-            href="/alligator/"
+            href="#resources"
+            onClick={[Function]}
           >
             Alligator
           </a>
@@ -330,7 +331,8 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
       <tr>
         <td>
           <a
-            href="/badger/"
+            href="#resources"
+            onClick={[Function]}
           >
             Badger
           </a>
@@ -348,7 +350,8 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
       <tr>
         <td>
           <a
-            href="/caterpillar/"
+            href="#resources"
+            onClick={[Function]}
           >
             Caterpillar
           </a>
@@ -366,7 +369,8 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
       <tr>
         <td>
           <a
-            href="/dolphin/"
+            href="#resources"
+            onClick={[Function]}
           >
             Dolphin
           </a>
@@ -384,7 +388,8 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
       <tr>
         <td>
           <a
-            href="/elephant/"
+            href="#resources"
+            onClick={[Function]}
           >
             Elephant
           </a>

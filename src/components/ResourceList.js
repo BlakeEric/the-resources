@@ -1,9 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import { Global, css } from '@emotion/core'
 import { rhythm } from "../utils/typography"
 import ResourceListTableHeader from './ResourceListTableHeader'
 import ResourceListFilters from './ResourceListFilters'
+import Resource from './Resource'
 
 export default class ResourceList extends React.Component {
 
@@ -11,6 +12,7 @@ export default class ResourceList extends React.Component {
   state = {
     resources: this.props.resources,
     isFilterable: false, // used to display filter options if JS is enabled
+    currentToggledItemId: null,
     orderBy: "name",
     order: "ASC",
     searchTerm: null,
@@ -43,6 +45,11 @@ export default class ResourceList extends React.Component {
     })
   }
 
+  setToggledItemId = (id) => {
+    this.setState({
+      currentToggledItemId: id
+    })
+  }
 
   /*
    * Set the key to use as basis for alphabetical sorting
@@ -73,28 +80,6 @@ export default class ResourceList extends React.Component {
 
 
   /*
-   * Alphabetically compare one field against another
-   * Return -1, 0, or 1 for use in Array.sort
-   */
-  compareFields(current, next) {
-
-    if (this.state.order === "DESC") {
-
-      if(current > next) { return -1; }
-      else if(current < next) { return 1; }
-
-    } else {
-
-      if(current < next) { return -1; }
-      else if(current > next) { return 1; }
-
-    }
-
-    return 0;
-  }
-
-
-  /*
    * Set search term in state
    */
   setSearchTerm = (searchTerm) => {
@@ -120,6 +105,28 @@ export default class ResourceList extends React.Component {
       selectedFormat: null,
       selectedFocus: null
     })
+  }
+
+
+  /*
+   * Alphabetically compare one field against another
+   * Return -1, 0, or 1 for use in Array.sort
+   */
+  compareFields(current, next) {
+
+    if (this.state.order === "DESC") {
+
+      if(current > next) { return -1; }
+      else if(current < next) { return 1; }
+
+    } else {
+
+      if(current < next) { return -1; }
+      else if(current > next) { return 1; }
+
+    }
+
+    return 0;
   }
 
 
@@ -224,7 +231,7 @@ export default class ResourceList extends React.Component {
 
         <table id="resources">
           <ResourceListTableHeader
-            keys={Object.keys(this.state.resources[0].node.frontmatter)}
+            keys={['name', 'format', 'focus', 'skillLevel']}
             orderBy={this.state.orderBy}
             order={this.state.order}
             handleFilterClick={this.setOrder}
@@ -237,22 +244,12 @@ export default class ResourceList extends React.Component {
                 </td>
               </tr>
             : this.filter().map(({ node }) => (
-              <tr key={node.id}>
-                <td>
-                  <Link to={node.fields.slug}>
-                    {node.frontmatter.name}
-                  </Link>
-                </td>
-                <td>
-                  {node.frontmatter.format}
-                </td>
-                <td>
-                  {node.frontmatter.focus}
-                </td>
-                <td>
-                  {node.frontmatter.skillLevel.length === 3 ? 'All' : node.frontmatter.skillLevel.join(', ')}
-                </td>
-              </tr>
+              <Resource
+                key={node.id}
+                {...node}
+                setToggledItemId={this.setToggledItemId}
+                isToggled={this.state.currentToggledItemId === node.id}
+              />
             ))}
           </tbody>
         </table>
@@ -277,6 +274,7 @@ const styles = css`
     font-size: ${rhythm(.525)};
     overflow-x: scroll;
     max-width: 100%;
+    position: relative;
   }
   thead {
     padding: 20px;

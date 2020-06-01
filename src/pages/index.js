@@ -74,7 +74,9 @@ export const query = graphql`
       edges {
         node {
           id
+          html
           frontmatter {
+            url
             name
             format
             focus

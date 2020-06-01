@@ -36,7 +36,7 @@ describe("ResourceList", () => {
     it("orders ASC by name on initial render", () => {
       const wrapper = mount(<ResourceList {...mockProps} />)
 
-      expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
+      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
     });
   });
 
@@ -48,7 +48,7 @@ describe("ResourceList", () => {
     it("toggles between DESC and ASC ordering by NAME on when appropriate button is clicked", () => {
       const wrapper = mount(<ResourceList {...mockProps} />)
 
-      expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
+      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
 
       // The "name" column button
       const button = wrapper.find('button').at(0)
@@ -58,14 +58,14 @@ describe("ResourceList", () => {
       wrapper.update();
 
       // The last item's name should start with "A"
-      expect(wrapper.find('tbody > tr').last().text().includes('Alligator')).toBeTruthy();
+      expect(wrapper.find('tbody tr').last().text().includes('Alligator')).toBeTruthy();
 
       //trigger button click again
       button.simulate('click');
       wrapper.update();
 
       // The FIRST item's name should start with "A"
-      expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
+      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
     });
   });
 
@@ -76,7 +76,7 @@ describe("ResourceList", () => {
     it("toggles between DESC and ASC ordering by FORMAT on when appropriate button is clicked", () => {
       const wrapper = mount(<ResourceList {...mockProps} />)
 
-      expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
+      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
 
       // The "skillLevel" column button
       const button = wrapper.find('button').at(1)
@@ -86,14 +86,14 @@ describe("ResourceList", () => {
       wrapper.update();
 
       // The first item's format should start with "A"
-      expect(wrapper.find('tbody > tr').first().text().includes('Article')).toBeTruthy();
+      expect(wrapper.find('tbody tr').first().text().includes('Article')).toBeTruthy();
 
       //trigger button click again
       button.simulate('click');
       wrapper.update();
 
       // The LAST item's format should start with "A"
-      expect(wrapper.find('tbody > tr').last().text().includes('Article')).toBeTruthy();
+      expect(wrapper.find('tbody tr').last().text().includes('Article')).toBeTruthy();
     });
   });
 
@@ -105,7 +105,7 @@ describe("ResourceList", () => {
     it("toggles between DESC and ASC ordering by FOCUS on when appropriate button is clicked", () => {
       const wrapper = mount(<ResourceList {...mockProps} />)
 
-      expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
+      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
 
       // The "focus" column button
       const button = wrapper.find('button').at(2)
@@ -115,14 +115,14 @@ describe("ResourceList", () => {
       wrapper.update();
 
       // The first item's focus should start with "A"
-      expect(wrapper.find('tbody > tr').first().text().includes('Algorithms')).toBeTruthy();
+      expect(wrapper.find('tbody tr').first().text().includes('Algorithms')).toBeTruthy();
 
       //trigger button click again
       button.simulate('click');
       wrapper.update();
 
       // The LAST item's focus should start with "A"
-      expect(wrapper.find('tbody > tr').last().text().includes('Algorithms')).toBeTruthy();
+      expect(wrapper.find('tbody tr').last().text().includes('Algorithms')).toBeTruthy();
     });
   });
 
@@ -133,7 +133,7 @@ describe("ResourceList", () => {
     it("toggles between DESC and ASC ordering by SKILL LEVEL on when appropriate button is clicked", () => {
       const wrapper = mount(<ResourceList {...mockProps} />)
 
-      expect(wrapper.find('tbody > tr').first().text().includes('Alligator')).toBeTruthy();
+      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
 
       // The "skillLevel" column button
       const button = wrapper.find('button').at(3)
@@ -143,14 +143,14 @@ describe("ResourceList", () => {
       wrapper.update();
 
       // The first item's skill level should start with "A"
-      expect(wrapper.find('tbody > tr').first().text().includes('Advanced')).toBeTruthy();
+      expect(wrapper.find('tbody tr').first().text().includes('Advanced')).toBeTruthy();
 
       //trigger button click again
       button.simulate('click');
       wrapper.update();
 
       // The LAST item's skill level should start with "A"
-      expect(wrapper.find('tbody > tr').last().text().includes('Advanced')).toBeTruthy();
+      expect(wrapper.find('tbody tr').last().text().includes('Advanced')).toBeTruthy();
     });
   });
 
@@ -163,7 +163,7 @@ describe("ResourceList", () => {
       const wrapper = mount(<ResourceList {...mockProps} />)
 
       // Five items should be rendered
-      expect(wrapper.find('tbody > tr').length).toEqual(5);
+      expect(wrapper.find('tbody tr').length).toEqual(5);
 
       // The "search term" input
       const field = wrapper.find('input#searchTerm').first()
@@ -173,7 +173,7 @@ describe("ResourceList", () => {
       wrapper.update();
 
       // Only two items should remain after filtering
-      expect(wrapper.find('tbody > tr').length).toEqual(1);
+      expect(wrapper.find('tbody tr').length).toEqual(1);
     });
   });
 
@@ -185,7 +185,7 @@ describe("ResourceList", () => {
       const wrapper = mount(<ResourceList {...mockProps} />)
 
       // Five items should be rendered
-      expect(wrapper.find('tbody > tr').length).toEqual(5);
+      expect(wrapper.find('tbody tr').length).toEqual(5);
 
       // The "skillLevel" filter button
       const field = wrapper.find('select#resourceSkillLevel').first()
@@ -195,7 +195,7 @@ describe("ResourceList", () => {
       wrapper.update();
 
       // Only two items should remain after filtering
-      expect(wrapper.find('tbody > tr').length).toEqual(2);
+      expect(wrapper.find('tbody tr').length).toEqual(2);
     });
   });
 
@@ -207,7 +207,7 @@ describe("ResourceList", () => {
       const wrapper = mount(<ResourceList {...mockProps} />)
 
       // Five items should be rendered
-      expect(wrapper.find('tbody > tr').length).toEqual(5);
+      expect(wrapper.find('tbody tr').length).toEqual(5);
 
       // The "format" filter button
       const field = wrapper.find('select#resourceFormat').first()
@@ -217,7 +217,7 @@ describe("ResourceList", () => {
       wrapper.update();
 
       // Only two items should remain after filtering
-      expect(wrapper.find('tbody > tr').length).toEqual(1);
+      expect(wrapper.find('tbody tr').length).toEqual(1);
     });
   });
 
@@ -229,7 +229,7 @@ describe("ResourceList", () => {
       const wrapper = mount(<ResourceList {...mockProps} />)
 
       // Five items should be rendered
-      expect(wrapper.find('tbody > tr').length).toEqual(5);
+      expect(wrapper.find('tbody tr').length).toEqual(5);
 
       // The "focus" filter button
       const field = wrapper.find('select#resourceFocus').first()
@@ -239,7 +239,7 @@ describe("ResourceList", () => {
       wrapper.update();
 
       // Only two items should remain after filtering
-      expect(wrapper.find('tbody > tr').length).toEqual(2);
+      expect(wrapper.find('tbody tr').length).toEqual(2);
     });
   });
 
@@ -260,7 +260,7 @@ describe("ResourceList", () => {
       wrapper.update();
 
       // Only two items should remain after filtering
-      expect(wrapper.find('tbody > tr').length).toEqual(2);
+      expect(wrapper.find('tbody tr').length).toEqual(2);
 
       // Simulate "clear filters" click
       const button = wrapper.find('.btn-clearFilters').first()
@@ -268,7 +268,7 @@ describe("ResourceList", () => {
       wrapper.update();
 
       // All items should be showing again
-      expect(wrapper.find('tbody > tr').length).toEqual(5);
+      expect(wrapper.find('tbody tr').length).toEqual(5);
 
     });
   });

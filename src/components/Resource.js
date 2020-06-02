@@ -16,7 +16,7 @@ export default function Resource(props) {
   }
 
   return (
-    <tr key={props.id}>
+    <tr key={props.id} style={{overflow: "visible"}}>
       <td>
         <a
           href={props.frontmatter.url}
@@ -65,7 +65,7 @@ const resourceDetailStyles = css`
   border-radius: 5px;
   box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
   padding: ${rhythm(.25)};
-  z-index: 10000;
+  z-index: 1000;
   border: 1px solid #e4e4e4;
   &:after {
     content: "";

@@ -1,25 +1,20 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 
-export default function About({ data }) {
+export default function About() {
   return (
     <Layout>
-      <h1>About {data.site.siteMetadata.title}</h1>
+      <h1>About</h1>
+      <h3>This site exists because we all get tired of googling stuff.</h3>
       <p>
-        This site contains a list of great resources for improving your engineering skills
+        The tech industry is unique in that many positions do not require advanced
+        degrees or certifications. The internet is full of free educational
+        resources to help web professionals improve their craft and set a standard
+        for best practices. This is my attempt to consolidate the best ones in a single location.
+      </p>
+      <p>
+        Want to share a resource so others can benefit from it? <a href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!">Recommend a resource!</a>
       </p>
     </Layout>
   )
 }
-
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

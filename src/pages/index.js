@@ -59,7 +59,7 @@ const headerStyles = css`
     }
     &.btn-gray {
       display: block;
-      margin-top: ${rhythm(.5)};
+      margin-top: ${rhythm(1)};
       background: #f3f3f4;
       color: #1d1f20;
     }

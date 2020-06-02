@@ -24,6 +24,7 @@
     "preact": "^10.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.0.0",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-alton": "^0.16.19",

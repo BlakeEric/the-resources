@@ -8,7 +8,7 @@
    siteMetadata: {
       title: "TheResources.dev",
       titleTemplate: "%s",
-      description: "One-up your coding skills and industry know-how using these great tools, courses, and articles.",
+      description: "One-up your coding skills and industry know-how using these free tools, courses, and articles.",
       url: "https://theresources.dev", // No trailing slash allowed!
       image: "src/images/icon.png", // Path to your image you placed in the 'static' folder
     },

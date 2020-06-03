@@ -9,7 +9,7 @@ export default function Home({ data }) {
   return (
     <Layout>
       <header css={headerStyles}>
-        <h2>One-up your coding skills and industry know-how using these great tools, courses, and articles.</h2>
+        <h2>One-up your coding skills and industry know-how using these free tools, courses, and articles.</h2>
         <p>Know a resource that should be added to the list?<a className="btn btn-gray" href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!">recommend a resource</a></p>
       </header>
       <main>

@@ -1,9 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
 export default function About() {
   return (
     <Layout>
+      <Seo title="About" />
       <h1>About</h1>
       <h3>This site exists because we all get tired of googling stuff.</h3>
       <p>

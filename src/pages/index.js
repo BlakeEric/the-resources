@@ -3,11 +3,13 @@ import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import { css } from '@emotion/core'
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 import ResourceList from "../components/ResourceList"
 
 export default function Home({ data }) {
   return (
     <Layout>
+      <Seo />
       <header css={headerStyles}>
         <h2>One-up your coding skills and industry know-how using these free tools, courses, and articles.</h2>
         <p>Know a resource that should be added to the list?<a className="btn btn-gray" href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!">recommend a resource</a></p>

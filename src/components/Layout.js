@@ -1,12 +1,11 @@
 import React from "react"
 import { css, Global } from "@emotion/core"
-import Seo from './Seo'
 import { useStaticQuery, Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 
 export const PureLayout = ({ data, children }) => (
   <div css={wrapperStyles}>
-    <Seo />
+
     <Global styles={globalStyles} />
     <nav>
       <Link to={`/`}>

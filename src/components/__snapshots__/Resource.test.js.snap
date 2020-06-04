@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Resource renders correctly not toggled 1`] = `
-<tr>
+<tr
+  style={
+    Object {
+      "overflow": "visible",
+    }
+  }
+>
   <td>
     <a
       onClick={[Function]}
@@ -24,7 +30,13 @@ exports[`Resource renders correctly not toggled 1`] = `
 `;
 
 exports[`Resource renders correctly when toggled 1`] = `
-<tr>
+<tr
+  style={
+    Object {
+      "overflow": "visible",
+    }
+  }
+>
   <td>
     <a
       onClick={[Function]}
@@ -49,7 +61,7 @@ exports[`Resource renders correctly when toggled 1`] = `
         css={
           Object {
             "map": undefined,
-            "name": "wvf8yw",
+            "name": "1jh9gsn",
             "next": undefined,
             "styles": "
   position: absolute;
@@ -62,7 +74,7 @@ exports[`Resource renders correctly when toggled 1`] = `
   border-radius: 5px;
   box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
   padding: 0.4025rem;
-  z-index: 10000;
+  z-index: 1000;
   border: 1px solid #e4e4e4;
   &:after {
     content: \\"\\";

@@ -272,7 +272,7 @@ ResourceList.defaultProps = {
 
 const styles = css`
   .tableWrap {
-    max-width: 100%;
+    /* max-width: 100%; */
     overflow-x: scroll;
     padding: 0 ${rhythm(.5)};
     margin: 0 -${rhythm(.5)};

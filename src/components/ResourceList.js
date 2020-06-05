@@ -243,12 +243,13 @@ export default class ResourceList extends React.Component {
                     <span className="notFoundMessage">Nothing found matching your search.</span>
                   </td>
                 </tr>
-              : this.filter().map(({ node }) => (
+              : this.filter().map(({ node }, i) => (
                 <Resource
                   key={node.id}
                   {...node}
                   setToggledItemId={this.setToggledItemId}
                   isToggled={this.state.currentToggledItemId === node.id}
+                  showDetailsAbove={i > this.filter().length - 5}
                 />
               ))}
             </tbody>
@@ -272,7 +273,6 @@ ResourceList.defaultProps = {
 
 const styles = css`
   .tableWrap {
-    /* max-width: 100%; */
     overflow-x: scroll;
     padding: 0 ${rhythm(.5)};
     margin: 0 -${rhythm(.5)};

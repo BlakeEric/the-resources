@@ -50,7 +50,9 @@ export default class Resource extends React.Component {
    * Open detail tab is currently closed, and vice versa
    */
   handleToggle = (e) => {
+    
     e.preventDefault();
+
     if (this.props.isToggled) {
       this.props.setToggledItemId(null)
     } else {
@@ -62,6 +64,7 @@ export default class Resource extends React.Component {
     return (
       <tr key={this.props.id} style={{overflow: "visible"}}>
         <td>
+        <div className="resourceDetails-wrapper" css={resourceDetailStyles}>
           <a
             href={this.props.frontmatter.url}
             onClick={(e) => this.handleToggle(e)}
@@ -71,14 +74,18 @@ export default class Resource extends React.Component {
             {this.props.frontmatter.name}
           </a>
           {this.props.isToggled &&
-            <div className="resourceDetails-wrapper" css={resourceDetailStyles}>
-              <aside className="resourceDetails" ref={this.setWrapperRef}>
+
+              <aside
+                className={`resourceDetails ${this.props.showDetailsAbove ? 'up' : ''}`}
+                ref={this.setWrapperRef}
+              >
                 <h4>{this.props.frontmatter.name}</h4>
                 <div dangerouslySetInnerHTML={{ __html: this.props.html }} />
                 <a href={this.props.frontmatter.url} target="_blank" rel="noreferrer noopener">View Now</a>
               </aside>
-            </div>
+
           }
+          </div>
         </td>
         <td>
           {this.props.frontmatter.format}
@@ -108,7 +115,7 @@ const resourceDetailStyles = css`
     left: 0;
     max-width: 90vw;
     width: 300px;
-    top: 5px;
+    top: 110%;
     left: -${rhythm(.25)};
     background: white;
     border-radius: 5px;
@@ -122,13 +129,25 @@ const resourceDetailStyles = css`
       width: 12px;
       position: absolute;
       top: 0;
-      left: 0;
       background: white;
       transform: rotate(-45deg);
       transform-origin: 0 0;
-      left: ${rhythm(1)};
+      left: ${rhythm(.5)};
       border-right: 1px solid #e4e4e4;
       border-top: 1px solid #e4e4e4;
+    }
+    &.up {
+      top: auto;
+      bottom: 110%;
+      &:after {
+        top: auto;
+        bottom: 0;
+        transform: rotate(45deg);
+        transform-origin: 0 100%;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 0;
+      }
     }
     h4 {
       margin-bottom: ${rhythm(.25)};

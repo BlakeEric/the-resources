@@ -9,13 +9,77 @@ exports[`Resource renders correctly not toggled 1`] = `
   }
 >
   <td>
-    <a
-      onClick={[Function]}
-      rel="noreferrer noopener"
-      target="_blank"
+    <div
+      className="resourceDetails-wrapper"
+      css={
+        Object {
+          "map": undefined,
+          "name": "lr1hv8",
+          "next": undefined,
+          "styles": "
+  position: relative;
+  .resourceDetails {
+    position: absolute;
+    left: 0;
+    max-width: 90vw;
+    width: 300px;
+    top: 110%;
+    left: -0.4025rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
+    padding: 0.4025rem;
+    z-index: 1000;
+    border: 1px solid #e4e4e4;
+    &:after {
+      content: \\"\\";
+      height: 12px;
+      width: 12px;
+      position: absolute;
+      top: 0;
+      background: white;
+      transform: rotate(-45deg);
+      transform-origin: 0 0;
+      left: 0.805rem;
+      border-right: 1px solid #e4e4e4;
+      border-top: 1px solid #e4e4e4;
+    }
+    &.up {
+      top: auto;
+      bottom: 110%;
+      &:after {
+        top: auto;
+        bottom: 0;
+        transform: rotate(45deg);
+        transform-origin: 0 100%;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 0;
+      }
+    }
+    h4 {
+      margin-bottom: 0.4025rem;
+    }
+    p {
+      color: black;
+    }
+    p:last-child {
+      margin: 0;
+    }
+  }
+",
+          "toString": [Function],
+        }
+      }
     >
-      Alligator
-    </a>
+      <a
+        onClick={[Function]}
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        Alligator
+      </a>
+    </div>
   </td>
   <td>
     Article
@@ -38,19 +102,12 @@ exports[`Resource renders correctly when toggled 1`] = `
   }
 >
   <td>
-    <a
-      onClick={[Function]}
-      rel="noreferrer noopener"
-      target="_blank"
-    >
-      Alligator
-    </a>
     <div
       className="resourceDetails-wrapper"
       css={
         Object {
           "map": undefined,
-          "name": "402duj",
+          "name": "lr1hv8",
           "next": undefined,
           "styles": "
   position: relative;
@@ -59,7 +116,7 @@ exports[`Resource renders correctly when toggled 1`] = `
     left: 0;
     max-width: 90vw;
     width: 300px;
-    top: 5px;
+    top: 110%;
     left: -0.4025rem;
     background: white;
     border-radius: 5px;
@@ -73,13 +130,25 @@ exports[`Resource renders correctly when toggled 1`] = `
       width: 12px;
       position: absolute;
       top: 0;
-      left: 0;
       background: white;
       transform: rotate(-45deg);
       transform-origin: 0 0;
-      left: 1.61rem;
+      left: 0.805rem;
       border-right: 1px solid #e4e4e4;
       border-top: 1px solid #e4e4e4;
+    }
+    &.up {
+      top: auto;
+      bottom: 110%;
+      &:after {
+        top: auto;
+        bottom: 0;
+        transform: rotate(45deg);
+        transform-origin: 0 100%;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 0;
+      }
     }
     h4 {
       margin-bottom: 0.4025rem;
@@ -96,8 +165,15 @@ exports[`Resource renders correctly when toggled 1`] = `
         }
       }
     >
+      <a
+        onClick={[Function]}
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        Alligator
+      </a>
       <aside
-        className="resourceDetails"
+        className="resourceDetails "
       >
         <h4>
           Alligator

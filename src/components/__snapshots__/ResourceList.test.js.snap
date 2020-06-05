@@ -324,13 +324,77 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
           }
         >
           <td>
-            <a
-              onClick={[Function]}
-              rel="noreferrer noopener"
-              target="_blank"
+            <div
+              className="resourceDetails-wrapper"
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "lr1hv8",
+                  "next": undefined,
+                  "styles": "
+  position: relative;
+  .resourceDetails {
+    position: absolute;
+    left: 0;
+    max-width: 90vw;
+    width: 300px;
+    top: 110%;
+    left: -0.4025rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
+    padding: 0.4025rem;
+    z-index: 1000;
+    border: 1px solid #e4e4e4;
+    &:after {
+      content: \\"\\";
+      height: 12px;
+      width: 12px;
+      position: absolute;
+      top: 0;
+      background: white;
+      transform: rotate(-45deg);
+      transform-origin: 0 0;
+      left: 0.805rem;
+      border-right: 1px solid #e4e4e4;
+      border-top: 1px solid #e4e4e4;
+    }
+    &.up {
+      top: auto;
+      bottom: 110%;
+      &:after {
+        top: auto;
+        bottom: 0;
+        transform: rotate(45deg);
+        transform-origin: 0 100%;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 0;
+      }
+    }
+    h4 {
+      margin-bottom: 0.4025rem;
+    }
+    p {
+      color: black;
+    }
+    p:last-child {
+      margin: 0;
+    }
+  }
+",
+                  "toString": [Function],
+                }
+              }
             >
-              Alligator
-            </a>
+              <a
+                onClick={[Function]}
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Alligator
+              </a>
+            </div>
           </td>
           <td>
             Article
@@ -350,13 +414,77 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
           }
         >
           <td>
-            <a
-              onClick={[Function]}
-              rel="noreferrer noopener"
-              target="_blank"
+            <div
+              className="resourceDetails-wrapper"
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "lr1hv8",
+                  "next": undefined,
+                  "styles": "
+  position: relative;
+  .resourceDetails {
+    position: absolute;
+    left: 0;
+    max-width: 90vw;
+    width: 300px;
+    top: 110%;
+    left: -0.4025rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
+    padding: 0.4025rem;
+    z-index: 1000;
+    border: 1px solid #e4e4e4;
+    &:after {
+      content: \\"\\";
+      height: 12px;
+      width: 12px;
+      position: absolute;
+      top: 0;
+      background: white;
+      transform: rotate(-45deg);
+      transform-origin: 0 0;
+      left: 0.805rem;
+      border-right: 1px solid #e4e4e4;
+      border-top: 1px solid #e4e4e4;
+    }
+    &.up {
+      top: auto;
+      bottom: 110%;
+      &:after {
+        top: auto;
+        bottom: 0;
+        transform: rotate(45deg);
+        transform-origin: 0 100%;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 0;
+      }
+    }
+    h4 {
+      margin-bottom: 0.4025rem;
+    }
+    p {
+      color: black;
+    }
+    p:last-child {
+      margin: 0;
+    }
+  }
+",
+                  "toString": [Function],
+                }
+              }
             >
-              Badger
-            </a>
+              <a
+                onClick={[Function]}
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Badger
+              </a>
+            </div>
           </td>
           <td>
             Interactive
@@ -376,13 +504,77 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
           }
         >
           <td>
-            <a
-              onClick={[Function]}
-              rel="noreferrer noopener"
-              target="_blank"
+            <div
+              className="resourceDetails-wrapper"
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "lr1hv8",
+                  "next": undefined,
+                  "styles": "
+  position: relative;
+  .resourceDetails {
+    position: absolute;
+    left: 0;
+    max-width: 90vw;
+    width: 300px;
+    top: 110%;
+    left: -0.4025rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
+    padding: 0.4025rem;
+    z-index: 1000;
+    border: 1px solid #e4e4e4;
+    &:after {
+      content: \\"\\";
+      height: 12px;
+      width: 12px;
+      position: absolute;
+      top: 0;
+      background: white;
+      transform: rotate(-45deg);
+      transform-origin: 0 0;
+      left: 0.805rem;
+      border-right: 1px solid #e4e4e4;
+      border-top: 1px solid #e4e4e4;
+    }
+    &.up {
+      top: auto;
+      bottom: 110%;
+      &:after {
+        top: auto;
+        bottom: 0;
+        transform: rotate(45deg);
+        transform-origin: 0 100%;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 0;
+      }
+    }
+    h4 {
+      margin-bottom: 0.4025rem;
+    }
+    p {
+      color: black;
+    }
+    p:last-child {
+      margin: 0;
+    }
+  }
+",
+                  "toString": [Function],
+                }
+              }
             >
-              Caterpillar
-            </a>
+              <a
+                onClick={[Function]}
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Caterpillar
+              </a>
+            </div>
           </td>
           <td>
             Article
@@ -402,13 +594,77 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
           }
         >
           <td>
-            <a
-              onClick={[Function]}
-              rel="noreferrer noopener"
-              target="_blank"
+            <div
+              className="resourceDetails-wrapper"
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "lr1hv8",
+                  "next": undefined,
+                  "styles": "
+  position: relative;
+  .resourceDetails {
+    position: absolute;
+    left: 0;
+    max-width: 90vw;
+    width: 300px;
+    top: 110%;
+    left: -0.4025rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
+    padding: 0.4025rem;
+    z-index: 1000;
+    border: 1px solid #e4e4e4;
+    &:after {
+      content: \\"\\";
+      height: 12px;
+      width: 12px;
+      position: absolute;
+      top: 0;
+      background: white;
+      transform: rotate(-45deg);
+      transform-origin: 0 0;
+      left: 0.805rem;
+      border-right: 1px solid #e4e4e4;
+      border-top: 1px solid #e4e4e4;
+    }
+    &.up {
+      top: auto;
+      bottom: 110%;
+      &:after {
+        top: auto;
+        bottom: 0;
+        transform: rotate(45deg);
+        transform-origin: 0 100%;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 0;
+      }
+    }
+    h4 {
+      margin-bottom: 0.4025rem;
+    }
+    p {
+      color: black;
+    }
+    p:last-child {
+      margin: 0;
+    }
+  }
+",
+                  "toString": [Function],
+                }
+              }
             >
-              Dolphin
-            </a>
+              <a
+                onClick={[Function]}
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Dolphin
+              </a>
+            </div>
           </td>
           <td>
             Tutorial
@@ -428,13 +684,77 @@ exports[`ResourceList Initial render renders correctly when resources passed in 
           }
         >
           <td>
-            <a
-              onClick={[Function]}
-              rel="noreferrer noopener"
-              target="_blank"
+            <div
+              className="resourceDetails-wrapper"
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "lr1hv8",
+                  "next": undefined,
+                  "styles": "
+  position: relative;
+  .resourceDetails {
+    position: absolute;
+    left: 0;
+    max-width: 90vw;
+    width: 300px;
+    top: 110%;
+    left: -0.4025rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
+    padding: 0.4025rem;
+    z-index: 1000;
+    border: 1px solid #e4e4e4;
+    &:after {
+      content: \\"\\";
+      height: 12px;
+      width: 12px;
+      position: absolute;
+      top: 0;
+      background: white;
+      transform: rotate(-45deg);
+      transform-origin: 0 0;
+      left: 0.805rem;
+      border-right: 1px solid #e4e4e4;
+      border-top: 1px solid #e4e4e4;
+    }
+    &.up {
+      top: auto;
+      bottom: 110%;
+      &:after {
+        top: auto;
+        bottom: 0;
+        transform: rotate(45deg);
+        transform-origin: 0 100%;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 0;
+      }
+    }
+    h4 {
+      margin-bottom: 0.4025rem;
+    }
+    p {
+      color: black;
+    }
+    p:last-child {
+      margin: 0;
+    }
+  }
+",
+                  "toString": [Function],
+                }
+              }
             >
-              Elephant
-            </a>
+              <a
+                onClick={[Function]}
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Elephant
+              </a>
+            </div>
           </td>
           <td>
             Video

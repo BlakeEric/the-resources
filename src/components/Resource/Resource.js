@@ -1,7 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import { rhythm } from "../utils/typography"
-
+import { rhythm } from "../../utils/typography"
 
 
 export default class Resource extends React.Component {
@@ -50,7 +49,7 @@ export default class Resource extends React.Component {
    * Open detail tab is currently closed, and vice versa
    */
   handleToggle = (e) => {
-    
+
     e.preventDefault();
 
     if (this.props.isToggled) {

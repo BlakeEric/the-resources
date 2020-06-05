@@ -1,6 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import ResourceListTableHeader from "./ResourceListTableHeader"
+import ResourceListHeader from "./ResourceListHeader"
 
 let mockProps = {
   keys: ["name", "skillLevel", "format", "focus"],
@@ -9,9 +9,9 @@ let mockProps = {
   handleFilterClick: () => {}
 }
 
-describe("ResourceListTableHeader", () => {
+describe("ResourceListHeader", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<ResourceListTableHeader {...mockProps} />).toJSON()
+    const tree = renderer.create(<ResourceListHeader {...mockProps} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -20,7 +20,7 @@ describe("ResourceListTableHeader", () => {
     mockProps.orderBy = "skillLevel"
     mockProps.order = "DESC"
 
-    const tree = renderer.create(<ResourceListTableHeader {...mockProps} />).toJSON()
+    const tree = renderer.create(<ResourceListHeader {...mockProps} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

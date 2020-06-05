@@ -1,5 +1,5 @@
 import React from "react"
-import typography from "../utils/typography"
+import typography from "../../utils/typography"
 import { css } from "@emotion/core"
 
 

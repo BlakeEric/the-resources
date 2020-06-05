@@ -1,6 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import ResourceListFilters from "./ResourceListFilters"
+import Filters from "./Filters"
 
 let mockProps = {
   selectedSkillLevel: null,
@@ -14,9 +14,9 @@ let mockProps = {
   searchTerm: null,
 }
 
-describe("ResourceListFilters", () => {
+describe("Filters", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<ResourceListFilters {...mockProps} />).toJSON()
+    const tree = renderer.create(<Filters {...mockProps} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -29,7 +29,7 @@ describe("ResourceListFilters", () => {
       selectedFocus: "Front-end",
       searchTerm: "Code"
     }
-    const tree = renderer.create(<ResourceListFilters {...mockProps} />).toJSON()
+    const tree = renderer.create(<Filters {...mockProps} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

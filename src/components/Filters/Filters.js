@@ -1,6 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 
 export default function ResourceListFilters(props) {
   const hasActiveFilters =

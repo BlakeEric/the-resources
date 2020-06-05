@@ -1,7 +1,7 @@
 import React from "react"
 import { css, Global } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 
 export const PureLayout = ({ data, children }) => (
   <div css={wrapperStyles}>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ResourceListFilters Adds selected values to appropriate fields 1`] = `
+exports[`Filters Adds selected values to appropriate fields 1`] = `
 <form
   css={
     Object {
@@ -202,7 +202,7 @@ exports[`ResourceListFilters Adds selected values to appropriate fields 1`] = `
 </form>
 `;
 
-exports[`ResourceListFilters renders correctly 1`] = `
+exports[`Filters renders correctly 1`] = `
 <form
   css={
     Object {

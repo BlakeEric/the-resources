@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../components/Layout"
-import Seo from "../components/Seo"
+import Layout from "../components/Layout/Layout"
+import Seo from "../components/Seo/Seo"
 
 export default function About() {
   return (

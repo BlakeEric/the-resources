@@ -1,10 +1,10 @@
 import React from "react"
 // import { Link } from "gatsby"
 import { Global, css } from '@emotion/core'
-import { rhythm } from "../utils/typography"
-import ResourceListTableHeader from './ResourceListTableHeader'
-import ResourceListFilters from './ResourceListFilters'
-import Resource from './Resource'
+import { rhythm } from "../../utils/typography"
+import ResourceListTableHeader from '../ResourceListHeader/ResourceListHeader'
+import ResourceListFilters from '../Filters/Filters'
+import Resource from '../Resource/Resource'
 
 export default class ResourceList extends React.Component {
 

@@ -2,7 +2,7 @@ import React from "react"
 import renderer from "react-test-renderer"
 import { shallow, mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
-import getResourcesResponse from '../__fixtures__/getResourcesResponse'
+import getResourcesResponse from '../../__fixtures__/getResourcesResponse'
 
 import ResourceList from "./ResourceList"
 
@@ -14,32 +14,6 @@ const mockProps = {
 }
 
 describe("ResourceList", () => {
-
-  /*
-  * Make sure the component renders without error
-  */
-  describe('Initial render', () => {
-    it("renders correctly when no resources passed in", () => {
-      const tree = renderer
-        .create(<ResourceList />)
-        .toJSON()
-      expect(tree).toMatchSnapshot()
-    })
-
-    it("renders correctly when resources passed in", () => {
-      const tree = renderer
-        .create(<ResourceList {...mockProps} />)
-        .toJSON()
-      expect(tree).toMatchSnapshot()
-    })
-
-    it("orders ASC by name on initial render", () => {
-      const wrapper = mount(<ResourceList {...mockProps} />)
-
-      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
-    });
-  });
-
 
   /*
   * Sorting by Name
@@ -247,7 +221,8 @@ describe("ResourceList", () => {
   /*
   * Clearing filters
   */
-  describe('When filtering by Focus', () => {
+  describe('When clearing filters', () => {
+
     it("displays all items when 'Clear filter' button is clicked", () => {
 
       const wrapper = mount(<ResourceList {...mockProps} />)
@@ -273,5 +248,75 @@ describe("ResourceList", () => {
     });
   });
 
+
+  /*
+  * Resource detail popover
+  */
+  describe('When viewing resource details', () => {
+
+    it("opens and closes resource detail popover when clicking twice on same item name", () => {
+
+      const wrapper = mount(<ResourceList {...mockProps} />)
+      const anchor = wrapper.find('.resourceDetails-wrapper a').first()
+
+      expect(wrapper.find('.resourceDetails').length).toEqual(0);
+
+      anchor.simulate('click');
+      wrapper.update();
+      expect(wrapper.find('.resourceDetails-wrapper:first-child .resourceDetails').length).toEqual(1);
+
+      anchor.simulate('click');
+      wrapper.update();
+      expect(wrapper.find('.resourceDetails').length).toEqual(0);
+
+    });
+
+
+    it("closes resource detail popover when clicking outside", () => {
+
+      // Mock event listeners to use them in enzyme test
+      const map = {};
+      document.addEventListener = jest.fn((event, cb) => {
+        map[event] = cb;
+      });
+
+      const wrapper = mount(<ResourceList {...mockProps} />)
+
+      // Open the first Item
+      wrapper.setState({ currentToggledItemId: "d04da249-50e7-5b18-a992-d530e14831a7" });
+
+      expect(wrapper.find('.resourceDetails').length).toEqual(1);
+
+      // Simulate mousedown event outside of container
+      map.mousedown({ pageX: 0, pageY: 0});
+      wrapper.update();
+      expect(wrapper.find('.resourceDetails').length).toEqual(0);
+
+    });
+
+
+    it("moves popover to clicked item if it is currently open on another item", () => {
+
+      const wrapper = mount(<ResourceList {...mockProps} />)
+
+      // Open the first Item
+      wrapper.setState({ currentToggledItemId: "d04da249-50e7-5b18-a992-d530e14831a7" });
+
+      expect(wrapper.find('.resourceDetails').length).toEqual(1);
+
+      // Click to open the last item
+      wrapper.find('.resourceDetails-wrapper a').last().simulate('click')
+      wrapper.update();
+
+      // Only one popover should be open
+      expect(wrapper.find('.resourceDetails').length).toEqual(1);
+
+      // the current toggled item in state should have changed
+      expect(wrapper.state().currentToggledItemId === "d04da249-50e7-5b18-a992-d530e14831a7").toBeFalsy();
+
+    });
+
+
+  });
 
 })

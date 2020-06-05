@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ResourceListTableHeader Adds appropriate className and icon to current orderBy key 1`] = `
+exports[`ResourceListHeader Adds appropriate className and icon to current orderBy key 1`] = `
 <thead
   css={
     Object {
@@ -95,7 +95,7 @@ exports[`ResourceListTableHeader Adds appropriate className and icon to current 
 </thead>
 `;
 
-exports[`ResourceListTableHeader renders correctly 1`] = `
+exports[`ResourceListHeader renders correctly 1`] = `
 <thead
   css={
     Object {

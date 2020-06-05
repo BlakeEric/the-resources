@@ -2,9 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import { css } from '@emotion/core'
-import Layout from "../components/Layout"
-import Seo from "../components/Seo"
-import ResourceList from "../components/ResourceList"
+import Layout from "../components/Layout/Layout"
+import Seo from "../components/Seo/Seo"
+import ResourceList from "../components/ResourceList/ResourceList"
 
 export default function Home({ data }) {
   return (

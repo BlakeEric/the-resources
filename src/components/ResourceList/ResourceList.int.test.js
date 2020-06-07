@@ -1,9 +1,6 @@
 import React from "react"
-import renderer from "react-test-renderer"
-import { shallow, mount } from 'enzyme'
-import toJson from 'enzyme-to-json'
+import { mount } from 'enzyme'
 import getResourcesResponse from '../../__fixtures__/getResourcesResponse'
-import { act } from 'react-dom/test-utils';
 import { ResourceProvider } from "../ResourceContext/ResourceContext"
 
 import ResourceList from "./ResourceList"
@@ -278,7 +275,7 @@ describe("ResourceList", () => {
       // hack to force rerender so useEffect works properly
       wrapper.setProps();
       wrapper.update();
-      
+
       expect(wrapper.find('.resourceDetails').length).toEqual(1);
 
       // Simulate mousedown event outside of container

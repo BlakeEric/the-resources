@@ -1,7 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import { shallow, mount } from 'enzyme'
-import toJson from 'enzyme-to-json'
+import { mount } from 'enzyme'
 import getResourcesResponse from '../../__fixtures__/getResourcesResponse'
 import { ResourceProvider } from "../ResourceContext/ResourceContext"
 

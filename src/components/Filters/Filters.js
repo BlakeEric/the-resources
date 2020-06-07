@@ -1,13 +1,17 @@
-import React from "react"
+import React, { useContext } from "react"
 import { css } from "@emotion/core"
 import { rhythm } from "../../utils/typography"
+import { ResourceContext } from "../ResourceContext/ResourceContext"
 
-export default function ResourceListFilters(props) {
+export default function ResourceListFilters() {
+
+  const context = useContext(ResourceContext);
+
   const hasActiveFilters =
-    props.searchTerm ||
-    props.selectedFormat ||
-    props.selectedFocus ||
-    props.selectedSkillLevel;
+    context.searchTerm ||
+    context.selectedFormat ||
+    context.selectedFocus ||
+    context.selectedSkillLevel
 
   return (
     <form css={styles}>
@@ -15,7 +19,7 @@ export default function ResourceListFilters(props) {
         <legend>
           Filter
           {hasActiveFilters &&
-            <button className="btn-clearFilters" onClick={props.clearFilters}>
+            <button className="btn-clearFilters" onClick={context.clearFilters}>
               × Clear All
             </button>
           }
@@ -29,8 +33,8 @@ export default function ResourceListFilters(props) {
             id="searchTerm"
             name="searchTerm"
             placeholder="Start typing..."
-            value={props.searchTerm || ""}
-            onChange={(event) => {props.setSearchTerm(event.target.value)}}
+            value={context.searchTerm || ""}
+            onChange={(event) => {context.setSearchTerm(event.target.value)}}
           />
         </label>
 
@@ -39,11 +43,11 @@ export default function ResourceListFilters(props) {
           <select
             id="resourceFormat"
             name="resourceFormat"
-            onChange={(event) => {props.setSelected('selectedFormat', event.target.value)}}
-            value={props.selectedFormat || ""}
+            onChange={(event) => {context.setSelected('selectedFormat', event.target.value)}}
+            value={context.selectedFormat || ""}
           >
             <option value="">All</option>
-            {props.formats.map((format, i) =>
+            {context.allFormats.map((format, i) =>
               <option key={`format-${i}`} value={format}>{format}</option>)
             }
           </select>
@@ -54,11 +58,11 @@ export default function ResourceListFilters(props) {
           <select
             id="resourceFocus"
             name="resourceFocus"
-            onChange={(event) => {props.setSelected('selectedFocus', event.target.value)}}
-            value={props.selectedFocus || ""}
+            onChange={(event) => {context.setSelected('selectedFocus', event.target.value)}}
+            value={context.selectedFocus || ""}
           >
             <option value="">All</option>
-            {props.focuses.map((focus, i) =>
+            {context.allFocuses.map((focus, i) =>
               <option key={`focus-${i}`} value={focus}>{focus}</option>)
             }
           </select>
@@ -69,11 +73,11 @@ export default function ResourceListFilters(props) {
           <select
             id="resourceSkillLevel"
             name="resourceSkillLevel"
-            onChange={(event) => {props.setSelected('selectedSkillLevel', event.target.value)}}
-            value={props.selectedSkillLevel || ""}
+            onChange={(event) => {context.setSelected('selectedSkillLevel', event.target.value)}}
+            value={context.selectedSkillLevel || ""}
           >
             <option value="">All</option>
-            {props.skillLevels.map((skillLevel, i) =>
+            {context.allSkillLevels.map((skillLevel, i) =>
               <option key={`skillLevel-${i}`} value={skillLevel}>{skillLevel}</option>)
             }
           </select>

@@ -2,6 +2,7 @@ import React from "react"
 import renderer from "react-test-renderer"
 import { shallow, mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
+import { ResourceContext } from "../ResourceContext/ResourceContext"
 import getResourcesResponse from '../../__fixtures__/getResourcesResponse'
 
 import Resource from "./Resource"
@@ -10,7 +11,6 @@ import Resource from "./Resource"
 const mockProps = {
   ...getResourcesResponse[0].node,
   isToggled: false,
-  setToggledItemId: () => {},
   showDetailsAbove: false
 }
 
@@ -21,8 +21,11 @@ describe("Resource", () => {
   */
   it("renders correctly not toggled", () => {
     const tree = renderer
-      .create(<Resource {...mockProps}/>)
-      .toJSON()
+      .create(
+        <ResourceContext.Provider value={{setToggledItemId: () => {}}}>
+          <Resource {...mockProps}/>)
+        </ResourceContext.Provider>
+      ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -31,20 +34,14 @@ describe("Resource", () => {
     mockProps.isToggled = true;
 
     const tree = renderer
-      .create(<Resource {...mockProps} />)
-      .toJSON()
+      .create(
+        <ResourceContext.Provider value={{setToggledItemId: () => {}}}>
+          <Resource {...mockProps}/>)
+        </ResourceContext.Provider>
+      ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
-  it("renders correctly when toggled", () => {
-
-    mockProps.isToggled = true;
-
-    const tree = renderer
-      .create(<Resource {...mockProps} />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
 
   it("renders popover above item when showDetailsAbove prop is true", () => {
 
@@ -52,8 +49,11 @@ describe("Resource", () => {
     mockProps.showDetailsAbove = true
 
     const tree = renderer
-      .create(<Resource {...mockProps} />)
-      .toJSON()
+      .create(
+        <ResourceContext.Provider value={{setToggledItemId: () => {}}}>
+          <Resource {...mockProps}/>)
+        </ResourceContext.Provider>
+      ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 

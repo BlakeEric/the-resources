@@ -4,6 +4,7 @@ import { rhythm } from "../utils/typography"
 import { css } from '@emotion/core'
 import Layout from "../components/Layout/Layout"
 import Seo from "../components/Seo/Seo"
+import { ResourceProvider } from "../components/ResourceContext/ResourceContext"
 import ResourceList from "../components/ResourceList/ResourceList"
 
 export default function Home({ data }) {
@@ -15,12 +16,14 @@ export default function Home({ data }) {
         <p>Know a resource that should be added to the list?<a className="btn btn-gray" href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!">recommend a resource</a></p>
       </header>
       <main>
-        <ResourceList
+        <ResourceProvider
           resources={data.resources.edges}
-          formats={data.formatData.distinct}
-          focuses={data.focusData.distinct}
-          skillLevels={data.skillLevelData.distinct}
-        />
+          allFormats={data.formatData.distinct}
+          allFocuses={data.focusData.distinct}
+          allSkillLevels={data.skillLevelData.distinct}
+        >
+          <ResourceList />
+        </ResourceProvider>
       </main>
     </Layout>
   )

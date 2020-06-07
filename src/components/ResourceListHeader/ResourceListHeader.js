@@ -1,16 +1,18 @@
-import React from "react"
+import React, { useContext } from "react"
 import typography from "../../utils/typography"
 import { css } from "@emotion/core"
+import { ResourceContext } from '../ResourceContext/ResourceContext'
 
+export default function ResourceListTableHeader({ keys }) {
 
-export default function ResourceListTableHeader(props) {
+  const context = useContext(ResourceContext);
 
   /*
    * Display up or down icon based on key and current order in state
    */
   const displaySortIcon = (keyName) => {
-    if (props.orderBy === keyName) {
-      if (props.order === "DESC") {
+    if (context.orderBy === keyName) {
+      if (context.order === "DESC") {
         return '↑'
       }
       return '↓'
@@ -32,11 +34,11 @@ export default function ResourceListTableHeader(props) {
   return (
     <thead css={styles} >
       <tr>
-        {props.keys.map(keyName => {
+        {keys.map(keyName => {
           return (
-            <th key={keyName} className={props.orderBy === keyName ? "active" : ""}>
+            <th key={keyName} className={context.orderBy === keyName ? "active" : ""}>
               <button
-                onClick={() => props.handleFilterClick(keyName)}>
+                onClick={() => context.setOrder(keyName)}>
                 {formatColumnTitle(keyName)} {displaySortIcon(keyName)}
               </button>
             </th>

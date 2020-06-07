@@ -3,26 +3,34 @@ import renderer from "react-test-renderer"
 import { shallow, mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import getResourcesResponse from '../../__fixtures__/getResourcesResponse'
+import { act } from 'react-dom/test-utils';
+import { ResourceProvider } from "../ResourceContext/ResourceContext"
 
 import ResourceList from "./ResourceList"
 
 const mockProps = {
   resources: getResourcesResponse,
-  skillLevels: ["Beginner", "Moderate", "Advanced"],
-  focuses: ["Front-end", "Multiple", "Algorithms"],
-  formats: ['Article', 'Interactive', 'Tutorial', 'Video']
+  allSkillLevels: ["Beginner", "Moderate", "Advanced"],
+  allFocuses: ["Front-end", "Multiple", "Algorithms"],
+  allFormats: ['Article', 'Interactive', 'Tutorial', 'Video']
 }
 
 describe("ResourceList", () => {
+
+  let wrapper;
+  beforeEach(() => {
+    wrapper = mount(
+      <ResourceProvider {...mockProps}>
+        <ResourceList />
+      </ResourceProvider>
+    )
+  });
 
   /*
   * Sorting by Name
   */
   describe('When sorting by name', () => {
     it("toggles between DESC and ASC ordering by NAME on when appropriate button is clicked", () => {
-      const wrapper = mount(<ResourceList {...mockProps} />)
-
-      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
 
       // The "name" column button
       const button = wrapper.find('button').at(0)
@@ -48,9 +56,6 @@ describe("ResourceList", () => {
   */
   describe('When sorting by Format', () => {
     it("toggles between DESC and ASC ordering by FORMAT on when appropriate button is clicked", () => {
-      const wrapper = mount(<ResourceList {...mockProps} />)
-
-      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
 
       // The "skillLevel" column button
       const button = wrapper.find('button').at(1)
@@ -77,9 +82,6 @@ describe("ResourceList", () => {
   */
   describe('When sorting by Focus', () => {
     it("toggles between DESC and ASC ordering by FOCUS on when appropriate button is clicked", () => {
-      const wrapper = mount(<ResourceList {...mockProps} />)
-
-      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
 
       // The "focus" column button
       const button = wrapper.find('button').at(2)
@@ -105,9 +107,6 @@ describe("ResourceList", () => {
   */
   describe('When sorting by Skill Level', () => {
     it("toggles between DESC and ASC ordering by SKILL LEVEL on when appropriate button is clicked", () => {
-      const wrapper = mount(<ResourceList {...mockProps} />)
-
-      expect(wrapper.find('tbody tr').first().text().includes('Alligator')).toBeTruthy();
 
       // The "skillLevel" column button
       const button = wrapper.find('button').at(3)
@@ -134,7 +133,6 @@ describe("ResourceList", () => {
   */
   describe('When filtering by name', () => {
     it("displays only items with Names containing the search term", () => {
-      const wrapper = mount(<ResourceList {...mockProps} />)
 
       // Five items should be rendered
       expect(wrapper.find('tbody tr').length).toEqual(5);
@@ -156,7 +154,6 @@ describe("ResourceList", () => {
   */
   describe('When filtering by Skill Level', () => {
     it("displays only items with skill levels containing the selection", () => {
-      const wrapper = mount(<ResourceList {...mockProps} />)
 
       // Five items should be rendered
       expect(wrapper.find('tbody tr').length).toEqual(5);
@@ -178,7 +175,6 @@ describe("ResourceList", () => {
   */
   describe('When filtering by Format', () => {
     it("displays only items with formats containing the selection", () => {
-      const wrapper = mount(<ResourceList {...mockProps} />)
 
       // Five items should be rendered
       expect(wrapper.find('tbody tr').length).toEqual(5);
@@ -200,7 +196,6 @@ describe("ResourceList", () => {
   */
   describe('When filtering by Focus', () => {
     it("displays only items with formats containing the selection", () => {
-      const wrapper = mount(<ResourceList {...mockProps} />)
 
       // Five items should be rendered
       expect(wrapper.find('tbody tr').length).toEqual(5);
@@ -224,8 +219,6 @@ describe("ResourceList", () => {
   describe('When clearing filters', () => {
 
     it("displays all items when 'Clear filter' button is clicked", () => {
-
-      const wrapper = mount(<ResourceList {...mockProps} />)
 
       // The "skillLevel" filter button
       const field = wrapper.find('select#resourceFocus').first()
@@ -256,7 +249,6 @@ describe("ResourceList", () => {
 
     it("opens and closes resource detail popover when clicking twice on same item name", () => {
 
-      const wrapper = mount(<ResourceList {...mockProps} />)
       const anchor = wrapper.find('.resourceDetails-wrapper a').first()
 
       expect(wrapper.find('.resourceDetails').length).toEqual(0);
@@ -280,15 +272,18 @@ describe("ResourceList", () => {
         map[event] = cb;
       });
 
-      const wrapper = mount(<ResourceList {...mockProps} />)
-
       // Open the first Item
       wrapper.setState({ currentToggledItemId: "d04da249-50e7-5b18-a992-d530e14831a7" });
 
+      // hack to force rerender so useEffect works properly
+      wrapper.setProps();
+      wrapper.update();
+      
       expect(wrapper.find('.resourceDetails').length).toEqual(1);
 
       // Simulate mousedown event outside of container
       map.mousedown({ pageX: 0, pageY: 0});
+
       wrapper.update();
       expect(wrapper.find('.resourceDetails').length).toEqual(0);
 
@@ -297,10 +292,12 @@ describe("ResourceList", () => {
 
     it("moves popover to clicked item if it is currently open on another item", () => {
 
-      const wrapper = mount(<ResourceList {...mockProps} />)
-
       // Open the first Item
       wrapper.setState({ currentToggledItemId: "d04da249-50e7-5b18-a992-d530e14831a7" });
+
+      // hack to force rerender so useEffect works properly
+      wrapper.setProps();
+      wrapper.update();
 
       expect(wrapper.find('.resourceDetails').length).toEqual(1);
 

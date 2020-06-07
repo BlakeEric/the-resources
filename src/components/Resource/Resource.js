@@ -1,109 +1,121 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { css } from '@emotion/core'
 import { rhythm } from "../../utils/typography"
+import { ResourceContext } from '../ResourceContext/ResourceContext'
 
 
-export default class Resource extends React.Component {
+export default function Resource(props) {
+
+  const context = useContext(ResourceContext)
+
+  /**
+   * return true if the current item's details should be showing
+   */
+  const isToggled = context.currentToggledItemId === props.id
 
 
-  componentDidUpdate() {
-    if(this.props.isToggled) {
-      document.addEventListener('mousedown', this.handleClickOutside);
+  /**
+   * add/remove click handler to close detail window
+   * when user clicks outside of the container
+   */
+  useEffect(() => {
+
+    if(isToggled) {
+      document.addEventListener('mousedown', handleClickOutside);
     } else {
-      document.removeEventListener('mousedown', this.handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     }
-  }
 
-  componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClickOutside);
-  }
+    // Specify how to clean up after this effect:
+    return function cleanup() {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  });
 
   /**
    * Set the wrapper ref
    */
-  setWrapperRef = (node) => {
-    this.wrapperRef = node;
+  let wrapperRef;
+  const setWrapperRef = (node) => {
+    wrapperRef = node;
   }
 
   /**
    * Set Trigger ref
    */
-  setTriggerRef = (node) => {
-    this.triggerRef = node;
+  let triggerRef;
+  const setTriggerRef = (node) => {
+    triggerRef = node;
   }
 
   /**
    * Close detail tab if clicked on outside
    */
-  handleClickOutside = (event) => {
+  const handleClickOutside = (event) => {
     if (
-      this.wrapperRef &&
-      !this.wrapperRef.contains(event.target) &&
-      !this.triggerRef.contains(event.target)
+      wrapperRef &&
+      triggerRef &&
+      !wrapperRef.contains(event.target) &&
+      !triggerRef.contains(event.target)
     ) {
-      this.props.setToggledItemId(null)
+      context.setToggledItemId(null)
     }
   }
 
   /**
    * Open detail tab is currently closed, and vice versa
    */
-  handleToggle = (e) => {
+  const handleToggle = (e) => {
 
     e.preventDefault();
 
-    if (this.props.isToggled) {
-      this.props.setToggledItemId(null)
+    if (isToggled) {
+      context.setToggledItemId(null)
     } else {
-      this.props.setToggledItemId(this.props.id)
+      context.setToggledItemId(props.id)
     }
   }
 
-  render() {
-    return (
-      <tr key={this.props.id} style={{overflow: "visible"}}>
-        <td>
+
+  return (
+    <tr key={props.id} style={{overflow: "visible"}}>
+      <td>
         <div className="resourceDetails-wrapper" css={resourceDetailStyles}>
           <a
-            href={this.props.frontmatter.url}
-            onClick={(e) => this.handleToggle(e)}
+            href={props.frontmatter.url}
+            onClick={(e) => handleToggle(e)}
             target="_blank" rel="noreferrer noopener"
-            ref={this.setTriggerRef}
+            ref={setTriggerRef}
           >
-            {this.props.frontmatter.name}
+            {props.frontmatter.name}
           </a>
-          {this.props.isToggled &&
-
-              <aside
-                className={`resourceDetails ${this.props.showDetailsAbove ? 'up' : ''}`}
-                ref={this.setWrapperRef}
-              >
-                <h4>{this.props.frontmatter.name}</h4>
-                <div dangerouslySetInnerHTML={{ __html: this.props.html }} />
-                <a href={this.props.frontmatter.url} target="_blank" rel="noreferrer noopener">View Now</a>
-              </aside>
-
+          {isToggled &&
+            <aside
+              className={`resourceDetails ${props.showDetailsAbove ? 'up' : ''}`}
+              ref={setWrapperRef}
+            >
+              <h4>{props.frontmatter.name}</h4>
+              <div dangerouslySetInnerHTML={{ __html: props.html }} />
+              <a href={props.frontmatter.url} target="_blank" rel="noreferrer noopener">View Now</a>
+            </aside>
           }
-          </div>
-        </td>
-        <td>
-          {this.props.frontmatter.format}
-        </td>
-        <td>
-          {this.props.frontmatter.focus}
-        </td>
-        <td>
-          {this.props.frontmatter.skillLevel.length === 3 ? 'All' : this.props.frontmatter.skillLevel.join(', ')}
-        </td>
-      </tr>
-
-    )
-  }
+        </div>
+      </td>
+      <td>
+        {props.frontmatter.format}
+      </td>
+      <td>
+        {props.frontmatter.focus}
+      </td>
+      <td>
+        {props.frontmatter.skillLevel.length === 3 ? 'All' : props.frontmatter.skillLevel.join(', ')}
+      </td>
+    </tr>
+  )
 
 }
 
 Resource.defaultProps = {
-  isToggled: false,
   setToggledItemId: () => {}
 }
 

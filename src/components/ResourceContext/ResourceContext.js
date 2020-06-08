@@ -7,21 +7,44 @@ export const ResourceContext = React.createContext();
 export class ResourceProvider extends React.Component {
 
   state = {
-    resources: this.props.resources,
-    isFilterable: false, // used to display filter options if JS is enabled
+    bookmarks: [],
     currentToggledItemId: null,
+    isFilterable: false, // used to display filter options if JS is enabled
     orderBy: "name",
     order: "ASC",
+    resources: this.props.resources,
     searchTerm: null,
     selectedSkillLevel: null,
     selectedFormat: null,
     selectedFocus: null,
   }
 
+
   componentDidMount() {
     // if JS is enabled allow dynamic filtering
     this.setState({isFilterable: true})
   }
+
+
+  /*
+   * add an resource's id to bookmarks of saved resources
+   */
+  addToBookmarks = (id) => {
+    this.setState({
+      bookmarks: [...this.state.bookmarks, id]
+    })
+  }
+
+
+  /*
+   * remove an resource's id from bookmarks of saved resources
+   */
+  removeFromBookmarks = (id) => {
+    this.setState({
+      bookmarks: this.state.bookmarks.filter(item => item !== id)
+    })
+  }
+
 
   /*
    * Reverse value of 'order' in state: "ASC" or "DESC"
@@ -209,6 +232,8 @@ export class ResourceProvider extends React.Component {
       allFormats: this.props.allFormats,
       allFocuses: this.props.allFocuses,
       allSkillLevels: this.props.allSkillLevels,
+      addToBookmarks: this.addToBookmarks,
+      removeFromBookmarks: this.removeFromBookmarks
     }
 
     return (

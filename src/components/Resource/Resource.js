@@ -15,6 +15,11 @@ export default function Resource(props) {
 
 
   /**
+   * return true if the current item's details should be showing
+   */
+  const isInBookmarks = context.bookmarks.includes(props.id)
+
+  /**
    * add/remove click handler to close detail window
    * when user clicks outside of the container
    */
@@ -96,7 +101,13 @@ export default function Resource(props) {
             >
               <h4>{props.frontmatter.name}</h4>
               <div dangerouslySetInnerHTML={{ __html: props.html }} />
-              <a href={props.frontmatter.url} target="_blank" rel="noreferrer noopener">View Now</a>
+              <div class="controls">
+                <a className="btn-view" href={props.frontmatter.url} target="_blank" rel="noreferrer noopener">View Now &rarr;</a>
+                {isInBookmarks
+                  ? <span style={{float: "right"}}>Bookmarked! <button className="btn-remove" onClick={() => context.removeFromBookmarks(props.id)}>Remove</button></span>
+                  : <button className="btn-add" onClick={() => context.addToBookmarks(props.id)}>Add to bookmarks</button>
+                }
+              </div>
             </aside>
           }
         </div>
@@ -167,7 +178,29 @@ const resourceDetailStyles = css`
       color: black;
     }
     p:last-child {
-      margin: 0;
+      margin-bottom: ${rhythm(.5)};
+    }
+    .btn-view {
+      padding-right: ${rhythm(.25)};
+    }
+    .btn-add {
+      float:right;
+      padding-right: ${rhythm(.25)};
+      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+      border: none;
+      padding: 0 ${rhythm(.25)};
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .btn-remove {
+      padding-right: ${rhythm(.25)};
+      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
+      border: none;
+      padding: 0 ${rhythm(.25)};
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
     }
   }
 `

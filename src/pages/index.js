@@ -6,6 +6,8 @@ import Layout from "../components/Layout/Layout"
 import Seo from "../components/Seo/Seo"
 import { ResourceProvider } from "../components/ResourceContext/ResourceContext"
 import ResourceList from "../components/ResourceList/ResourceList"
+import Bookmarks from "../components/Bookmarks/Bookmarks"
+
 
 export default function Home({ data }) {
   return (
@@ -15,20 +17,39 @@ export default function Home({ data }) {
         <h2>One-up your coding skills and industry know-how using these free tools, courses, and articles.</h2>
         <p>Know a resource that should be added to the list?<a className="btn btn-gray" href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!">recommend a resource</a></p>
       </header>
-      <main>
-        <ResourceProvider
-          resources={data.resources.edges}
-          allFormats={data.formatData.distinct}
-          allFocuses={data.focusData.distinct}
-          allSkillLevels={data.skillLevelData.distinct}
-        >
+      <ResourceProvider
+        resources={data.resources.edges}
+        allFormats={data.formatData.distinct}
+        allFocuses={data.focusData.distinct}
+        allSkillLevels={data.skillLevelData.distinct}
+      >
+        <main style={{position: "relative"}}>
           <ResourceList />
-        </ResourceProvider>
-      </main>
+          <aside css={bookmarkStyles}>
+            <Bookmarks />
+          </aside>
+        </main>
+      </ResourceProvider>
     </Layout>
   )
 }
 
+
+const bookmarkStyles = css`
+  padding-top: ${rhythm(1)};
+  @media (min-width: 1200px) {
+    padding-top: 0;
+    position: absolute;
+    right: -195px;
+    width: 175px;
+    height: 100%;
+    top: 0;
+  }
+  @media (min-width: 1300px) {
+    right: -215px;
+    width: 190px;
+  }
+`
 
 const headerStyles = css`
   text-align: center;

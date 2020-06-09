@@ -101,7 +101,7 @@ export default function Resource(props) {
             >
               <h4>{props.frontmatter.name}</h4>
               <div dangerouslySetInnerHTML={{ __html: props.html }} />
-              <div class="controls">
+              <div className="controls">
                 <a className="btn-view" href={props.frontmatter.url} target="_blank" rel="noreferrer noopener">View Now &rarr;</a>
                 {isInBookmarks
                   ? <span style={{float: "right"}}>Bookmarked! <button className="btn-remove" onClick={() => context.removeFromBookmarks(props.id)}>Remove</button></span>

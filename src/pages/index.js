@@ -40,7 +40,7 @@ const bookmarkStyles = css`
   @media (min-width: 1200px) {
     padding-top: 0;
     position: absolute;
-    right: -195px;
+    right: -200px;
     width: 175px;
     height: 100%;
     top: 0;

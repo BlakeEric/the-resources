@@ -22,7 +22,19 @@ export class ResourceProvider extends React.Component {
 
   componentDidMount() {
     // if JS is enabled allow dynamic filtering
-    this.setState({isFilterable: true})
+    this.setState({
+      isFilterable: true,
+      bookmarks: JSON.parse(window.localStorage.getItem('bookmarks'))
+    })
+
+  }
+
+
+  /*
+   * Sync localStorage with bookmarks in state
+   */
+  updateBookmarksInLocalStorage = () => {
+    window.localStorage.setItem('bookmarks', JSON.stringify(this.state.bookmarks));
   }
 
 
@@ -32,7 +44,7 @@ export class ResourceProvider extends React.Component {
   addToBookmarks = (id) => {
     this.setState({
       bookmarks: [...this.state.bookmarks, id]
-    })
+    }, this.updateBookmarksInLocalStorage)
   }
 
 
@@ -42,7 +54,7 @@ export class ResourceProvider extends React.Component {
   removeFromBookmarks = (id) => {
     this.setState({
       bookmarks: this.state.bookmarks.filter(item => item !== id)
-    })
+    }, this.updateBookmarksInLocalStorage)
   }
 
 

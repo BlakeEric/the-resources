@@ -4,6 +4,7 @@ import getResourcesResponse from '../../__fixtures__/getResourcesResponse'
 import { ResourceProvider } from "../ResourceContext/ResourceContext"
 
 import ResourceList from "./ResourceList"
+import Bookmarks from "../Bookmarks/Bookmarks"
 
 const mockProps = {
   resources: getResourcesResponse,
@@ -270,7 +271,7 @@ describe("ResourceList", () => {
       });
 
       // Open the first Item
-      wrapper.setState({ currentToggledItemId: "d04da249-50e7-5b18-a992-d530e14831a7" });
+      wrapper.setState({ currentToggledItemId: getResourcesResponse[0].node.id });
 
       // hack to force rerender so useEffect works properly
       wrapper.setProps();
@@ -290,7 +291,7 @@ describe("ResourceList", () => {
     it("moves popover to clicked item if it is currently open on another item", () => {
 
       // Open the first Item
-      wrapper.setState({ currentToggledItemId: "d04da249-50e7-5b18-a992-d530e14831a7" });
+      wrapper.setState({ currentToggledItemId: getResourcesResponse[0].node.id });
 
       // hack to force rerender so useEffect works properly
       wrapper.setProps();
@@ -306,11 +307,72 @@ describe("ResourceList", () => {
       expect(wrapper.find('.resourceDetails').length).toEqual(1);
 
       // the current toggled item in state should have changed
-      expect(wrapper.state().currentToggledItemId === "d04da249-50e7-5b18-a992-d530e14831a7").toBeFalsy();
+      expect(wrapper.state().currentToggledItemId === getResourcesResponse[0].node.id).toBeFalsy();
 
     });
 
+  });
 
+
+  /*
+  * Resource detail popover
+  */
+  describe('when selecting bookmarks', () => {
+
+    beforeEach(() => {
+      wrapper = mount(
+        <ResourceProvider {...mockProps}>
+          <ResourceList />
+          <Bookmarks />
+        </ResourceProvider>
+      )
+      // Open the first Item
+      wrapper.setState({ currentToggledItemId: getResourcesResponse[0].node.id });
+
+      // hack to force rerender so useEffect works properly
+      wrapper.setProps();
+      wrapper.update();
+    })
+
+    it("adds an item to bookmarks when 'add' button is clicked", () => {
+
+      // Click to open the last item
+      wrapper.find('.resourceDetails-wrapper button').first().simulate('click')
+      wrapper.update();
+
+      // Number of bookmarks displayed and in state should be one
+      expect(wrapper.find('.bookmarks li').length).toEqual(1);
+      expect(wrapper.state().bookmarks.length).toEqual(1);
+
+    });
+
+    it("removes an item from bookmarks when 'remove' button is clicked on item detail", () => {
+
+      wrapper.setState({ bookmarks: [getResourcesResponse[0].node.id] });
+
+      // Click to open the last item
+      wrapper.find('.resourceDetails-wrapper button').first().simulate('click')
+      wrapper.update();
+
+      // Number of bookmarks displayed and in state should be 0
+      expect(wrapper.find('.bookmarks li').length).toEqual(0);
+      expect(wrapper.state().bookmarks.length).toEqual(0);
+
+    });
+
+    it("removes an item from bookmarks when 'remove' button is clicked in bookmarks tab", () => {
+
+      wrapper.setState({ bookmarks: [getResourcesResponse[0].node.id] });
+
+      // Click to open the last item
+      wrapper.find('.bookmarks li button').first().simulate('click')
+      wrapper.update();
+
+      // Number of bookmarks displayed and in state should be 0
+      expect(wrapper.find('.bookmarks li').length).toEqual(0);
+      expect(wrapper.state().bookmarks.length).toEqual(0);
+
+    });
   });
 
 })

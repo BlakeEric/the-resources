@@ -21,12 +21,18 @@ export class ResourceProvider extends React.Component {
 
 
   componentDidMount() {
+
+    let bookmarks = [];
+
+    if (window.localStorage.getItem('bookmarks') !== null) {
+      bookmarks = JSON.parse(window.localStorage.getItem('bookmarks'))
+    }
+
     // if JS is enabled allow dynamic filtering
     this.setState({
       isFilterable: true,
-      bookmarks: JSON.parse(window.localStorage.getItem('bookmarks'))
+      bookmarks
     })
-
   }
 
 

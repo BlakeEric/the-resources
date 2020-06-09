@@ -6,10 +6,15 @@ import getResourcesResponse from '../../__fixtures__/getResourcesResponse'
 import Resource from "./Resource"
 
 
-const mockProps = {
+let mockProps = {
   ...getResourcesResponse[0].node,
-  isToggled: false,
   showDetailsAbove: false
+}
+
+let mockContext = {
+  setToggledItemId: () => {},
+  currentToggledItemId: null,
+  bookmarks: []
 }
 
 describe("Resource", () => {
@@ -20,7 +25,7 @@ describe("Resource", () => {
   it("renders correctly not toggled", () => {
     const tree = renderer
       .create(
-        <ResourceContext.Provider value={{setToggledItemId: () => {}}}>
+        <ResourceContext.Provider value={mockContext}>
           <Resource {...mockProps}/>)
         </ResourceContext.Provider>
       ).toJSON()
@@ -29,11 +34,11 @@ describe("Resource", () => {
 
   it("renders correctly when toggled", () => {
 
-    mockProps.isToggled = true;
+    mockContext.currentToggledItemId = getResourcesResponse[0].node.id;
 
     const tree = renderer
       .create(
-        <ResourceContext.Provider value={{setToggledItemId: () => {}}}>
+        <ResourceContext.Provider value={mockContext}>
           <Resource {...mockProps}/>)
         </ResourceContext.Provider>
       ).toJSON()
@@ -48,7 +53,21 @@ describe("Resource", () => {
 
     const tree = renderer
       .create(
-        <ResourceContext.Provider value={{setToggledItemId: () => {}}}>
+        <ResourceContext.Provider value={mockContext}>
+          <Resource {...mockProps}/>)
+        </ResourceContext.Provider>
+      ).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+
+  it("Shows indication that item has been bookmarked", () => {
+
+    mockContext.bookmarks = [getResourcesResponse[0].node.id];
+
+    const tree = renderer
+      .create(
+        <ResourceContext.Provider value={mockContext}>
           <Resource {...mockProps}/>)
         </ResourceContext.Provider>
       ).toJSON()

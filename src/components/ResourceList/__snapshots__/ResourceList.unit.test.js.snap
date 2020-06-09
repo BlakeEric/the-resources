@@ -316,7 +316,7 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
               css={
                 Object {
                   "map": undefined,
-                  "name": "lr1hv8",
+                  "name": "39f3gt",
                   "next": undefined,
                   "styles": "
   position: relative;
@@ -366,7 +366,29 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
       color: black;
     }
     p:last-child {
-      margin: 0;
+      margin-bottom: 0.805rem;
+    }
+    .btn-view {
+      padding-right: 0.4025rem;
+    }
+    .btn-add {
+      float:right;
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .btn-remove {
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
     }
   }
 ",
@@ -406,7 +428,7 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
               css={
                 Object {
                   "map": undefined,
-                  "name": "lr1hv8",
+                  "name": "39f3gt",
                   "next": undefined,
                   "styles": "
   position: relative;
@@ -456,7 +478,29 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
       color: black;
     }
     p:last-child {
-      margin: 0;
+      margin-bottom: 0.805rem;
+    }
+    .btn-view {
+      padding-right: 0.4025rem;
+    }
+    .btn-add {
+      float:right;
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .btn-remove {
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
     }
   }
 ",
@@ -496,7 +540,7 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
               css={
                 Object {
                   "map": undefined,
-                  "name": "lr1hv8",
+                  "name": "39f3gt",
                   "next": undefined,
                   "styles": "
   position: relative;
@@ -546,7 +590,29 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
       color: black;
     }
     p:last-child {
-      margin: 0;
+      margin-bottom: 0.805rem;
+    }
+    .btn-view {
+      padding-right: 0.4025rem;
+    }
+    .btn-add {
+      float:right;
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .btn-remove {
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
     }
   }
 ",
@@ -586,7 +652,7 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
               css={
                 Object {
                   "map": undefined,
-                  "name": "lr1hv8",
+                  "name": "39f3gt",
                   "next": undefined,
                   "styles": "
   position: relative;
@@ -636,7 +702,29 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
       color: black;
     }
     p:last-child {
-      margin: 0;
+      margin-bottom: 0.805rem;
+    }
+    .btn-view {
+      padding-right: 0.4025rem;
+    }
+    .btn-add {
+      float:right;
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .btn-remove {
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
     }
   }
 ",
@@ -676,7 +764,7 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
               css={
                 Object {
                   "map": undefined,
-                  "name": "lr1hv8",
+                  "name": "39f3gt",
                   "next": undefined,
                   "styles": "
   position: relative;
@@ -726,7 +814,29 @@ exports[`ResourceList Initial render renders correctly when no resources passed 
       color: black;
     }
     p:last-child {
-      margin: 0;
+      margin-bottom: 0.805rem;
+    }
+    .btn-view {
+      padding-right: 0.4025rem;
+    }
+    .btn-add {
+      float:right;
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .btn-remove {
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
     }
   }
 ",

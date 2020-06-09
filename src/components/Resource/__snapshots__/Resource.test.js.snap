@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Resource renders correctly not toggled 1`] = `
+exports[`Resource Shows indication that item has been bookmarked 1`] = `
 Array [
   <tr
     style={
@@ -15,7 +15,7 @@ Array [
         css={
           Object {
             "map": undefined,
-            "name": "lr1hv8",
+            "name": "39f3gt",
             "next": undefined,
             "styles": "
   position: relative;
@@ -65,7 +65,187 @@ Array [
       color: black;
     }
     p:last-child {
-      margin: 0;
+      margin-bottom: 0.805rem;
+    }
+    .btn-view {
+      padding-right: 0.4025rem;
+    }
+    .btn-add {
+      float:right;
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .btn-remove {
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+  }
+",
+            "toString": [Function],
+          }
+        }
+      >
+        <a
+          onClick={[Function]}
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Alligator
+        </a>
+        <aside
+          className="resourceDetails up"
+        >
+          <h4>
+            Alligator
+          </h4>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+          />
+          <div
+            className="controls"
+          >
+            <a
+              className="btn-view"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              View Now →
+            </a>
+            <span
+              style={
+                Object {
+                  "float": "right",
+                }
+              }
+            >
+              Bookmarked! 
+              <button
+                className="btn-remove"
+                onClick={[Function]}
+              >
+                Remove
+              </button>
+            </span>
+          </div>
+        </aside>
+      </div>
+    </td>
+    <td>
+      Article
+    </td>
+    <td>
+      Front-end
+    </td>
+    <td>
+      All
+    </td>
+  </tr>,
+  ")",
+]
+`;
+
+exports[`Resource renders correctly not toggled 1`] = `
+Array [
+  <tr
+    style={
+      Object {
+        "overflow": "visible",
+      }
+    }
+  >
+    <td>
+      <div
+        className="resourceDetails-wrapper"
+        css={
+          Object {
+            "map": undefined,
+            "name": "39f3gt",
+            "next": undefined,
+            "styles": "
+  position: relative;
+  .resourceDetails {
+    position: absolute;
+    left: 0;
+    max-width: 90vw;
+    width: 300px;
+    top: 110%;
+    left: -0.4025rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
+    padding: 0.4025rem;
+    z-index: 1000;
+    border: 1px solid #e4e4e4;
+    &:after {
+      content: \\"\\";
+      height: 12px;
+      width: 12px;
+      position: absolute;
+      top: 0;
+      background: white;
+      transform: rotate(-45deg);
+      transform-origin: 0 0;
+      left: 0.805rem;
+      border-right: 1px solid #e4e4e4;
+      border-top: 1px solid #e4e4e4;
+    }
+    &.up {
+      top: auto;
+      bottom: 110%;
+      &:after {
+        top: auto;
+        bottom: 0;
+        transform: rotate(45deg);
+        transform-origin: 0 100%;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+        border-top: 0;
+      }
+    }
+    h4 {
+      margin-bottom: 0.4025rem;
+    }
+    p {
+      color: black;
+    }
+    p:last-child {
+      margin-bottom: 0.805rem;
+    }
+    .btn-view {
+      padding-right: 0.4025rem;
+    }
+    .btn-add {
+      float:right;
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .btn-remove {
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
     }
   }
 ",
@@ -111,7 +291,7 @@ Array [
         css={
           Object {
             "map": undefined,
-            "name": "lr1hv8",
+            "name": "39f3gt",
             "next": undefined,
             "styles": "
   position: relative;
@@ -161,7 +341,29 @@ Array [
       color: black;
     }
     p:last-child {
-      margin: 0;
+      margin-bottom: 0.805rem;
+    }
+    .btn-view {
+      padding-right: 0.4025rem;
+    }
+    .btn-add {
+      float:right;
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .btn-remove {
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
     }
   }
 ",
@@ -176,6 +378,37 @@ Array [
         >
           Alligator
         </a>
+        <aside
+          className="resourceDetails "
+        >
+          <h4>
+            Alligator
+          </h4>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+          />
+          <div
+            className="controls"
+          >
+            <a
+              className="btn-view"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              View Now →
+            </a>
+            <button
+              className="btn-add"
+              onClick={[Function]}
+            >
+              Add to bookmarks
+            </button>
+          </div>
+        </aside>
       </div>
     </td>
     <td>
@@ -207,7 +440,7 @@ Array [
         css={
           Object {
             "map": undefined,
-            "name": "lr1hv8",
+            "name": "39f3gt",
             "next": undefined,
             "styles": "
   position: relative;
@@ -257,7 +490,29 @@ Array [
       color: black;
     }
     p:last-child {
-      margin: 0;
+      margin-bottom: 0.805rem;
+    }
+    .btn-view {
+      padding-right: 0.4025rem;
+    }
+    .btn-add {
+      float:right;
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
+    }
+    .btn-remove {
+      padding-right: 0.4025rem;
+      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
+      border: none;
+      padding: 0 0.4025rem;
+      color: white;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+      border-radius: 3px;
     }
   }
 ",
@@ -272,6 +527,37 @@ Array [
         >
           Alligator
         </a>
+        <aside
+          className="resourceDetails up"
+        >
+          <h4>
+            Alligator
+          </h4>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+          />
+          <div
+            className="controls"
+          >
+            <a
+              className="btn-view"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              View Now →
+            </a>
+            <button
+              className="btn-add"
+              onClick={[Function]}
+            >
+              Add to bookmarks
+            </button>
+          </div>
+        </aside>
       </div>
     </td>
     <td>

@@ -4,6 +4,7 @@ import getResourcesResponse from '../../__fixtures__/getResourcesResponse'
 import { ResourceProvider } from "../ResourceContext/ResourceContext"
 
 import ResourceList from "./ResourceList"
+import Filters from "../Filters/Filters"
 import Bookmarks from "../Bookmarks/Bookmarks"
 
 const mockProps = {
@@ -19,6 +20,7 @@ describe("ResourceList", () => {
   beforeEach(() => {
     wrapper = mount(
       <ResourceProvider {...mockProps}>
+        <Filters />
         <ResourceList />
       </ResourceProvider>
     )

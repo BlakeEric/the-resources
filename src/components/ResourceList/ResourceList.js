@@ -1,8 +1,7 @@
 import React, { useContext } from "react"
-import { Global, css } from '@emotion/core'
-import { rhythm } from "../../utils/typography"
+import { resourceListStyles } from './ResourceList.styles.js'
+import "./ResourceList.css"
 import ResourceListHeader from '../ResourceListHeader/ResourceListHeader'
-import Filters from '../Filters/Filters'
 import Resource from '../Resource/Resource'
 import { ResourceContext } from '../ResourceContext/ResourceContext'
 
@@ -23,13 +22,9 @@ export default function ResourceList() {
   }
 
   return (
-    <div css={css`min-height: 500px`}>
-      <Global styles={styles} />
-
-      {context.isFilterable && <Filters />}
-
-      <section className="tableWrap">
-        <table>
+    <div>
+      <section className="tableWrap" css={resourceListStyles}>
+        <table className="table">
           <ResourceListHeader keys={['name', 'format', 'focus', 'skillLevel']} />
           <tbody>
             {filteredResources.length === 0 ?
@@ -61,38 +56,3 @@ ResourceList.defaultProps = {
   focuses: []
 }
 
-
-
-const styles = css`
-  .tableWrap {
-    overflow-x: scroll;
-    padding: 0 ${rhythm(.5)};
-    margin: 0 -${rhythm(.5)};
-  }
-  table {
-    font-size: ${rhythm(.525)};
-    min-width: 640px;
-    position: relative;
-  }
-  thead {
-    padding: 20px;
-    min-width: 900px;
-  }
-  tbody {
-    min-width: 900px;
-  }
-  td {
-    width: 25%;
-    padding-top: 0.25rem;
-    padding-bottom: calc(0.25rem - 1px);
-  }
-  td span.notFoundMessage {
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-  }
-  td a {
-    display: inline-block;
-    line-height: 1.25;
-  }
-`

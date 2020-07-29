@@ -1,82 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Filters Adds selected values to appropriate fields 1`] = `
-<form
-  css={
-    Object {
-      "map": undefined,
-      "name": "olpobj",
-      "next": undefined,
-      "styles": "
-  font-size: 0.8855rem;
-  margin: auto -0.805rem;
-  @media (min-width: 600px) {
-    position: sticky;
-    top: 0;
-    z-index: 10000;
-  }
-  fieldset {
-    color: white;
-    border-radius: 5px;
-    background-color: #6aa7fa;
-    background-image: linear-gradient(to bottom right, #6aa7fa, #7b4caf);
-    padding: 0.4025rem;
-    border: none;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-    legend {
-      width: 100%;
-      float: left;
-      padding: 0 0.4025rem;
-      font-size: 0.805rem;
-      letter-spacing: 1px;
-      line-height: 1.5;
-      border-radius: 5px;
-      text-transform: uppercase;
-      button.btn-clearFilters {
-        margin-left: 12px;
-        display: inline;
-        padding: 2px .25rem;
-        background-color: #0acc9e;
-        background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
-        border: 1px solid transparent;
-        color: white;
-        border-radius: 3px;
-        font-size: 0.805rem;
-        line-height: 1;
-        &:hover, &:focus {
-          border: 1px solid #048e6d;
-        }
-      }
-    }
-  }
-  label {
-    width: 50%;
-    display: inline-block;
-    padding: 0.4025rem;
-    @media (min-width: 600px) {
-      width: 25%;
-    }
-  }
-  input, select {
-    width: 100%;
-    height: 30px;
-    border-color: white;
-    background: white;
-    box-shadow: none;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1.5px solid white;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-  }
-",
-      "toString": [Function],
-    }
-  }
->
+<form>
   <fieldset>
     <legend>
-      Filter
+      <strong>
+        Filter
+      </strong>
       <button
         className="btn-clearFilters"
       >
@@ -89,6 +19,7 @@ exports[`Filters Adds selected values to appropriate fields 1`] = `
       Name
       <input
         aria-label="Name"
+        className="css-iyqgnx"
         id="searchTerm"
         name="searchTerm"
         onChange={[Function]}
@@ -101,184 +32,165 @@ exports[`Filters Adds selected values to appropriate fields 1`] = `
       htmlFor="resourceFormat"
     >
       Format
-      <select
-        id="resourceFormat"
-        name="resourceFormat"
-        onChange={[Function]}
-        value="Article"
+      <div
+        className="css-4cffwv"
       >
-        <option
-          value=""
-        >
-          All
-        </option>
-        <option
+        <select
+          className="css-iyqgnx"
+          id="resourceFormat"
+          name="resourceFormat"
+          onChange={[Function]}
           value="Article"
         >
-          Article
-        </option>
-        <option
-          value="Interactive"
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            value="Article"
+          >
+            Article
+          </option>
+          <option
+            value="Interactive"
+          >
+            Interactive
+          </option>
+          <option
+            value="Tutorial"
+          >
+            Tutorial
+          </option>
+          <option
+            value="Video"
+          >
+            Video
+          </option>
+        </select>
+        <svg
+          className="css-1swud1q"
+          fill="currentcolor"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          Interactive
-        </option>
-        <option
-          value="Tutorial"
-        >
-          Tutorial
-        </option>
-        <option
-          value="Video"
-        >
-          Video
-        </option>
-      </select>
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
     </label>
     <label
       htmlFor="resourceFocus"
     >
       Focus
-      <select
-        id="resourceFocus"
-        name="resourceFocus"
-        onChange={[Function]}
-        value="Front-end"
+      <div
+        className="css-4cffwv"
       >
-        <option
-          value=""
-        >
-          All
-        </option>
-        <option
+        <select
+          className="css-iyqgnx"
+          id="resourceFocus"
+          name="resourceFocus"
+          onChange={[Function]}
           value="Front-end"
         >
-          Front-end
-        </option>
-        <option
-          value="Multiple"
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            value="Front-end"
+          >
+            Front-end
+          </option>
+          <option
+            value="Multiple"
+          >
+            Multiple
+          </option>
+          <option
+            value="Algorithms"
+          >
+            Algorithms
+          </option>
+        </select>
+        <svg
+          className="css-1swud1q"
+          fill="currentcolor"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          Multiple
-        </option>
-        <option
-          value="Algorithms"
-        >
-          Algorithms
-        </option>
-      </select>
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
     </label>
     <label
       htmlFor="resourceSkillLevel"
     >
       Skill Level
-      <select
-        id="resourceSkillLevel"
-        name="resourceSkillLevel"
-        onChange={[Function]}
-        value="Beginner"
+      <div
+        className="css-4cffwv"
       >
-        <option
-          value=""
-        >
-          All
-        </option>
-        <option
+        <select
+          className="css-iyqgnx"
+          id="resourceSkillLevel"
+          name="resourceSkillLevel"
+          onChange={[Function]}
           value="Beginner"
         >
-          Beginner
-        </option>
-        <option
-          value="Moderate"
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            value="Beginner"
+          >
+            Beginner
+          </option>
+          <option
+            value="Moderate"
+          >
+            Moderate
+          </option>
+          <option
+            value="Advanced"
+          >
+            Advanced
+          </option>
+        </select>
+        <svg
+          className="css-1swud1q"
+          fill="currentcolor"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          Moderate
-        </option>
-        <option
-          value="Advanced"
-        >
-          Advanced
-        </option>
-      </select>
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
     </label>
   </fieldset>
 </form>
 `;
 
 exports[`Filters renders correctly 1`] = `
-<form
-  css={
-    Object {
-      "map": undefined,
-      "name": "olpobj",
-      "next": undefined,
-      "styles": "
-  font-size: 0.8855rem;
-  margin: auto -0.805rem;
-  @media (min-width: 600px) {
-    position: sticky;
-    top: 0;
-    z-index: 10000;
-  }
-  fieldset {
-    color: white;
-    border-radius: 5px;
-    background-color: #6aa7fa;
-    background-image: linear-gradient(to bottom right, #6aa7fa, #7b4caf);
-    padding: 0.4025rem;
-    border: none;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-    legend {
-      width: 100%;
-      float: left;
-      padding: 0 0.4025rem;
-      font-size: 0.805rem;
-      letter-spacing: 1px;
-      line-height: 1.5;
-      border-radius: 5px;
-      text-transform: uppercase;
-      button.btn-clearFilters {
-        margin-left: 12px;
-        display: inline;
-        padding: 2px .25rem;
-        background-color: #0acc9e;
-        background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
-        border: 1px solid transparent;
-        color: white;
-        border-radius: 3px;
-        font-size: 0.805rem;
-        line-height: 1;
-        &:hover, &:focus {
-          border: 1px solid #048e6d;
-        }
-      }
-    }
-  }
-  label {
-    width: 50%;
-    display: inline-block;
-    padding: 0.4025rem;
-    @media (min-width: 600px) {
-      width: 25%;
-    }
-  }
-  input, select {
-    width: 100%;
-    height: 30px;
-    border-color: white;
-    background: white;
-    box-shadow: none;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1.5px solid white;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-  }
-",
-      "toString": [Function],
-    }
-  }
->
+<form>
   <fieldset>
     <legend>
-      Filter
+      <strong>
+        Filter
+      </strong>
     </legend>
     <label
       htmlFor="searchTerm"
@@ -286,6 +198,7 @@ exports[`Filters renders correctly 1`] = `
       Name
       <input
         aria-label="Name"
+        className="css-iyqgnx"
         id="searchTerm"
         name="searchTerm"
         onChange={[Function]}
@@ -298,102 +211,153 @@ exports[`Filters renders correctly 1`] = `
       htmlFor="resourceFormat"
     >
       Format
-      <select
-        id="resourceFormat"
-        name="resourceFormat"
-        onChange={[Function]}
-        value=""
+      <div
+        className="css-4cffwv"
       >
-        <option
+        <select
+          className="css-iyqgnx"
+          id="resourceFormat"
+          name="resourceFormat"
+          onChange={[Function]}
           value=""
         >
-          All
-        </option>
-        <option
-          value="Article"
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            value="Article"
+          >
+            Article
+          </option>
+          <option
+            value="Interactive"
+          >
+            Interactive
+          </option>
+          <option
+            value="Tutorial"
+          >
+            Tutorial
+          </option>
+          <option
+            value="Video"
+          >
+            Video
+          </option>
+        </select>
+        <svg
+          className="css-1swud1q"
+          fill="currentcolor"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          Article
-        </option>
-        <option
-          value="Interactive"
-        >
-          Interactive
-        </option>
-        <option
-          value="Tutorial"
-        >
-          Tutorial
-        </option>
-        <option
-          value="Video"
-        >
-          Video
-        </option>
-      </select>
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
     </label>
     <label
       htmlFor="resourceFocus"
     >
       Focus
-      <select
-        id="resourceFocus"
-        name="resourceFocus"
-        onChange={[Function]}
-        value=""
+      <div
+        className="css-4cffwv"
       >
-        <option
+        <select
+          className="css-iyqgnx"
+          id="resourceFocus"
+          name="resourceFocus"
+          onChange={[Function]}
           value=""
         >
-          All
-        </option>
-        <option
-          value="Front-end"
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            value="Front-end"
+          >
+            Front-end
+          </option>
+          <option
+            value="Multiple"
+          >
+            Multiple
+          </option>
+          <option
+            value="Algorithms"
+          >
+            Algorithms
+          </option>
+        </select>
+        <svg
+          className="css-1swud1q"
+          fill="currentcolor"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          Front-end
-        </option>
-        <option
-          value="Multiple"
-        >
-          Multiple
-        </option>
-        <option
-          value="Algorithms"
-        >
-          Algorithms
-        </option>
-      </select>
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
     </label>
     <label
       htmlFor="resourceSkillLevel"
     >
       Skill Level
-      <select
-        id="resourceSkillLevel"
-        name="resourceSkillLevel"
-        onChange={[Function]}
-        value=""
+      <div
+        className="css-4cffwv"
       >
-        <option
+        <select
+          className="css-iyqgnx"
+          id="resourceSkillLevel"
+          name="resourceSkillLevel"
+          onChange={[Function]}
           value=""
         >
-          All
-        </option>
-        <option
-          value="Beginner"
+          <option
+            value=""
+          >
+            All
+          </option>
+          <option
+            value="Beginner"
+          >
+            Beginner
+          </option>
+          <option
+            value="Moderate"
+          >
+            Moderate
+          </option>
+          <option
+            value="Advanced"
+          >
+            Advanced
+          </option>
+        </select>
+        <svg
+          className="css-1swud1q"
+          fill="currentcolor"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          Beginner
-        </option>
-        <option
-          value="Moderate"
-        >
-          Moderate
-        </option>
-        <option
-          value="Advanced"
-        >
-          Advanced
-        </option>
-      </select>
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
     </label>
   </fieldset>
 </form>

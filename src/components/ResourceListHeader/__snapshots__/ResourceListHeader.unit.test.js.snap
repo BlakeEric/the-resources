@@ -1,56 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ResourceListHeader Adds appropriate className and icon to current orderBy key 1`] = `
-<thead
-  css={
-    Object {
-      "map": undefined,
-      "name": "1soaygs",
-      "next": undefined,
-      "styles": "
-  thead{
-    padding: 20px;
-  }
-  th {
-    font-family: Lato,sans-serif;
-  }
-  th button {
-    background: white;
-    padding: 0;
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    &:hover, &:focus {
-      text-decoration: underline;
-    }
-  }
-  th.active button {
-    font-weight: 400;
-    background-color: #0acc9e;
-    background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
-    color: white;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-    padding: 0 0.4025rem;
-    &:hover, &:focus {
-      text-decoration: none;
-    }
-  }
-  th {
-    width: 25%;
-    padding-top: 0.25rem;
-    padding-bottom: calc(0.25rem - 1px);
-  }
-",
-      "toString": [Function],
-    }
-  }
->
+<thead>
   <tr>
     <th
-      className=""
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
     >
       <button
+        className="css-vhv7r1"
         onClick={[Function]}
       >
         Name
@@ -59,9 +20,14 @@ exports[`ResourceListHeader Adds appropriate className and icon to current order
       </button>
     </th>
     <th
-      className="active"
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
     >
       <button
+        className="css-vhv7r1"
         onClick={[Function]}
       >
         Skill Level
@@ -70,9 +36,14 @@ exports[`ResourceListHeader Adds appropriate className and icon to current order
       </button>
     </th>
     <th
-      className=""
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
     >
       <button
+        className="css-vhv7r1"
         onClick={[Function]}
       >
         Format
@@ -81,9 +52,14 @@ exports[`ResourceListHeader Adds appropriate className and icon to current order
       </button>
     </th>
     <th
-      className=""
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
     >
       <button
+        className="css-vhv7r1"
         onClick={[Function]}
       >
         Focus
@@ -96,56 +72,17 @@ exports[`ResourceListHeader Adds appropriate className and icon to current order
 `;
 
 exports[`ResourceListHeader renders correctly 1`] = `
-<thead
-  css={
-    Object {
-      "map": undefined,
-      "name": "1soaygs",
-      "next": undefined,
-      "styles": "
-  thead{
-    padding: 20px;
-  }
-  th {
-    font-family: Lato,sans-serif;
-  }
-  th button {
-    background: white;
-    padding: 0;
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    &:hover, &:focus {
-      text-decoration: underline;
-    }
-  }
-  th.active button {
-    font-weight: 400;
-    background-color: #0acc9e;
-    background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
-    color: white;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-    padding: 0 0.4025rem;
-    &:hover, &:focus {
-      text-decoration: none;
-    }
-  }
-  th {
-    width: 25%;
-    padding-top: 0.25rem;
-    padding-bottom: calc(0.25rem - 1px);
-  }
-",
-      "toString": [Function],
-    }
-  }
->
+<thead>
   <tr>
     <th
-      className="active"
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
     >
       <button
+        className="css-vhv7r1"
         onClick={[Function]}
       >
         Name
@@ -154,9 +91,14 @@ exports[`ResourceListHeader renders correctly 1`] = `
       </button>
     </th>
     <th
-      className=""
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
     >
       <button
+        className="css-vhv7r1"
         onClick={[Function]}
       >
         Skill Level
@@ -165,9 +107,14 @@ exports[`ResourceListHeader renders correctly 1`] = `
       </button>
     </th>
     <th
-      className=""
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
     >
       <button
+        className="css-vhv7r1"
         onClick={[Function]}
       >
         Format
@@ -176,9 +123,14 @@ exports[`ResourceListHeader renders correctly 1`] = `
       </button>
     </th>
     <th
-      className=""
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
     >
       <button
+        className="css-vhv7r1"
         onClick={[Function]}
       >
         Focus

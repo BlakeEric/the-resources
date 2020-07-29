@@ -15,9 +15,12 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
-    "gatsby": "^2.22.15",
+    "@theme-ui/css": "^0.3.1",
+    "@theme-ui/presets": "^0.3.0",
+    "gatsby": "^2.24.11",
     "gatsby-plugin-emotion": "^4.3.1",
     "gatsby-plugin-manifest": "^2.4.9",
+    "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-plugin-typography": "^2.5.1",
     "gatsby-source-filesystem": "^2.3.1",
     "gatsby-transformer-remark": "^2.8.7",
@@ -26,6 +29,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "react-typography": "^0.16.19",
+    "theme-ui": "^0.3.1",
     "typography": "^0.16.19",
     "typography-theme-alton": "^0.16.19",
     "typography-theme-noriega": "^0.16.19"

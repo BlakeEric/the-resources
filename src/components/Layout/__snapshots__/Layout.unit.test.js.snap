@@ -1,255 +1,239 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout renders correctly 1`] = `
-<div
-  css={
-    Object {
-      "map": undefined,
-      "name": "vi9d7b",
-      "next": undefined,
-      "styles": "
-  margin: 0.805rem auto;
-  max-width: 900px;
-  padding: 1.61rem 0.805rem;
-  background: white;
-  @media (min-width: 600px) {
-    padding: 2.415rem;
-  }
-  .page {
-    min-height: 60vh;
-  }
-",
-      "toString": [Function],
-    }
-  }
->
-  <nav>
-    <a
-      href="/"
-    >
-      <h3
-        css={
-          Object {
-            "map": undefined,
-            "name": "kgn0fp",
-            "next": undefined,
-            "styles": "
-            margin-bottom: 3.22rem;
-            display: inline-block;
-            font-style: normal;
-          ",
-            "toString": [Function],
-          }
-        }
-      >
-        Cool Site Title
-      </h3>
-    </a>
-    <a
-      css={
-        Object {
-          "map": undefined,
-          "name": "1huhmlv",
-          "next": undefined,
-          "styles": "
-          float: right;
-        ",
-          "toString": [Function],
-        }
-      }
-      href="/about/"
-    >
-      About
-    </a>
-  </nav>
+Array [
   <div
-    className="page"
-  />
-  <footer
-    css={
-      Object {
-        "map": undefined,
-        "name": "1vkm4mx",
-        "next": undefined,
-        "styles": "
-  margin-top: 3.22rem;
-  font-size: 0.92575rem;
-  @media (min-width: 600px) {
-    display: flex;
-    justify-content: space-between;
-  }
-  span {
-    display: inline-block;
-    margin-bottom: 0.4025rem;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    @media (min-width: 600px) {
-     text-align: right;
-    }
-    li {
-      margin-bottom: 0.4025rem;
-      line-height: 1.25;
-    }
-  }
-",
-        "toString": [Function],
-      }
-    }
+    className="css-xs1m8z"
   >
-    <span>
-      ©Blake Lundquist 
-      2020
-    </span>
-    <ul>
-      <li>
-        <a
-          href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!"
+    <nav>
+      <div
+        className="css-4cffwv"
+      >
+        <div
+          className="css-qt71f4"
         >
-          Recommend a resource
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/BlakeEric/the-resources"
-          rel="noopener noreferrer"
-          target="_blank"
+          <a
+            css={
+              Object {
+                "map": undefined,
+                "name": "1ggai7v",
+                "next": undefined,
+                "styles": "
+              text-decoration: none;
+            ",
+                "toString": [Function],
+              }
+            }
+            href="/"
+          >
+            <h3
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "1n6x3hh",
+                  "next": undefined,
+                  "styles": "
+                margin: 0;
+                line-height: 1.5;
+              ",
+                  "toString": [Function],
+                }
+              }
+            >
+              Cool Site Title
+            </h3>
+          </a>
+        </div>
+        <div
+          className="css-h9fdzh"
         >
-          View source code for this website
-        </a>
-      </li>
-    </ul>
-  </footer>
-</div>
+          <a
+            href="/about/"
+          >
+            About
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  <div
+    className="css-1ba6x1c"
+  />,
+  <div
+    className="css-1yrmf69"
+  >
+    <footer>
+      <div
+        className="css-dxwf3u"
+      >
+        <div
+          className="css-qt71f4"
+        >
+          <span>
+            © Blake Lundquist 
+            2020
+          </span>
+        </div>
+        <div
+          className="css-h9fdzh"
+        >
+          <ul
+            css={
+              Object {
+                "map": undefined,
+                "name": "47y1c9",
+                "next": undefined,
+                "styles": "
+              margin: 0;
+              list-style: none;
+              padding: 0;
+            ",
+                "toString": [Function],
+              }
+            }
+          >
+            <li>
+              <a
+                href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!"
+              >
+                Recommend a resource
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/BlakeEric/the-resources"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View source code for this website
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>,
+]
 `;
 
 exports[`Layout renders correctly with children 1`] = `
-<div
-  css={
-    Object {
-      "map": undefined,
-      "name": "vi9d7b",
-      "next": undefined,
-      "styles": "
-  margin: 0.805rem auto;
-  max-width: 900px;
-  padding: 1.61rem 0.805rem;
-  background: white;
-  @media (min-width: 600px) {
-    padding: 2.415rem;
-  }
-  .page {
-    min-height: 60vh;
-  }
-",
-      "toString": [Function],
-    }
-  }
->
-  <nav>
-    <a
-      href="/"
-    >
-      <h3
-        css={
-          Object {
-            "map": undefined,
-            "name": "kgn0fp",
-            "next": undefined,
-            "styles": "
-            margin-bottom: 3.22rem;
-            display: inline-block;
-            font-style: normal;
-          ",
-            "toString": [Function],
-          }
-        }
-      >
-        Cool Site Title
-      </h3>
-    </a>
-    <a
-      css={
-        Object {
-          "map": undefined,
-          "name": "1huhmlv",
-          "next": undefined,
-          "styles": "
-          float: right;
-        ",
-          "toString": [Function],
-        }
-      }
-      href="/about/"
-    >
-      About
-    </a>
-  </nav>
+Array [
   <div
-    className="page"
+    className="css-xs1m8z"
+  >
+    <nav>
+      <div
+        className="css-4cffwv"
+      >
+        <div
+          className="css-qt71f4"
+        >
+          <a
+            css={
+              Object {
+                "map": undefined,
+                "name": "1ggai7v",
+                "next": undefined,
+                "styles": "
+              text-decoration: none;
+            ",
+                "toString": [Function],
+              }
+            }
+            href="/"
+          >
+            <h3
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "1n6x3hh",
+                  "next": undefined,
+                  "styles": "
+                margin: 0;
+                line-height: 1.5;
+              ",
+                  "toString": [Function],
+                }
+              }
+            >
+              Cool Site Title
+            </h3>
+          </a>
+        </div>
+        <div
+          className="css-h9fdzh"
+        >
+          <a
+            href="/about/"
+          >
+            About
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  <div
+    className="css-1ba6x1c"
   >
     <main>
       <h1>
         I'm a child!
       </h1>
     </main>
-  </div>
-  <footer
-    css={
-      Object {
-        "map": undefined,
-        "name": "1vkm4mx",
-        "next": undefined,
-        "styles": "
-  margin-top: 3.22rem;
-  font-size: 0.92575rem;
-  @media (min-width: 600px) {
-    display: flex;
-    justify-content: space-between;
-  }
-  span {
-    display: inline-block;
-    margin-bottom: 0.4025rem;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    @media (min-width: 600px) {
-     text-align: right;
-    }
-    li {
-      margin-bottom: 0.4025rem;
-      line-height: 1.25;
-    }
-  }
-",
-        "toString": [Function],
-      }
-    }
+  </div>,
+  <div
+    className="css-1yrmf69"
   >
-    <span>
-      ©Blake Lundquist 
-      2020
-    </span>
-    <ul>
-      <li>
-        <a
-          href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!"
+    <footer>
+      <div
+        className="css-dxwf3u"
+      >
+        <div
+          className="css-qt71f4"
         >
-          Recommend a resource
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/BlakeEric/the-resources"
-          rel="noopener noreferrer"
-          target="_blank"
+          <span>
+            © Blake Lundquist 
+            2020
+          </span>
+        </div>
+        <div
+          className="css-h9fdzh"
         >
-          View source code for this website
-        </a>
-      </li>
-    </ul>
-  </footer>
-</div>
+          <ul
+            css={
+              Object {
+                "map": undefined,
+                "name": "47y1c9",
+                "next": undefined,
+                "styles": "
+              margin: 0;
+              list-style: none;
+              padding: 0;
+            ",
+                "toString": [Function],
+              }
+            }
+          >
+            <li>
+              <a
+                href="mailto:blake@blakelundquist.dev?subject=A new resource for theresources.dev!"
+              >
+                Recommend a resource
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/BlakeEric/the-resources"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View source code for this website
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>,
+]
 `;

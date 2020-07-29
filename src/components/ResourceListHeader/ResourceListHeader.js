@@ -1,7 +1,6 @@
 import React, { useContext } from "react"
-import typography from "../../utils/typography"
-import { css } from "@emotion/core"
 import { ResourceContext } from '../ResourceContext/ResourceContext'
+import { Button } from 'theme-ui'
 
 export default function ResourceListTableHeader({ keys }) {
 
@@ -32,15 +31,14 @@ export default function ResourceListTableHeader({ keys }) {
   }
 
   return (
-    <thead css={styles} >
+    <thead >
       <tr>
         {keys.map(keyName => {
           return (
-            <th key={keyName} className={context.orderBy === keyName ? "active" : ""}>
-              <button
-                onClick={() => context.setOrder(keyName)}>
+            <th key={keyName} style={{textAlign: "left"}}>
+              <Button variant={context.orderBy === keyName ? "secondary" : "muted"} onClick={() => context.setOrder(keyName)}>
                 {formatColumnTitle(keyName)} {displaySortIcon(keyName)}
-              </button>
+              </Button>
             </th>
           )
         })}
@@ -48,39 +46,3 @@ export default function ResourceListTableHeader({ keys }) {
     </thead>
   )
 }
-
-const styles = css`
-  thead{
-    padding: 20px;
-  }
-  th {
-    font-family: ${typography.options.headerFontFamily.toString()};
-  }
-  th button {
-    background: white;
-    padding: 0;
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    &:hover, &:focus {
-      text-decoration: underline;
-    }
-  }
-  th.active button {
-    font-weight: 400;
-    background-color: #0acc9e;
-    background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
-    color: white;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-    padding: 0 ${typography.rhythm(.25)};
-    &:hover, &:focus {
-      text-decoration: none;
-    }
-  }
-  th {
-    width: 25%;
-    padding-top: 0.25rem;
-    padding-bottom: calc(0.25rem - 1px);
-  }
-`

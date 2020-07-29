@@ -3,79 +3,18 @@
 exports[`Bookmarks renders correctly when context has bookmarks 1`] = `
 <section
   className="bookmarks"
-  css={
-    Object {
-      "map": undefined,
-      "name": "1q4azch",
-      "next": undefined,
-      "styles": "
-  position: sticky;
-  top: calc(50% - 20%);
-  width: 300px;
-  max-width: 100%;
-  border-radius: 5px;
-  padding: 0.4025rem 0.52325rem;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-  border: 1px solid #eaeaea;
-  h3 {
-    letter-spacing: 1px;
-    line-height: 1.5;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-bottom: 0.4025rem;
-    font-size: 0.805rem;
-  }
-  p {
-    margin-bottom: 0;
-    font-size: 0.84525rem;
-  }
-  ul {
-    font-size: 0.84525rem;
-    list-style: none;
-    margin: 0;
-    display: block;
-  }
-  li {
-    width: 100%;
-    margin: 0;
-    display: block;
-    border-bottom: 1px solid #eaeaea;
-    position: relative;
-    line-height: 1.25;
-    padding: 0.20125rem 23px 0.4025rem 0;
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-  .btn-remove {
-    position: absolute;
-    right: 0;
-    height: 22px;
-    width: 22px;
-    background: white;
-    border: none;
-    padding: 0;
-    text-align: center;
-    margin-left: 0.20125rem;
-    color: #ce3030;
-    border-radius: 50%;
-    &:hover, &:focus {
-      background-image: linear-gradient(to bottom right,#ce3030,#ef6666);
-      color: white;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-    }
-  }
-",
-      "toString": [Function],
-    }
-  }
 >
   <h3>
     My Bookmarks
   </h3>
   <ul>
-    <li>
+    <li
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
       <a
         className="btn-view"
         rel="noreferrer noopener"
@@ -83,15 +22,20 @@ exports[`Bookmarks renders correctly when context has bookmarks 1`] = `
       >
         Alligator
       </a>
-       
       <button
-        className="btn-remove"
+        className="btn-remove css-vhv7r1"
         onClick={[Function]}
       >
         ×
       </button>
     </li>
-    <li>
+    <li
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
       <a
         className="btn-view"
         rel="noreferrer noopener"
@@ -99,9 +43,8 @@ exports[`Bookmarks renders correctly when context has bookmarks 1`] = `
       >
         Badger
       </a>
-       
       <button
-        className="btn-remove"
+        className="btn-remove css-vhv7r1"
         onClick={[Function]}
       >
         ×
@@ -114,73 +57,6 @@ exports[`Bookmarks renders correctly when context has bookmarks 1`] = `
 exports[`Bookmarks renders correctly when no items bookmarked 1`] = `
 <section
   className="bookmarks"
-  css={
-    Object {
-      "map": undefined,
-      "name": "1q4azch",
-      "next": undefined,
-      "styles": "
-  position: sticky;
-  top: calc(50% - 20%);
-  width: 300px;
-  max-width: 100%;
-  border-radius: 5px;
-  padding: 0.4025rem 0.52325rem;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-  border: 1px solid #eaeaea;
-  h3 {
-    letter-spacing: 1px;
-    line-height: 1.5;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-bottom: 0.4025rem;
-    font-size: 0.805rem;
-  }
-  p {
-    margin-bottom: 0;
-    font-size: 0.84525rem;
-  }
-  ul {
-    font-size: 0.84525rem;
-    list-style: none;
-    margin: 0;
-    display: block;
-  }
-  li {
-    width: 100%;
-    margin: 0;
-    display: block;
-    border-bottom: 1px solid #eaeaea;
-    position: relative;
-    line-height: 1.25;
-    padding: 0.20125rem 23px 0.4025rem 0;
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-  .btn-remove {
-    position: absolute;
-    right: 0;
-    height: 22px;
-    width: 22px;
-    background: white;
-    border: none;
-    padding: 0;
-    text-align: center;
-    margin-left: 0.20125rem;
-    color: #ce3030;
-    border-radius: 50%;
-    &:hover, &:focus {
-      background-image: linear-gradient(to bottom right,#ce3030,#ef6666);
-      color: white;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-    }
-  }
-",
-      "toString": [Function],
-    }
-  }
 >
   <h3>
     My Bookmarks

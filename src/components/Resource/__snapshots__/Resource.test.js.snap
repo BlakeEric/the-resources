@@ -2,20 +2,14 @@
 
 exports[`Resource Shows indication that item has been bookmarked 1`] = `
 Array [
-  <tr
-    style={
-      Object {
-        "overflow": "visible",
-      }
-    }
-  >
+  <tr>
     <td>
       <div
         className="resourceDetails-wrapper"
         css={
           Object {
             "map": undefined,
-            "name": "39f3gt",
+            "name": "1f9ea78",
             "next": undefined,
             "styles": "
   position: relative;
@@ -29,7 +23,7 @@ Array [
     background: white;
     border-radius: 5px;
     box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
-    padding: 0.4025rem;
+    padding: 0.805rem;
     z-index: 1000;
     border: 1px solid #e4e4e4;
     &:after {
@@ -59,7 +53,7 @@ Array [
       }
     }
     h4 {
-      margin-bottom: 0.4025rem;
+      margin: 0;
     }
     p {
       color: black;
@@ -70,24 +64,12 @@ Array [
     .btn-view {
       padding-right: 0.4025rem;
     }
-    .btn-add {
-      float:right;
-      padding-right: 0.4025rem;
-      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
-      border: none;
-      padding: 0 0.4025rem;
-      color: white;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-      border-radius: 3px;
+    button, span {
+      display: inline-block;
+      font-size: 13px;
     }
-    .btn-remove {
-      padding-right: 0.4025rem;
-      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
-      border: none;
-      padding: 0 0.4025rem;
-      color: white;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-      border-radius: 3px;
+    .right {
+        float: right;
     }
   }
 ",
@@ -126,15 +108,11 @@ Array [
               View Now →
             </a>
             <span
-              style={
-                Object {
-                  "float": "right",
-                }
-              }
+              className="right"
             >
               Bookmarked! 
               <button
-                className="btn-remove"
+                className="css-vhv7r1"
                 onClick={[Function]}
               >
                 Remove
@@ -160,20 +138,14 @@ Array [
 
 exports[`Resource renders correctly not toggled 1`] = `
 Array [
-  <tr
-    style={
-      Object {
-        "overflow": "visible",
-      }
-    }
-  >
+  <tr>
     <td>
       <div
         className="resourceDetails-wrapper"
         css={
           Object {
             "map": undefined,
-            "name": "39f3gt",
+            "name": "1f9ea78",
             "next": undefined,
             "styles": "
   position: relative;
@@ -187,7 +159,7 @@ Array [
     background: white;
     border-radius: 5px;
     box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
-    padding: 0.4025rem;
+    padding: 0.805rem;
     z-index: 1000;
     border: 1px solid #e4e4e4;
     &:after {
@@ -217,7 +189,7 @@ Array [
       }
     }
     h4 {
-      margin-bottom: 0.4025rem;
+      margin: 0;
     }
     p {
       color: black;
@@ -228,24 +200,12 @@ Array [
     .btn-view {
       padding-right: 0.4025rem;
     }
-    .btn-add {
-      float:right;
-      padding-right: 0.4025rem;
-      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
-      border: none;
-      padding: 0 0.4025rem;
-      color: white;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-      border-radius: 3px;
+    button, span {
+      display: inline-block;
+      font-size: 13px;
     }
-    .btn-remove {
-      padding-right: 0.4025rem;
-      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
-      border: none;
-      padding: 0 0.4025rem;
-      color: white;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-      border-radius: 3px;
+    .right {
+        float: right;
     }
   }
 ",
@@ -278,20 +238,14 @@ Array [
 
 exports[`Resource renders correctly when toggled 1`] = `
 Array [
-  <tr
-    style={
-      Object {
-        "overflow": "visible",
-      }
-    }
-  >
+  <tr>
     <td>
       <div
         className="resourceDetails-wrapper"
         css={
           Object {
             "map": undefined,
-            "name": "39f3gt",
+            "name": "1f9ea78",
             "next": undefined,
             "styles": "
   position: relative;
@@ -305,7 +259,7 @@ Array [
     background: white;
     border-radius: 5px;
     box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
-    padding: 0.4025rem;
+    padding: 0.805rem;
     z-index: 1000;
     border: 1px solid #e4e4e4;
     &:after {
@@ -335,7 +289,7 @@ Array [
       }
     }
     h4 {
-      margin-bottom: 0.4025rem;
+      margin: 0;
     }
     p {
       color: black;
@@ -346,24 +300,12 @@ Array [
     .btn-view {
       padding-right: 0.4025rem;
     }
-    .btn-add {
-      float:right;
-      padding-right: 0.4025rem;
-      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
-      border: none;
-      padding: 0 0.4025rem;
-      color: white;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-      border-radius: 3px;
+    button, span {
+      display: inline-block;
+      font-size: 13px;
     }
-    .btn-remove {
-      padding-right: 0.4025rem;
-      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
-      border: none;
-      padding: 0 0.4025rem;
-      color: white;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-      border-radius: 3px;
+    .right {
+        float: right;
     }
   }
 ",
@@ -402,7 +344,7 @@ Array [
               View Now →
             </a>
             <button
-              className="btn-add"
+              className="right css-vhv7r1"
               onClick={[Function]}
             >
               Add to bookmarks
@@ -427,20 +369,14 @@ Array [
 
 exports[`Resource renders popover above item when showDetailsAbove prop is true 1`] = `
 Array [
-  <tr
-    style={
-      Object {
-        "overflow": "visible",
-      }
-    }
-  >
+  <tr>
     <td>
       <div
         className="resourceDetails-wrapper"
         css={
           Object {
             "map": undefined,
-            "name": "39f3gt",
+            "name": "1f9ea78",
             "next": undefined,
             "styles": "
   position: relative;
@@ -454,7 +390,7 @@ Array [
     background: white;
     border-radius: 5px;
     box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.25);
-    padding: 0.4025rem;
+    padding: 0.805rem;
     z-index: 1000;
     border: 1px solid #e4e4e4;
     &:after {
@@ -484,7 +420,7 @@ Array [
       }
     }
     h4 {
-      margin-bottom: 0.4025rem;
+      margin: 0;
     }
     p {
       color: black;
@@ -495,24 +431,12 @@ Array [
     .btn-view {
       padding-right: 0.4025rem;
     }
-    .btn-add {
-      float:right;
-      padding-right: 0.4025rem;
-      background-image: linear-gradient(to bottom right, #37e6bd, #0acc9e);
-      border: none;
-      padding: 0 0.4025rem;
-      color: white;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-      border-radius: 3px;
+    button, span {
+      display: inline-block;
+      font-size: 13px;
     }
-    .btn-remove {
-      padding-right: 0.4025rem;
-      background-image: linear-gradient(to bottom right, #ce3030, #ef6666);
-      border: none;
-      padding: 0 0.4025rem;
-      color: white;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
-      border-radius: 3px;
+    .right {
+        float: right;
     }
   }
 ",
@@ -551,7 +475,7 @@ Array [
               View Now →
             </a>
             <button
-              className="btn-add"
+              className="right css-vhv7r1"
               onClick={[Function]}
             >
               Add to bookmarks

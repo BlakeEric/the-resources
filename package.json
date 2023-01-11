@@ -23,7 +23,7 @@
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-plugin-typography": "^2.5.1",
     "gatsby-source-filesystem": "^2.3.1",
-    "gatsby-transformer-remark": "^2.8.7",
+    "gatsby-transformer-remark": "^5.25.1",
     "preact": "^10.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
